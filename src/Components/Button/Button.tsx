@@ -1,11 +1,17 @@
 import React from "react";
+import StyledButton from "./Button.styled";
 
 interface Props {
-  label: string;
+  label?: string;
+  active?: boolean;
 }
 
-const Button: React.FC<Props> = ({ label = "Button" }) => {
-  return <button>{label}</button>;
+const Button: React.FC<Props> = ({ label = "Button", active = false }) => {
+  return (
+    <StyledButton active={active} title={label}>
+      {label}
+    </StyledButton>
+  );
 };
 
 export default Button;
