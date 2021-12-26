@@ -10,6 +10,7 @@ export const color = {
   light_yellow: "#FFE500",
   green: "#0BDA51",
   text_lightGray: "rgba(0, 0, 0, 0.5)",
+  text_disabled: "#BFBFBF",
 
   lightest: "#FFFFFF",
   darkest: "#000000",

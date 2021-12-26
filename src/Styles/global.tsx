@@ -32,6 +32,11 @@ export const bodyStyles = css`
     padding: 0;
   }
 
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
   h2 {
     font-size: ${typography.size.text_22};
   }
@@ -55,6 +60,13 @@ export const bodyStyles = css`
     outline: none;
     font-family: ${typography.type.primary};
     border: none;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
   }
 
   sub,
