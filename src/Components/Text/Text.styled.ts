@@ -2,10 +2,10 @@ import styled from "styled-components";
 import { color, typography, breakpoint } from "../../Styles/styles";
 
 export const StyledParagraph = styled.p<{
-  isInline: boolean;
-  opacity: number;
+  isInline?: boolean;
+  opacity?: number;
   size?: string;
-  fontWeigh: string;
+  fontWeigh?: string;
   textTransform?: string;
 }>`
   color: ${color.darkest};
