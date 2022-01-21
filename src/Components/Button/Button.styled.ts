@@ -60,7 +60,7 @@ export const StyledButton = styled.button<{
     pointer-event: none;
     `}
 
-  @media (min-width: ${breakpoint.sm}px) {
+  @media (min-width: ${breakpoint.laptopScreen}px) {
     width: ${btnSize.width_large}px;
     height: ${btnSize.height_large}px;
     padding: 0 20px;

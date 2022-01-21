@@ -8,7 +8,7 @@ export const StyledRating = styled.div`
   background-color: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px) brightness(105%);
 
-  @media (min-width: ${breakpoint.sm}px) {
+  @media (min-width: ${breakpoint.laptopScreen}px) {
     padding: 6px 18px;
     border-radius: 15px;
   }
@@ -22,7 +22,7 @@ export const StyledRatingContent = styled.div`
     width: 18px;
     height: 18px;
 
-    @media (min-width: ${breakpoint.sm}px) {
+    @media (min-width: ${breakpoint.laptopScreen}px) {
       width: 23px;
       height: 23px;
     }
@@ -34,7 +34,7 @@ export const StyledRatingContent = styled.div`
     font-feature-settings: "tnum";
     font-variant-numeric: tabular-nums;
 
-    @media (min-width: ${breakpoint.sm}px) {
+    @media (min-width: ${breakpoint.laptopScreen}px) {
       margin-left: 8px;
     }
   }

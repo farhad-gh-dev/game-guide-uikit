@@ -74,5 +74,6 @@ export const typography = {
 };
 
 export const breakpoint = {
-  sm: 600,
+  laptopScreen: 1280,
+  largeScreen: 1920,
 };

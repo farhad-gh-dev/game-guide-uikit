@@ -10,7 +10,7 @@ export const StyledParagraph = styled.p<{
 }>`
   color: ${color.darkest};
   font-size: ${typography.size.text_12};
-  @media (min-width: ${breakpoint.sm}px) {
+  @media (min-width: ${breakpoint.laptopScreen}px) {
     font-size: ${typography.size.text_18};
   }
 
@@ -33,7 +33,7 @@ export const StyledParagraph = styled.p<{
     props.size === "sm" &&
     `
     font-size: ${typography.size.text_12};
-    @media (min-width: ${breakpoint.sm}px) {
+    @media (min-width: ${breakpoint.laptopScreen}px) {
       font-size: ${typography.size.text_16};
     }
     `}
@@ -42,7 +42,7 @@ export const StyledParagraph = styled.p<{
     props.size === "md" &&
     `
     font-size: ${typography.size.text_14};
-    @media (min-width: ${breakpoint.sm}px) {
+    @media (min-width: ${breakpoint.laptopScreen}px) {
       font-size: ${typography.size.text_18};
     }
     `}
@@ -51,7 +51,7 @@ export const StyledParagraph = styled.p<{
     props.size === "lg" &&
     `
     font-size: ${typography.size.text_16};
-    @media (min-width: ${breakpoint.sm}px) {
+    @media (min-width: ${breakpoint.laptopScreen}px) {
       font-size: ${typography.size.text_20};
     }
     `}

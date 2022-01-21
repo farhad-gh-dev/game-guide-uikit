@@ -7,7 +7,7 @@ export const bodyStyles = css`
   font-size: ${typography.size.text_14};
   color: ${color.darkest};
 
-  @media (min-width: ${breakpoint.sm * 1}px) {
+  @media (min-width: ${breakpoint.laptopScreen}px) {
     font-size: ${typography.size.text_18};
   }
 
@@ -44,7 +44,7 @@ export const bodyStyles = css`
     font-size: ${typography.size.text_18};
   }
 
-  @media (min-width: ${breakpoint.sm}px) {
+  @media (min-width: ${breakpoint.laptopScreen}px) {
     h2 {
       font-size: ${typography.size.text_28};
     }
@@ -101,7 +101,7 @@ export const bodyStyles = css`
     -moz-osx-font-smoothing: grayscale;
   }
 
-  @media (min-width: ${breakpoint.sm}px) {
+  @media (min-width: ${breakpoint.laptopScreen}px) {
     pre {
       font-size: ${typography.size.text_18}px;
     }
