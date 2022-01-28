@@ -9,6 +9,10 @@ export const StyledRating = styled.div`
   backdrop-filter: blur(10px) brightness(105%);
 
   @media (min-width: ${breakpoint.laptopScreen}px) {
+    padding: 3px 12px;
+    border-radius: 12px;
+  }
+  @media (min-width: ${breakpoint.largeScreen}px) {
     padding: 6px 18px;
     border-radius: 15px;
   }
@@ -23,6 +27,10 @@ export const StyledRatingContent = styled.div`
     height: 18px;
 
     @media (min-width: ${breakpoint.laptopScreen}px) {
+      width: 20px;
+      height: 20px;
+    }
+    @media (min-width: ${breakpoint.largeScreen}px) {
       width: 23px;
       height: 23px;
     }
@@ -35,6 +43,9 @@ export const StyledRatingContent = styled.div`
     font-variant-numeric: tabular-nums;
 
     @media (min-width: ${breakpoint.laptopScreen}px) {
+      margin-left: 6px;
+    }
+    @media (min-width: ${breakpoint.largeScreen}px) {
       margin-left: 8px;
     }
   }

@@ -12,6 +12,11 @@ export const StyledAvatar = styled.div<{ imageSrc?: string }>`
   background-position: center center;
 
   @media (min-width: ${breakpoint.laptopScreen}px) {
+    width: 50px;
+    height: 50px;
+  }
+
+  @media (min-width: ${breakpoint.largeScreen}px) {
     width: 60px;
     height: 60px;
   }
@@ -31,8 +36,15 @@ export const StyledProfileType = styled.div`
   letter-spacing: 0.05em;
 
   @media (min-width: ${breakpoint.laptopScreen}px) {
+    bottom: -8px;
+    padding: 0 7px;
+    border-radius: 4px;
+    font-size: ${typography.size.text_12};
+  }
+
+  @media (min-width: ${breakpoint.largeScreen}px) {
     bottom: -9px;
-    padding: 1px 9px 1px 9px;
+    padding: 1px 9px 1px;
     border-radius: 5px;
     font-size: ${typography.size.text_12};
   }

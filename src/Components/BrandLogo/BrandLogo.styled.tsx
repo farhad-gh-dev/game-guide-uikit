@@ -10,8 +10,13 @@ export const StyledLogo = styled.img<{
   imageOnly?: boolean;
 }>`
   height: 25px;
+  width: auto;
 
   @media (min-width: ${breakpoint.laptopScreen}px) {
+    height: 44px;
+  }
+
+  @media (min-width: ${breakpoint.largeScreen}px) {
     height: 50px;
   }
 
@@ -21,6 +26,10 @@ export const StyledLogo = styled.img<{
     margin-right: 7px;
   
     @media (min-width: ${breakpoint.laptopScreen}px) {
+        margin-right: 15px;
+    }
+
+    @media (min-width: ${breakpoint.largeScreen}px) {
         margin-right: 20px;
     }
   `}
@@ -34,8 +43,12 @@ export const StyledText = styled.span<{
   text-transform: capitalize;
 
   @media (min-width: ${breakpoint.laptopScreen}px) {
-    font-size: ${typography.size.text_20};
+    font-size: ${typography.size.text_18};
     font-weight: 600;
+  }
+
+  @media (min-width: ${breakpoint.largeScreen}px) {
+    font-size: ${typography.size.text_20};
   }
 
   ${(props) => props.colored && `color: ${color.primary}`}

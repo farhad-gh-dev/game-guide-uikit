@@ -7,6 +7,9 @@ export const StyledSliderControl = styled.div`
   padding-left: 5px;
 
   @media (min-width: ${breakpoint.laptopScreen}px) {
+    padding-left: 15px;
+  }
+  @media (min-width: ${breakpoint.largeScreen}px) {
     padding-left: 25px;
   }
 `;
@@ -26,7 +29,10 @@ export const StyledSlideIndicators = styled.div`
   margin-bottom: 10px;
 
   @media (min-width: ${breakpoint.laptopScreen}px) {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+  }
+  @media (min-width: ${breakpoint.largeScreen}px) {
+    margin-bottom: 25px;
   }
 `;
 
@@ -39,6 +45,11 @@ export const StyledSingleIndicator = styled.div<{ active?: boolean }>`
   transition: 0.3s ease-in-out;
 
   @media (min-width: ${breakpoint.laptopScreen}px) {
+    width: 3px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+  @media (min-width: ${breakpoint.largeScreen}px) {
     width: 5px;
     border-radius: 5px;
     margin-bottom: 15px;
@@ -62,6 +73,9 @@ export const StyledSlideNumber = styled.span`
   font-variant-numeric: tabular-nums;
 
   @media (min-width: ${breakpoint.laptopScreen}px) {
+    font-size: ${typography.size.text_18};
+  }
+  @media (min-width: ${breakpoint.largeScreen}px) {
     font-size: ${typography.size.text_20};
   }
 `;
