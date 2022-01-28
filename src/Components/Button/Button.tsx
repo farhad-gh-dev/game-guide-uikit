@@ -8,6 +8,9 @@ type Props = {
 } & React.ComponentProps<"button"> &
   React.ComponentProps<"a">;
 
+/**
+ * This component also accept all attributes and events of buttons and links.
+ */
 const Button: React.FC<Props> = (props) => {
   const { isLink = false, children = null } = props;
 

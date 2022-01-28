@@ -3,14 +3,14 @@ import DefaultProfileImage from "../../Assets/default-profile-image.png";
 import { StyledAvatar, StyledProfileType } from "./Avatar.styled";
 
 type Props = {
-  type?: string;
+  userType?: string;
   imageSrc?: string;
 };
 
-const Avatar: React.FC<Props> = ({ type = "", imageSrc = "" }) => {
+const Avatar: React.FC<Props> = ({ userType = "", imageSrc = "" }) => {
   return (
     <StyledAvatar imageSrc={imageSrc ? imageSrc : DefaultProfileImage}>
-      {type ? <StyledProfileType>{type}</StyledProfileType> : null}
+      {userType ? <StyledProfileType>{userType}</StyledProfileType> : null}
     </StyledAvatar>
   );
 };

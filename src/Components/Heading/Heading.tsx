@@ -11,6 +11,9 @@ import {
 type Props = {
   children?: ReactNode;
   isInline?: boolean;
+  /**
+   * Accept a value between 0 and 1 -> EX: 0.5
+   */
   opacity?: number;
   textTransform?: "uppercase" | "capitalize" | "lowercase" | "none";
   fontWeigh?:
