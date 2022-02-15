@@ -25,6 +25,7 @@ const SliderControl: React.FC<Props> = ({
           {[...Array(numberOfSlides)].map((i, index) => {
             return (
               <StyledSingleIndicator
+                key={index}
                 active={index + 1 === activeSlide}
                 onClick={() => handleSlideChange(index)}
               />
