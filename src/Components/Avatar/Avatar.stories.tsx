@@ -3,9 +3,6 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Avatar from "./Avatar";
 
 export default {
-  /*
-   * This is a test
-   */
   title: "UnitComponents/Avatar",
   component: Avatar,
 } as ComponentMeta<typeof Avatar>;
