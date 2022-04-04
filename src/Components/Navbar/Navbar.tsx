@@ -5,7 +5,7 @@ type NavbarProps = {
   children?: ReactNode;
 };
 
-/**
+/*
  * This feature uses a nested structure.
  *
  * Navbar component wrap all the NavbarItems components (passed to the component as array).

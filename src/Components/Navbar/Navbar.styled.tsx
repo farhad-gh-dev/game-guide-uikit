@@ -30,9 +30,14 @@ export const StyledNavbarItem = styled.li<{ active?: boolean }>`
     color: ${color.lightest};
     font-size: ${typography.size.text_14};
     letter-spacing: 0.05em;
+    transition: 0.2s ease-in-out;
 
     @media (min-width: ${breakpoint.laptopScreen}px) {
       font-size: ${typography.size.text_16};
+    }
+
+    &:hover {
+      opacity: 1;
     }
   }
 
