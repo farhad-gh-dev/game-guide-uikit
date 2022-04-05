@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { color, typography, breakpoint } from "../../Styles/styles";
+import { color, breakpoint } from "../../Styles/styles";
 
 export const StyledIcon = styled.div<{
   color?: string;
