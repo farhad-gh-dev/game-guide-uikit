@@ -92,12 +92,5 @@ export const StyledMenuItem = styled.div<{ active?: boolean }>`
     @media (min-width: ${breakpoint.laptopScreen}px) {
       padding: 9px 23px;
     }
-
-    span {
-      display: block;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
   }
 `;

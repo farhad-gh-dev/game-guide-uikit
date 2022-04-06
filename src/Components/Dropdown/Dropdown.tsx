@@ -40,6 +40,7 @@ export const Dropdown: React.FC<Props> = ({
                     size="sm"
                     fontWeigh="500"
                     textTransform="capitalize"
+                    overflowEllipsis
                   >
                     {i.text}
                   </Text>

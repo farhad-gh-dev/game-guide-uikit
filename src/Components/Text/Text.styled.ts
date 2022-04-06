@@ -7,7 +7,9 @@ export const StyledParagraph = styled.p<{
   size?: string;
   fontWeigh?: string;
   textTransform?: string;
+  overflowEllipsis?: string;
 }>`
+  display: block;
   color: ${color.darkest};
   font-size: ${typography.size.text_12};
   @media (min-width: ${breakpoint.laptopScreen}px) {
@@ -80,6 +82,15 @@ export const StyledParagraph = styled.p<{
     props.textTransform &&
     `
     text-transform: ${props.textTransform};
+    `}
+  
+  // overflow
+  ${(props) =>
+    props.overflowEllipsis &&
+    `
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     `}
 `;
 

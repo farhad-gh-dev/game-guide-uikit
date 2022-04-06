@@ -20,6 +20,7 @@ type Props = {
     | "700"
     | "900";
   textTransform?: "uppercase" | "capitalize" | "lowercase" | "none";
+  overflowEllipsis?: boolean;
 } & React.ComponentProps<"p"> &
   React.ComponentProps<"span">;
 
