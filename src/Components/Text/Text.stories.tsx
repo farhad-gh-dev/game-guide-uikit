@@ -62,3 +62,10 @@ export const Transform = () => (
     <Text textTransform="uppercase">Uppercase: {defaultText}</Text>
   </div>
 );
+
+export const OverflowEllipsis = Template.bind({});
+OverflowEllipsis.args = {
+  children: "This text is so long it's overflowing",
+  style: { width: "230px" },
+  overflowEllipsis: true,
+};
