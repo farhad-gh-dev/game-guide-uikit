@@ -5,7 +5,7 @@ export const StyledParagraph = styled.p<{
   isInline?: boolean;
   opacity?: number;
   size?: string;
-  fontWeigh?: string;
+  fontWeight?: string;
   textTransform?: string;
   overflowEllipsis?: string;
 }>`
@@ -70,11 +70,11 @@ export const StyledParagraph = styled.p<{
     }
     `}
 
-  // fontWeigh
+  // fontWeight
   ${(props) =>
-    props.fontWeigh &&
+    props.fontWeight &&
     `
-    font-weight: ${props.fontWeigh};
+    font-weight: ${props.fontWeight};
     `}
 
   // textTransform

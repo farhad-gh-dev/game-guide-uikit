@@ -54,13 +54,13 @@ export const Types = () => (
 
 export const FontWeights = () => (
   <div>
-    <Heading fontWeigh="lighter">
+    <Heading fontWeight="lighter">
       {defaultText} ---{">"} lighter
     </Heading>
-    <Heading fontWeigh="normal">
+    <Heading fontWeight="normal">
       {defaultText} ---{">"} normal
     </Heading>
-    <Heading fontWeigh="bold">
+    <Heading fontWeight="bold">
       {defaultText} ---{">"} bold
     </Heading>
   </div>

@@ -43,13 +43,13 @@ export const Sizes = () => (
 
 export const FontWeights = () => (
   <div>
-    <Text fontWeigh="lighter">
+    <Text fontWeight="lighter">
       {defaultText} ---{">"} lighter
     </Text>
-    <Text fontWeigh="normal">
+    <Text fontWeight="normal">
       {defaultText} ---{">"} normal
     </Text>
-    <Text fontWeigh="bold">
+    <Text fontWeight="bold">
       {defaultText} ---{">"} bold
     </Text>
   </div>

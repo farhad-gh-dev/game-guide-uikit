@@ -10,7 +10,7 @@ type Props = {
    */
   opacity?: number;
   size?: "sm" | "md" | "lg"; // sm -> m:12px, d:16px || md -> m:14px, d:18px || lg -> m:16px, d:20px
-  fontWeigh?:
+  fontWeight?:
     | "lighter"
     | "normal"
     | "bold"

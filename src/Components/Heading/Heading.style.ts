@@ -4,7 +4,7 @@ import { color, typography, breakpoint } from "../../Styles/styles";
 export const StyledH1 = styled.h1<{
   isInline?: boolean;
   opacity?: number;
-  fontWeigh?: string;
+  fontWeight?: string;
   textTransform?: string;
 }>`
   color: ${color.darkest};
@@ -30,11 +30,11 @@ export const StyledH1 = styled.h1<{
     opacity: ${props.opacity};
     `}
 
-  // fontWeigh
+  // fontWeight
   ${(props) =>
-    props.fontWeigh &&
+    props.fontWeight &&
     `
-    font-weight: ${props.fontWeigh};
+    font-weight: ${props.fontWeight};
     `}
 
   // textTransform

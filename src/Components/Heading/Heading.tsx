@@ -16,7 +16,7 @@ type Props = {
    */
   opacity?: number;
   textTransform?: "uppercase" | "capitalize" | "lowercase" | "none";
-  fontWeigh?:
+  fontWeight?:
     | "lighter"
     | "normal"
     | "bold"

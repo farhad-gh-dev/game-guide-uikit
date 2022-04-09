@@ -38,7 +38,7 @@ export const Dropdown: React.FC<Props> = ({
                   <Text
                     isSpan
                     size="sm"
-                    fontWeigh="500"
+                    fontWeight="500"
                     textTransform="capitalize"
                     overflowEllipsis
                   >
