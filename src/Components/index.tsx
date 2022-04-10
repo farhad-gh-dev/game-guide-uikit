@@ -4,6 +4,7 @@ export { default as Button } from "./Button/Button";
 export { default as CustomIcon } from "./CustomIcon/CustomIcon";
 export { default as Dropdown } from "./Dropdown/Dropdown";
 export { default as Heading } from "./Heading/Heading";
+export { default as ItemCard } from "./ItemCard/ItemCard";
 export { Navbar, NavbarItem } from "./Navbar/Navbar";
 export { default as Rating } from "./Rating/Rating";
 export { default as SliderControl } from "./SliderControl/SliderControl";
