@@ -26,7 +26,7 @@ Standard.args = {
   children: mockItems.map((i, index) => {
     return (
       <NavbarItem active={index === 1}>
-        <a key={i} href="/">
+        <a key={i} href="#">
           {i}
         </a>
       </NavbarItem>
