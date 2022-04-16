@@ -1,6 +1,5 @@
 import { createGlobalStyle, css } from "styled-components";
 import { color, typography, breakpoint } from "./styles";
-import "./fonts/index.scss";
 
 export const bodyStyles = css`
   font-family: ${typography.type.primary};
@@ -142,7 +141,9 @@ export const bodyStyles = css`
 `;
 
 export const GlobalStyle = createGlobalStyle`
- body {
-   ${bodyStyles}
- }
+  @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap");
+
+  body {
+    ${bodyStyles}
+  }
 `;
