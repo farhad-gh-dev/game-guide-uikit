@@ -6,18 +6,21 @@ export const StyledBrandLogo = styled.div`
   align-items: center;
 `;
 
-export const StyledLogo = styled.img<{
+export const StyledLogo = styled.div<{
   imageOnly?: boolean;
 }>`
-  height: 25px;
-  width: auto;
+  &,
+  svg {
+    height: 25px;
+    width: auto;
 
-  @media (min-width: ${breakpoint.laptopScreen}px) {
-    height: 44px;
-  }
+    @media (min-width: ${breakpoint.laptopScreen}px) {
+      height: 44px;
+    }
 
-  @media (min-width: ${breakpoint.largeScreen}px) {
-    height: 50px;
+    @media (min-width: ${breakpoint.largeScreen}px) {
+      height: 50px;
+    }
   }
 
   ${(props) =>

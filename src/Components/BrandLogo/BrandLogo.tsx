@@ -1,5 +1,5 @@
 import React from "react";
-import LogoIcon from "../../Assets/brand-logo.svg";
+import LogoIcon from "./Logo";
 import { StyledBrandLogo, StyledLogo, StyledText } from "./BrandLogo.styled";
 
 type Props = {
@@ -13,7 +13,9 @@ const Button: React.FC<Props> = (props) => {
 
   return (
     <StyledBrandLogo>
-      <StyledLogo src={LogoIcon} imageOnly={imageOnly} />
+      <StyledLogo imageOnly={imageOnly}>
+        <LogoIcon />
+      </StyledLogo>
       {!imageOnly ? (
         <>
           <StyledText colored>{coloredText}</StyledText>&nbsp;

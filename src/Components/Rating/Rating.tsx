@@ -1,6 +1,6 @@
 import React from "react";
 import { StyledRating, StyledRatingContent } from "./Rating.styled";
-import { ReactComponent as StarSvg } from "../../Assets/star.svg";
+import StarSvg from "./StarIcon";
 import { Text } from "..";
 
 type Props = {

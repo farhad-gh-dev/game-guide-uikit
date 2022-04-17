@@ -1,9 +1,9 @@
 import React from "react";
 import { StyledIcon } from "./CustomIcon.styled";
-import { ReactComponent as ShoppingCardIcon } from "../../Assets/icons/shopping-card.svg";
-import { ReactComponent as BellIcon } from "../../Assets/icons/bell.svg";
-import { ReactComponent as SearchIcon } from "../../Assets/icons/search.svg";
-import { ReactComponent as PlayIcon } from "../../Assets/icons/play.svg";
+import ShoppingCardIcon from "./Icons/ShoppingCard";
+import BellIcon from "./Icons/Bell";
+import SearchIcon from "./Icons/Search";
+import PlayIcon from "./Icons/Play";
 
 type IconTypes = "shopping-card" | "bell" | "search" | "play";
 type Props = {
