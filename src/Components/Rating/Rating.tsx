@@ -1,7 +1,7 @@
 import React from "react";
 import { StyledRating, StyledRatingContent } from "./Rating.styled";
 import StarSvg from "./StarIcon";
-import { Text } from "..";
+import Text from "../Text/Text";
 
 type Props = {
   rating?: number;

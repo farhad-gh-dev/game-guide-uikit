@@ -5,8 +5,8 @@ import {
   StyledRatingBox,
   StyledTitleBox,
 } from "./ItemCard.styled";
-import { Text } from "../index";
-import { Rating } from "../index";
+import Text from "../Text/Text";
+import Rating from "../Rating/Rating";
 
 type Props = {
   title?: string;

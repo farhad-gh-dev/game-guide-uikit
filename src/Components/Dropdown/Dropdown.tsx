@@ -5,7 +5,7 @@ import {
   StyledMenu,
   StyledMenuItem,
 } from "./Dropdown.styled";
-import { Text } from "../index";
+import Text from "../Text/Text";
 
 type DropdownItem = {
   text?: string;
