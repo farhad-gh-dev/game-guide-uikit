@@ -1,7 +1,13 @@
 {
-  "name": "ui-kit",
-  "version": "0.1.0",
-  "private": true,
+  "name": "game-guide-ui-kit",
+  "version": "0.6.4",
+  "description": "a UI kit for game guide application",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "repository": "https://github.com/farhad-gh-dev/game-guide-uikit.git",
+  "author": "Farhad Gholomi",
+  "license": "MIT",
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
@@ -24,7 +30,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "rollup -c",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
@@ -59,11 +65,31 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@rollup/plugin-commonjs": "^21.1.0",
+    "@rollup/plugin-image": "^2.1.1",
+    "@rollup/plugin-node-resolve": "^13.2.1",
+    "@rollup/plugin-typescript": "^8.3.2",
     "@storybook/addon-actions": "^6.3.12",
     "@storybook/addon-essentials": "^6.3.12",
     "@storybook/addon-links": "^6.3.12",
     "@storybook/node-logger": "^6.3.12",
     "@storybook/preset-create-react-app": "^3.2.0",
-    "@storybook/react": "^6.3.12"
+    "@storybook/react": "^6.3.12",
+    "@svgr/rollup": "^6.2.1",
+    "cross-env": "^7.0.3",
+    "rollup": "^2.70.2",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-dts": "^4.2.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-scss": "^3.0.0",
+    "rollup-plugin-terser": "^7.0.2"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react",
+      "@babel/preset-typescript"
+    ]
   }
 }
