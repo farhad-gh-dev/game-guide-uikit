@@ -11,11 +11,11 @@ import SliderControl from "./Components/SliderControl/SliderControl";
 import Text from "./Components/Text/Text";
 
 import * as styles from "./Styles/styles";
-import * as global from "./Styles/global";
+import { GlobalStyle } from "./Styles/global";
 
 export {
     styles, 
-    global,
+    GlobalStyle,
     Avatar,
     BrandLogo,
     Button,

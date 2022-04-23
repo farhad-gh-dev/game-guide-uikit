@@ -1,25 +1,34 @@
 import styled from "styled-components";
 import { color, typography, breakpoint } from "../../Styles/styles";
 
-export const StyledAvatar = styled.div<{ imageSrc?: string }>`
+export const StyledAvatar = styled.div<{ imageSrc?: any }>`
   position: relative;
-  width: 35px;
-  height: 35px;
   border-radius: 100%;
-  background-image: url(${(props) => (props.imageSrc ? props.imageSrc : "")});
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
 
-  @media (min-width: ${breakpoint.laptopScreen}px) {
-    width: 50px;
-    height: 50px;
+  &,
+  svg {
+    width: 35px;
+    height: 35px;
+
+    @media (min-width: ${breakpoint.laptopScreen}px) {
+      width: 50px;
+      height: 50px;
+    }
+
+    @media (min-width: ${breakpoint.largeScreen}px) {
+      width: 60px;
+      height: 60px;
+    }
   }
 
-  @media (min-width: ${breakpoint.largeScreen}px) {
-    width: 60px;
-    height: 60px;
-  }
+  ${(props) =>
+    props.imageSrc &&
+    `
+      background-image: url(${props.imageSrc});
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    `};
 `;
 
 export const StyledProfileType = styled.div`
