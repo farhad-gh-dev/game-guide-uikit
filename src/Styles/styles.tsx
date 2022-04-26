@@ -27,21 +27,6 @@ export const spacing = {
     navbar_large: 50,
     navbar_small: 20,
 
-    // banner_large: 35,
-    // banner_small: 16,
-
-    // price_box_large: 20,
-    // price_box_small: 10,
-
-    // collection_card_large: 20,
-    // collection_card_small: 14,
-
-    // offer_image_large: 25,
-    // offer_image_small: 16,
-
-    // rating_large: 15,
-    // rating_small: 12,
-
     default: 10,
   },
 };
