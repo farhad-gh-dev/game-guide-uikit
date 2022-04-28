@@ -15,6 +15,9 @@ export const StyledSlider = styled.div`
 `;
 
 export const StyledSliderItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: absolute;
   top: 0;
   left: 0;

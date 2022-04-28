@@ -1,5 +1,6 @@
 import React from "react";
 import Text from "../Text/Text";
+import PriceBox from "./PriceBox/PriceBox";
 import {
   StyledSlider,
   StyledSliderItem,
@@ -37,6 +38,9 @@ const Slider: React.FC<Props> = ({
             </Text>
           </StyledDescription>
         </StyledTextArea>
+        <div>
+          <PriceBox />
+        </div>
       </StyledSliderItem>
     </StyledSlider>
   );
