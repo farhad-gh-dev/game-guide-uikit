@@ -9,10 +9,16 @@ import {
 } from "./PriceBox.styled";
 
 type Props = {
+  itemId?: string | number;
   price?: number;
+  onBuyHandler?: (itemId?: string | number) => void;
 };
 
-const PriceBox: React.FC<Props> = ({ price = 0 }) => {
+const PriceBox: React.FC<Props> = ({
+  itemId,
+  price = 0,
+  onBuyHandler = () => {},
+}) => {
   return (
     <StyledPriceBox>
       <StyledTextArea>
@@ -21,13 +27,13 @@ const PriceBox: React.FC<Props> = ({ price = 0 }) => {
         </Text>
         <StyledPrice>
           <Text size="md" fontWeight="900">
-            $ 1,500
+            $ {price}
           </Text>
           <div></div>
         </StyledPrice>
       </StyledTextArea>
       <StyledButtonContainer>
-        <Button active={true} isLink={true} href={"https://google.com"}>
+        <Button active={true} onClick={() => onBuyHandler(itemId)}>
           Buy
         </Button>
       </StyledButtonContainer>

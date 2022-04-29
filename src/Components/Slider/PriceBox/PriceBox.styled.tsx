@@ -24,6 +24,16 @@ export const StyledPriceBox = styled.div`
 export const StyledTextArea = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 116px;
+
+  @media (min-width: ${breakpoint.laptopScreen}px) {
+    width: 191px;
+  }
+
+  @media (min-width: ${breakpoint.largeScreen}px) {
+    width: 214px;
+  }
 
   p {
     color: rgba(0, 0, 0, 0.5);
@@ -33,15 +43,6 @@ export const StyledTextArea = styled.div`
 export const StyledPrice = styled.div`
   display: flex;
   align-items: center;
-  margin-left: 26px;
-
-  @media (min-width: ${breakpoint.laptopScreen}px) {
-    margin-left: 65px;
-  }
-
-  @media (min-width: ${breakpoint.largeScreen}px) {
-    margin-left: 70px;
-  }
 
   p {
     color: black;

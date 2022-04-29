@@ -4,44 +4,82 @@ import PriceBox from "./PriceBox/PriceBox";
 import {
   StyledSlider,
   StyledSliderItem,
+  StyledOverlayImage,
   StyledTextArea,
   StyledTitleImage,
   StyledDefaultTitle,
   StyledDescription,
 } from "./Slider.styled";
 
-type Props = {
+type SliderItem = {
+  id?: string | number;
+  title: string;
+  backgroundImageSrc?: string;
+  overlayImageSrc?: string;
+  /**
+   * To percentage
+   */
+  overlayImageHeight: number;
+  /**
+   * To percentage
+   */
+  overlayPositionFromRight: number;
   titleImageSrc?: string;
   description?: string;
+  lightDescription?: boolean;
   price?: number;
 };
 
+type Props = {
+  sliderItems?: Array<SliderItem>;
+  activeSlide?: number;
+  onBuyHandler?: (itemId?: string | number) => void;
+};
+
 const Slider: React.FC<Props> = ({
-  titleImageSrc = "",
-  description = "",
-  price = "",
+  sliderItems = [],
+  activeSlide = 0,
+  onBuyHandler = () => {},
 }) => {
   return (
     <StyledSlider>
-      <StyledSliderItem>
-        <StyledTextArea>
-          {titleImageSrc ? (
-            <StyledTitleImage src={titleImageSrc} title={titleImageSrc} />
-          ) : (
-            <StyledDefaultTitle>No Title</StyledDefaultTitle>
-          )}
-          <StyledDescription>
-            <Text size="md">
-              This Collection Includes 4 Versions Of All Call Of Duty & You Can
-              Have Permanent Access To The 4 Versions Available In The
-              Collection Buy Buying Online.
-            </Text>
-          </StyledDescription>
-        </StyledTextArea>
-        <div>
-          <PriceBox />
-        </div>
-      </StyledSliderItem>
+      {sliderItems?.map((item, index) => {
+        return (
+          <StyledSliderItem
+            active={activeSlide === index}
+            backgroundImageSrc={item.backgroundImageSrc}
+            key={item.id}
+          >
+            <StyledOverlayImage
+              src={item.overlayImageSrc}
+              imageHeight={item.overlayImageHeight}
+              imagePositionFromRight={item.overlayPositionFromRight}
+            />
+            <StyledTextArea>
+              {item.titleImageSrc ? (
+                <StyledTitleImage
+                  src={item.titleImageSrc}
+                  title={item.titleImageSrc}
+                />
+              ) : (
+                <StyledDefaultTitle>
+                  {item.title ? item.title : "No Title"}
+                </StyledDefaultTitle>
+              )}
+              <StyledDescription isLight={item.lightDescription}>
+                <Text size="md">{item.description}</Text>
+              </StyledDescription>
+            </StyledTextArea>
+            <div>
+              <PriceBox
+                price={item.price}
+                itemId={item.id}
+                onBuyHandler={onBuyHandler}
+              />
+            </div>
+          </StyledSliderItem>
+        );
+      })}
     </StyledSlider>
   );
 };

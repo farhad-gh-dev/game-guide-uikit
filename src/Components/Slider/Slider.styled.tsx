@@ -14,7 +14,10 @@ export const StyledSlider = styled.div`
   }
 `;
 
-export const StyledSliderItem = styled.div`
+export const StyledSliderItem = styled.div<{
+  active?: boolean;
+  backgroundImageSrc?: string;
+}>`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -26,6 +29,9 @@ export const StyledSliderItem = styled.div`
   padding: 30px 20px;
   background-color: #f2f2f2;
   border-radius: 16px;
+  opacity: 0;
+  z-index: 0;
+  transition: 0.3s ease-in-out;
 
   @media (min-width: ${breakpoint.laptopScreen}px) {
     border-radius: 20px;
@@ -35,6 +41,45 @@ export const StyledSliderItem = styled.div`
     border-radius: 35px;
     padding: 80px 60px;
   }
+
+  ${(props) =>
+    props.backgroundImageSrc &&
+    `
+    background-image: url("${props.backgroundImageSrc}");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    `}
+
+  ${(props) =>
+    props.active &&
+    `
+    opacity: 1;
+    z-index: 100;
+    `}
+`;
+
+export const StyledOverlayImage = styled.img<{
+  imageHeight?: number;
+  imagePositionFromRight?: number;
+}>`
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 120%;
+  width: auto;
+
+  ${(props) =>
+    props.imagePositionFromRight &&
+    `
+    right: ${props.imagePositionFromRight}%;
+    `}
+
+  ${(props) =>
+    props.imageHeight &&
+    `
+    height: ${props.imageHeight}%;
+    `}
 `;
 
 export const StyledTextArea = styled.div``;
@@ -65,7 +110,9 @@ export const StyledDefaultTitle = styled.span`
   }
 `;
 
-export const StyledDescription = styled.div`
+export const StyledDescription = styled.div<{
+  isLight?: boolean;
+}>`
   display: none;
 
   @media (min-width: ${breakpoint.laptopScreen}px) {
@@ -77,7 +124,7 @@ export const StyledDescription = styled.div`
 
   @media (min-width: ${breakpoint.largeScreen}px) {
     width: 500px;
-    margin-top: 44px;
+    margin-top: 32px;
   }
 
   p {
@@ -86,5 +133,11 @@ export const StyledDescription = styled.div`
     @media (min-width: ${breakpoint.largeScreen}px) {
       font-size: ${typography.size.text_20};
     }
+
+    ${(props) =>
+      props.isLight &&
+      `
+    color: ${color.lightest};
+    `}
   }
 `;
