@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import CustomIcon from "./CustomIcon";
 
 export default {
-  title: "UnitComponents/CustomIcon",
+  title: "Unit_Components/CustomIcon",
   component: CustomIcon,
 } as ComponentMeta<typeof CustomIcon>;
 

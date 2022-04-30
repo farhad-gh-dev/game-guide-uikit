@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Navbar, NavbarItem } from "./Navbar";
 
 export default {
-  title: "UnitComponents/Navbar",
+  title: "Unit_Components/Navbar",
   component: Navbar,
 } as ComponentMeta<typeof Navbar>;
 

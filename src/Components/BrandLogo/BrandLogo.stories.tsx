@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import BrandLogo from "./BrandLogo";
 
 export default {
-  title: "UnitComponents/Brand Logo",
+  title: "Unit_Components/Brand Logo",
   component: BrandLogo,
 } as ComponentMeta<typeof BrandLogo>;
 

@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Text from "./Text";
 
 export default {
-  title: "UnitComponents/Text",
+  title: "Unit_Components/Text",
   component: Text,
 } as ComponentMeta<typeof Text>;
 

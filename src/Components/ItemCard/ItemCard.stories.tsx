@@ -5,7 +5,7 @@ import { breakpoint } from "../../Styles/styles";
 import ItemCard from "./ItemCard";
 
 export default {
-  title: "UnitComponents/ItemCard",
+  title: "Composed_Components/ItemCard",
   component: ItemCard,
 } as ComponentMeta<typeof ItemCard>;
 

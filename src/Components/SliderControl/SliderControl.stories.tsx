@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import SliderControl from "./SliderControl";
 
 export default {
-  title: "UnitComponents/Slider Control",
+  title: "Unit_Components/Slider Control",
   component: SliderControl,
 } as ComponentMeta<typeof SliderControl>;
 
