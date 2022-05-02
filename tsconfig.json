@@ -16,7 +16,7 @@
     "jsx": "react-jsx",
     "declaration": true,
     "declarationDir": "types",
-    "sourceMap": true,
+    "sourceMap": false,
     "outDir": "dist",
     "emitDeclarationOnly": true
   },

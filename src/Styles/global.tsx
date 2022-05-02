@@ -5,6 +5,8 @@ export const bodyStyles = css`
   font-family: ${typography.type.primary};
   font-size: ${typography.size.text_14};
   color: ${color.darkest};
+  margin: 0;
+  padding: 0;
 
   @media (min-width: ${breakpoint.laptopScreen}px) {
     font-size: ${typography.size.text_18};

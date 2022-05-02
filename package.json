@@ -1,6 +1,6 @@
 {
   "name": "game-guide-ui-kit",
-  "version": "0.6.7",
+  "version": "0.9.3",
   "description": "a UI kit for game guide application",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -27,7 +27,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "rollup -c",
+    "build": "npx rimraf dist && rollup -c",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
