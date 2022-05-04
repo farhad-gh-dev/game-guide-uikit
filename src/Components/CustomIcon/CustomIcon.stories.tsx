@@ -26,7 +26,7 @@ export const All = () => {
     <div>
       <Template type="shopping-card" />
       <Template type="shopping-card" strokeColor="primary" />
-      <Template type="shopping-card" heightTablet="50px" />
+      <Template type="shopping-card" heightLaptop="50px" />
       <Template type="bell" />
       <Template type="search" strokeColor="white" />
       <Template type="play" />

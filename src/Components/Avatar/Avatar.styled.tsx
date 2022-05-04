@@ -38,6 +38,7 @@ export const StyledProfileType = styled.div`
   transform: translateX(-50%);
   padding: 0 4px;
   background-color: ${color.dark_yellow};
+  color: ${color.darkest};
   border-radius: 3px;
   font-size: ${typography.size.text_10};
   text-transform: capitalize;

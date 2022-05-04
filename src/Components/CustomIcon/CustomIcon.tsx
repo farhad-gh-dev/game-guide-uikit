@@ -20,7 +20,7 @@ type Props = {
   widthTablet?: string;
   widthDesktop?: string;
   height?: string;
-  heightTablet?: string;
+  heightLaptop?: string;
   heightDesktop?: string;
 };
 

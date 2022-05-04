@@ -8,10 +8,11 @@ export const StyledIcon = styled.div<{
   widthTablet?: string;
   widthDesktop?: string;
   height?: string;
-  heightTablet?: string;
+  heightLaptop?: string;
   heightDesktop?: string;
 }>`
   svg {
+    display: block;
     height: auto;
     width: auto;
 
@@ -21,17 +22,17 @@ export const StyledIcon = styled.div<{
             height: ${props.height}
         `};
     ${(props) =>
-      props.heightTablet &&
+      props.heightLaptop &&
       `
             @media (min-width: ${breakpoint.laptopScreen}px) {
-                height: ${props.heightTablet};
+                height: ${props.heightLaptop};
             } 
         `};
     ${(props) =>
       props.heightDesktop &&
       `
             @media (min-width: ${breakpoint.largeScreen}px) {
-                height: ${props.widthDesktop};
+                height: ${props.heightDesktop};
             }
         `};
 
