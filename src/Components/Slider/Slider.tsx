@@ -13,17 +13,17 @@ import {
 
 type SliderItem = {
   id?: string | number;
-  title: string;
+  title?: string;
   backgroundImageSrc?: string;
   overlayImageSrc?: string;
   /**
    * To percentage
    */
-  overlayImageHeight: number;
+  overlayImageHeight?: number;
   /**
    * To percentage
    */
-  overlayPositionFromRight: number;
+  overlayPositionFromRight?: number;
   titleImageSrc?: string;
   description?: string;
   lightDescription?: boolean;
