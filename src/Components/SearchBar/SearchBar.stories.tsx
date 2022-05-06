@@ -21,3 +21,6 @@ const Template: ComponentStory<typeof SearchBar> = (args) => (
 );
 
 export const Standard = Template.bind({});
+Standard.args = {
+  onSearch: (i) => console.log(i),
+};

@@ -9,10 +9,10 @@ import {
 import CustomIcon from "../CustomIcon/CustomIcon";
 
 type Props = {
-  onSearch: (i: string) => void;
+  onSearch?: (i: string) => void;
 };
 
-const SearchBar: React.FC<Props> = ({ onSearch }) => {
+const SearchBar: React.FC<Props> = ({ onSearch = () => {} }) => {
   const [isActive, setIsActive] = useState<boolean>(false);
   const [inputValue, setInputValue] = useState<string>("");
 
