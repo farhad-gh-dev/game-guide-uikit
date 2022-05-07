@@ -30,6 +30,8 @@ export const All = () => {
       <Template type="bell" />
       <Template type="search" strokeColor="white" />
       <Template type="play" />
+      <Template type="arrow-to-left" strokeColor="white" />
+      <Template type="arrow-to-right" strokeColor="white" />
     </div>
   );
 };

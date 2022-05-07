@@ -4,8 +4,16 @@ import ShoppingCardIcon from "./Icons/ShoppingCard";
 import BellIcon from "./Icons/Bell";
 import SearchIcon from "./Icons/Search";
 import PlayIcon from "./Icons/Play";
+import ArrowToLeft from "./Icons/ArrowToLeft";
+import ArrowToRight from "./Icons/ArrowToRight";
 
-type IconTypes = "shopping-card" | "bell" | "search" | "play";
+type IconTypes =
+  | "shopping-card"
+  | "bell"
+  | "search"
+  | "play"
+  | "arrow-to-left"
+  | "arrow-to-right";
 type Props = {
   type?: IconTypes;
   /**
@@ -42,6 +50,10 @@ const TargetIcon: React.FC<{ type?: IconTypes }> = ({ type = "" }) => {
       return <SearchIcon />;
     case "play":
       return <PlayIcon />;
+    case "arrow-to-left":
+      return <ArrowToLeft />;
+    case "arrow-to-right":
+      return <ArrowToRight />;
     default:
       return null;
   }
