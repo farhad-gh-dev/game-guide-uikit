@@ -68,6 +68,7 @@ export const StyledOverlayImage = styled.img<{
   bottom: 0;
   height: 120%;
   width: auto;
+  max-width: 100%;
 
   ${(props) =>
     props.imagePositionFromRight &&
@@ -82,13 +83,21 @@ export const StyledOverlayImage = styled.img<{
     `}
 `;
 
-export const StyledTextArea = styled.div``;
+export const StyledTextArea = styled.div`
+  flex: 1;
+  position: relative;
+`;
 
 export const StyledTitleImage = styled.img<{
   titleImageSrc?: string;
+  titleImageHeight?: number;
 }>`
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 25px;
   width: auto;
+  z-index: -1;
 
   @media (min-width: ${breakpoint.laptopScreen}px) {
     height: 37px;
@@ -96,6 +105,20 @@ export const StyledTitleImage = styled.img<{
   @media (min-width: ${breakpoint.largeScreen}px) {
     height: 50px;
   }
+
+  ${(props) =>
+    props.titleImageHeight &&
+    `
+      height: ${props.titleImageHeight}%;
+
+      @media (min-width: ${breakpoint.laptopScreen}px) {
+        height: ${props.titleImageHeight}%;
+      }
+
+      @media (min-width: ${breakpoint.largeScreen}px) {
+        height: ${props.titleImageHeight}%;
+      }
+    `}
 `;
 
 export const StyledDefaultTitle = styled.span`
@@ -107,37 +130,5 @@ export const StyledDefaultTitle = styled.span`
   }
   @media (min-width: ${breakpoint.largeScreen}px) {
     font-size: 37px;
-  }
-`;
-
-export const StyledDescription = styled.div<{
-  isLight?: boolean;
-}>`
-  display: none;
-
-  @media (min-width: ${breakpoint.laptopScreen}px) {
-    display: flex;
-    flex-direction: column;
-    width: 445px;
-    margin-top: 37px;
-  }
-
-  @media (min-width: ${breakpoint.largeScreen}px) {
-    width: 500px;
-    margin-top: 32px;
-  }
-
-  p {
-    text-shadow: 0px 0px black;
-
-    @media (min-width: ${breakpoint.largeScreen}px) {
-      font-size: ${typography.size.text_20};
-    }
-
-    ${(props) =>
-      props.isLight &&
-      `
-    color: ${color.lightest};
-    `}
   }
 `;

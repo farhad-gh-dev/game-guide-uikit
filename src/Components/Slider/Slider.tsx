@@ -8,7 +8,6 @@ import {
   StyledTextArea,
   StyledTitleImage,
   StyledDefaultTitle,
-  StyledDescription,
 } from "./Slider.styled";
 
 type SliderItem = {
@@ -25,7 +24,10 @@ type SliderItem = {
    */
   overlayPositionFromRight?: number;
   titleImageSrc?: string;
-  description?: string;
+  /**
+   * To percentage
+   */
+  titleImageHeight?: number;
   lightDescription?: boolean;
   price?: number;
 };
@@ -60,15 +62,13 @@ const Slider: React.FC<Props> = ({
                 <StyledTitleImage
                   src={item.titleImageSrc}
                   title={item.titleImageSrc}
+                  titleImageHeight={item.titleImageHeight}
                 />
-              ) : (
-                <StyledDefaultTitle>
-                  {item.title ? item.title : "No Title"}
-                </StyledDefaultTitle>
-              )}
-              <StyledDescription isLight={item.lightDescription}>
-                <Text size="md">{item.description}</Text>
-              </StyledDescription>
+              ) : null}
+
+              {!item.titleImageSrc && item.title ? (
+                <StyledDefaultTitle>{item.title}</StyledDefaultTitle>
+              ) : null}
             </StyledTextArea>
             <div>
               <PriceBox

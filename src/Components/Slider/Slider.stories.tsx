@@ -42,8 +42,7 @@ Standard.args = {
       overlayPositionFromRight: 2,
       titleImageSrc:
         "https://logodownload.org/wp-content/uploads/2020/06/valorant-logo.png",
-      description:
-        "This Collection Includes 4 Versions Of All Call Of Duty & You Can Have Permanent Access To The 4 Versions Available In The Collection Buy Buying Online.",
+      titleImageHeight: 50,
       lightDescription: true,
       price: 1500,
     },
@@ -55,8 +54,6 @@ Standard.args = {
         "https://gmedia.playstation.com/is/image/SIEPDC/apex-legends-seer-character-image-block-01-ps4-en-27jul21?$native--t$",
       overlayPositionFromRight: -3,
       title: "Apex Legends",
-      description:
-        "This Collection Includes 4 Versions Of All Call Of Duty & You Can Have Permanent Access To The 4 Versions Available In The Collection Buy Buying Online.",
       price: 1700,
     },
   ],
