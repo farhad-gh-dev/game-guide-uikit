@@ -8,6 +8,7 @@ import ItemCard from "./Components/ItemCard/ItemCard";
 import { Navbar, NavbarItem } from "./Components/Navbar/Navbar";
 import Rating from "./Components/Rating/Rating";
 import SearchBar from './Components/SearchBar/SearchBar';
+import Slider from './Components/Slider/Slider';
 import SliderControl from "./Components/SliderControl/SliderControl";
 import Text from "./Components/Text/Text";
 
@@ -27,6 +28,7 @@ export {
     Navbar, NavbarItem,
     Rating,
     SearchBar,
+    Slider,
     SliderControl,
     Text
 };

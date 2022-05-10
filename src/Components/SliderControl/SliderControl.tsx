@@ -14,7 +14,7 @@ type Props = {
 };
 
 const SliderControl: React.FC<Props> = ({
-  numberOfSlides = 4,
+  numberOfSlides = 1,
   activeSlide = 1,
   handleSlideChange = () => {},
 }) => {
@@ -27,7 +27,7 @@ const SliderControl: React.FC<Props> = ({
               <StyledSingleIndicator
                 key={index}
                 active={index + 1 === activeSlide}
-                onClick={() => handleSlideChange(index)}
+                onClick={() => handleSlideChange(index + 1)}
               />
             );
           })}

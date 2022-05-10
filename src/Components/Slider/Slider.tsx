@@ -38,7 +38,7 @@ type Props = {
 
 const Slider: React.FC<Props> = ({
   sliderItems = [],
-  activeSlide = 0,
+  activeSlide = 1,
   onBuyHandler = () => {},
 }) => {
   return (
@@ -46,7 +46,7 @@ const Slider: React.FC<Props> = ({
       {sliderItems?.map((item, index) => {
         return (
           <StyledSliderItem
-            active={activeSlide === index}
+            active={activeSlide - 1 === index}
             backgroundImageSrc={item.backgroundImageSrc}
             key={item.id}
           >
