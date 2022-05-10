@@ -27,7 +27,7 @@ const PriceBox: React.FC<Props> = ({
         </Text>
         <StyledPrice>
           <Text size="md" fontWeight="900">
-            $ {price}
+            {price ? "$" + price : "Free"}
           </Text>
           <div></div>
         </StyledPrice>
