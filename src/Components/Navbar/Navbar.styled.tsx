@@ -81,5 +81,5 @@ export const StyledNavbarItem = styled.li<{ active?: boolean }>`
             }
         }
 
-    `}
+    `};
 `;

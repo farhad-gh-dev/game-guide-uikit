@@ -38,8 +38,8 @@ Standard.args = {
         "https://progameguides.com/wp-content/uploads/2021/12/Featured-VALORANT-Logo-900x506.jpg",
       overlayImageSrc:
         "https://i.pinimg.com/originals/a9/94/d9/a994d91c5d89aca55b8231879dd7c9d0.png",
-      overlayImageHeight: 121,
-      overlayPositionFromRight: 2,
+      overlayImageHeight: 150,
+      overlayPositionFromRight: 0,
       titleImageSrc:
         "https://logodownload.org/wp-content/uploads/2020/06/valorant-logo.png",
       titleImageHeight: 50,

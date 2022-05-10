@@ -16,33 +16,29 @@ export const StyledH1 = styled.h1<{
     font-size: ${typography.size.text_32};
   }
 
-  // isInline
   ${(props) =>
     props.isInline &&
     `
     display: inline-block;
-    `}
+    `};
 
-  // opacity
   ${(props) =>
     props.opacity &&
     `
     opacity: ${props.opacity};
-    `}
+    `};
 
-  // fontWeight
   ${(props) =>
     props.fontWeight &&
     `
     font-weight: ${props.fontWeight};
-    `}
+    `};
 
-  // textTransform
   ${(props) =>
     props.textTransform &&
     `
     text-transform: ${props.textTransform};
-    `}
+    `};
 `;
 
 export const StyledH2 = styled(StyledH1).attrs({ as: "h2" })`

@@ -49,14 +49,14 @@ export const StyledSliderItem = styled.div<{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    `}
+    `};
 
   ${(props) =>
     props.active &&
     `
     opacity: 1;
     z-index: 100;
-    `}
+    `};
 `;
 
 export const StyledOverlayImage = styled.img<{
@@ -74,13 +74,13 @@ export const StyledOverlayImage = styled.img<{
     props.imagePositionFromRight &&
     `
     right: ${props.imagePositionFromRight}%;
-    `}
+    `};
 
   ${(props) =>
     props.imageHeight &&
     `
     height: ${props.imageHeight}%;
-    `}
+    `};
 `;
 
 export const StyledTextArea = styled.div`
@@ -118,7 +118,7 @@ export const StyledTitleImage = styled.img<{
       @media (min-width: ${breakpoint.largeScreen}px) {
         height: ${props.titleImageHeight}%;
       }
-    `}
+    `};
 `;
 
 export const StyledDefaultTitle = styled.span`

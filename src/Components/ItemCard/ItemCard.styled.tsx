@@ -26,7 +26,6 @@ export const StyledImageBox = styled.div<{
     border-radius: 20px;
   }
 
-  // Background image
   ${(props) =>
     props.backgroundImage &&
     `
@@ -34,7 +33,7 @@ export const StyledImageBox = styled.div<{
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
-    `}
+    `};
 `;
 
 export const StyledRatingBox = styled.div`

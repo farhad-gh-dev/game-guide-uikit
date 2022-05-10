@@ -63,7 +63,7 @@ export const StyledSingleIndicator = styled.div<{ active?: boolean }>`
     props.active &&
     `
         background-color: ${color.primary}
-    `}
+    `};
 `;
 
 export const StyledSlideNumber = styled.span`

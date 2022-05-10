@@ -19,21 +19,18 @@ export const StyledParagraph = styled.p<{
     font-size: ${typography.size.text_18};
   }
 
-  // isInline
   ${(props) =>
     props.isInline &&
     `
     display: inline-block;
-    `}
+    `};
 
-  // opacity
   ${(props) =>
     props.opacity &&
     `
     opacity: ${props.opacity};
-    `}
+    `};
 
-  // size
   ${(props) =>
     props.size === "sm" &&
     `
@@ -44,7 +41,7 @@ export const StyledParagraph = styled.p<{
     @media (min-width: ${breakpoint.largeScreen}px) {
       font-size: ${typography.size.text_16};
     }
-    `}
+    `};
 
   ${(props) =>
     props.size === "md" &&
@@ -56,7 +53,7 @@ export const StyledParagraph = styled.p<{
     @media (min-width: ${breakpoint.largeScreen}px) {
       font-size: ${typography.size.text_18};
     }
-    `}
+    `};
 
   ${(props) =>
     props.size === "lg" &&
@@ -68,30 +65,27 @@ export const StyledParagraph = styled.p<{
     @media (min-width: ${breakpoint.largeScreen}px) {
       font-size: ${typography.size.text_20};
     }
-    `}
+    `};
 
-  // fontWeight
   ${(props) =>
     props.fontWeight &&
     `
     font-weight: ${props.fontWeight};
-    `}
+    `};
 
-  // textTransform
   ${(props) =>
     props.textTransform &&
     `
     text-transform: ${props.textTransform};
-    `}
+    `};
   
-  // overflow
   ${(props) =>
     props.overflowEllipsis &&
     `
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-    `}
+    `};
 `;
 
 export const StyledSpan = StyledParagraph.withComponent("span");

@@ -52,7 +52,7 @@ export const StyledButton = styled.button<{
     &:hover, &:focus {
       filter: brightness(85%);
     }
-    `}
+    `};
 
   ${(props) =>
     props.disabled &&
@@ -61,7 +61,7 @@ export const StyledButton = styled.button<{
     color: ${color.text_disabled};
     cursor: not-allowed;
     pointer-event: none;
-    `}
+    `};
 
   @media (min-width: ${breakpoint.laptopScreen}px) {
     width: ${btnSize.width_laptop}px;
@@ -76,7 +76,7 @@ export const StyledButton = styled.button<{
       props.active &&
       `
       border-color: transparent;
-      `}
+      `};
   }
 
   @media (min-width: ${breakpoint.largeScreen}px) {
@@ -90,7 +90,7 @@ export const StyledButton = styled.button<{
       props.active &&
       `
       border-color: transparent;
-      `}
+      `};
   }
 `;
 

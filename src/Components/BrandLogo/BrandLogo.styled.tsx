@@ -35,7 +35,7 @@ export const StyledLogo = styled.div<{
     @media (min-width: ${breakpoint.largeScreen}px) {
         margin-right: 20px;
     }
-  `}
+  `};
 `;
 
 export const StyledText = styled.span<{
