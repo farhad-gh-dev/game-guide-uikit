@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import { StyledButton, StyledLink } from "./Button.styled";
 
-type Props = {
+export type ButtonProps = {
   active?: boolean;
   isLink?: boolean;
   children?: ReactNode;
@@ -11,7 +11,7 @@ type Props = {
 /**
  * This component also accept all attributes and events of buttons and links.
  */
-const Button: React.FC<Props> = (props) => {
+const Button: React.FC<ButtonProps> = (props) => {
   const { isLink = false, children = null } = props;
 
   let ButtonRender: any = StyledButton;

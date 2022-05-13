@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import { StyledParagraph, StyledSpan } from "./Text.styled";
 
-type Props = {
+export type TextProps = {
   children?: ReactNode;
   isInline?: boolean;
   isSpan?: boolean;
@@ -24,7 +24,7 @@ type Props = {
 } & React.ComponentProps<"p"> &
   React.ComponentProps<"span">;
 
-const Text: React.FC<Props> = (props) => {
+const Text: React.FC<TextProps> = (props) => {
   const { isSpan = false, children = null } = props;
 
   let TextType: any = StyledParagraph;

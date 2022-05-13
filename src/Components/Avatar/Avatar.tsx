@@ -2,12 +2,12 @@ import React from "react";
 import DefaultProfileImage from "./DefaultAvatar";
 import { StyledAvatar, StyledProfileType } from "./Avatar.styled";
 
-type Props = {
+export type AvatarProps = {
   userType?: string;
   imageSrc?: string;
 };
 
-const Avatar: React.FC<Props> = ({ userType = "", imageSrc = "" }) => {
+const Avatar: React.FC<AvatarProps> = ({ userType = "", imageSrc = "" }) => {
   return (
     <StyledAvatar imageSrc={imageSrc}>
       {!imageSrc && <DefaultProfileImage />}

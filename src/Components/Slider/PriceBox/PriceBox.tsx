@@ -8,13 +8,13 @@ import {
   StyledButtonContainer,
 } from "./PriceBox.styled";
 
-type Props = {
+export type PriceBoxProps = {
   itemId?: string | number;
   price?: number;
   onBuyHandler?: (itemId?: string | number) => void;
 };
 
-const PriceBox: React.FC<Props> = ({
+const PriceBox: React.FC<PriceBoxProps> = ({
   itemId,
   price = 0,
   onBuyHandler = () => {},

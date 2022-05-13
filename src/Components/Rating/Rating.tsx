@@ -3,11 +3,11 @@ import { StyledRating, StyledRatingContent } from "./Rating.styled";
 import StarSvg from "./StarIcon";
 import Text from "../Text/Text";
 
-type Props = {
+export type RatingProps = {
   rating?: number;
 };
 
-export const Rating: React.FC<Props> = ({ rating = 0.0 }) => {
+const Rating: React.FC<RatingProps> = ({ rating = 0.0 }) => {
   return (
     <StyledRating>
       <StyledRatingContent>

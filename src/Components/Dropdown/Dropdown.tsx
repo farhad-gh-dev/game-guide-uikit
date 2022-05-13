@@ -7,16 +7,16 @@ import {
 } from "./Dropdown.styled";
 import Text from "../Text/Text";
 
-type DropdownItem = {
+export type DropdownItem = {
   text?: string;
   url?: string;
 };
-type Props = {
+export type DropdownProps = {
   items?: DropdownItem[];
   activeItemIndex?: number;
 };
 
-export const Dropdown: React.FC<Props> = ({
+const Dropdown: React.FC<DropdownProps> = ({
   items = [],
   activeItemIndex = 0,
 }) => {

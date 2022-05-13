@@ -8,11 +8,11 @@ import {
 } from "./SearchBar.styled";
 import CustomIcon from "../CustomIcon/CustomIcon";
 
-type Props = {
+export type SearchBarProps = {
   onSearch?: (i: string) => void;
 };
 
-const SearchBar: React.FC<Props> = ({ onSearch = () => {} }) => {
+const SearchBar: React.FC<SearchBarProps> = ({ onSearch = () => {} }) => {
   const [isActive, setIsActive] = useState<boolean>(false);
   const [inputValue, setInputValue] = useState<string>("");
 

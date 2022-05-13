@@ -8,13 +8,13 @@ import {
 import Text from "../Text/Text";
 import Rating from "../Rating/Rating";
 
-type Props = {
+export type ItemCardProps = {
   title?: string;
   rating?: number;
   imageSrc?: string;
 };
 
-export const ItemCard: React.FC<Props> = ({
+const ItemCard: React.FC<ItemCardProps> = ({
   title = "",
   rating = 0,
   imageSrc = "",

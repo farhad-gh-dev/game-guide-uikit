@@ -8,7 +8,7 @@ import {
   StyledH6,
 } from "./Heading.style";
 
-type Props = {
+export type HeadingProps = {
   children?: ReactNode;
   isInline?: boolean;
   /**
@@ -33,7 +33,7 @@ type Props = {
   h6?: boolean;
 } & React.ComponentProps<"h1">;
 
-const Heading: React.FC<Props> = (props) => {
+const Heading: React.FC<HeadingProps> = (props) => {
   const { h1, h2, h3, h4, h5, h6, children = null } = props;
 
   let HeadingType: any = StyledH3;

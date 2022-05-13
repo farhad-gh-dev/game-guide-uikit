@@ -7,13 +7,13 @@ import {
   StyledSlideNumber,
 } from "./SliderControl.styled";
 
-type Props = {
+export type SliderControlProps = {
   numberOfSlides?: number;
   activeSlide?: number;
   handleSlideChange?: Function;
 };
 
-const SliderControl: React.FC<Props> = ({
+const SliderControl: React.FC<SliderControlProps> = ({
   numberOfSlides = 1,
   activeSlide = 1,
   handleSlideChange = () => {},

@@ -2,13 +2,13 @@ import React from "react";
 import LogoIcon from "./Logo";
 import { StyledBrandLogo, StyledLogo, StyledText } from "./BrandLogo.styled";
 
-type Props = {
+export type BrandLogoProps = {
   imageOnly?: boolean;
   coloredText?: string;
   whiteText?: string;
 };
 
-const Button: React.FC<Props> = (props) => {
+const BrandLogo: React.FC<BrandLogoProps> = (props) => {
   const { imageOnly, coloredText = "Game", whiteText = "Guide" } = props;
 
   return (
@@ -26,4 +26,4 @@ const Button: React.FC<Props> = (props) => {
   );
 };
 
-export default Button;
+export default BrandLogo;

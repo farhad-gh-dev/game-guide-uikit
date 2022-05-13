@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import { StyledNavbar, StyledNavbarItem } from "./Navbar.styled";
 
-type NavbarProps = {
+export type NavbarProps = {
   children?: ReactNode;
 };
 
@@ -16,7 +16,7 @@ export const Navbar: React.FC<NavbarProps> = ({ children = "" }) => {
   return <StyledNavbar>{children}</StyledNavbar>;
 };
 
-type NavbarItemProps = {
+export type NavbarItemProps = {
   active: boolean;
   children?: ReactNode;
 };

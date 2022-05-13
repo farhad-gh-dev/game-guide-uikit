@@ -1,5 +1,4 @@
 import React from "react";
-import Text from "../Text/Text";
 import PriceBox from "./PriceBox/PriceBox";
 import {
   StyledSlider,
@@ -10,7 +9,7 @@ import {
   StyledDefaultTitle,
 } from "./Slider.styled";
 
-type SliderItem = {
+export type SliderItem = {
   id?: string | number;
   title?: string;
   backgroundImageSrc?: string;
@@ -32,13 +31,13 @@ type SliderItem = {
   price?: number;
 };
 
-type Props = {
+export type SliderProps = {
   sliderItems?: Array<SliderItem>;
   activeSlide?: number;
   onBuyHandler?: (itemId?: string | number) => void;
 };
 
-const Slider: React.FC<Props> = ({
+const Slider: React.FC<SliderProps> = ({
   sliderItems = [],
   activeSlide = 1,
   onBuyHandler = () => {},

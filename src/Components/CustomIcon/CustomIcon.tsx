@@ -7,14 +7,15 @@ import PlayIcon from "./Icons/Play";
 import ArrowToLeft from "./Icons/ArrowToLeft";
 import ArrowToRight from "./Icons/ArrowToRight";
 
-type IconTypes =
+export type IconTypes =
   | "shopping-card"
   | "bell"
   | "search"
   | "play"
   | "arrow-to-left"
   | "arrow-to-right";
-type Props = {
+
+export type CustomIconProps = {
   type?: IconTypes;
   /**
    * Also accepts "primary" as value
@@ -32,7 +33,7 @@ type Props = {
   heightDesktop?: string;
 };
 
-const CustomIcon: React.FC<Props> = ({ type, ...props }) => {
+const CustomIcon: React.FC<CustomIconProps> = ({ type, ...props }) => {
   return (
     <StyledIcon {...props}>
       <TargetIcon type={type} />
