@@ -12,15 +12,17 @@ export type ItemCardProps = {
   title?: string;
   rating?: number;
   imageSrc?: string;
+  className?: string;
 };
 
 const ItemCard: React.FC<ItemCardProps> = ({
   title = "",
   rating = 0,
   imageSrc = "",
+  className = "",
 }) => {
   return (
-    <StyledItemCard href={"#"}>
+    <StyledItemCard href={"#"} className={className}>
       <StyledImageBox backgroundImage={imageSrc}>
         {rating !== 0 && (
           <StyledRatingBox>

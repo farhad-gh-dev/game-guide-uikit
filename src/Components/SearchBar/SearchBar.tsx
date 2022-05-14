@@ -9,10 +9,14 @@ import {
 import CustomIcon from "../CustomIcon/CustomIcon";
 
 export type SearchBarProps = {
+  className?: string;
   onSearch?: (i: string) => void;
 };
 
-const SearchBar: React.FC<SearchBarProps> = ({ onSearch = () => {} }) => {
+const SearchBar: React.FC<SearchBarProps> = ({
+  className,
+  onSearch = () => {},
+}) => {
   const [isActive, setIsActive] = useState<boolean>(false);
   const [inputValue, setInputValue] = useState<string>("");
 
@@ -23,7 +27,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch = () => {} }) => {
   };
 
   return (
-    <StyledSearchBar>
+    <StyledSearchBar className={className}>
       <div onClick={() => setIsActive(true)}>
         <CustomIcon type="search" height="25px" heightDesktop="30px" />
       </div>

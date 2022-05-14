@@ -34,16 +34,18 @@ export type SliderItem = {
 export type SliderProps = {
   sliderItems?: Array<SliderItem>;
   activeSlide?: number;
+  className?: string;
   onBuyHandler?: (itemId?: string | number) => void;
 };
 
 const Slider: React.FC<SliderProps> = ({
   sliderItems = [],
   activeSlide = 1,
+  className = "",
   onBuyHandler = () => {},
 }) => {
   return (
-    <StyledSlider>
+    <StyledSlider className={className}>
       {sliderItems?.map((item, index) => {
         return (
           <StyledSliderItem

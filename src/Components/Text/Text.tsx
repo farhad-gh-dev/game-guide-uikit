@@ -24,9 +24,11 @@ export type TextProps = {
 } & React.ComponentProps<"p"> &
   React.ComponentProps<"span">;
 
-const Text: React.FC<TextProps> = (props) => {
-  const { isSpan = false, children = null } = props;
-
+const Text: React.FC<TextProps> = ({
+  isSpan = false,
+  children = null,
+  ...props
+}) => {
   let TextType: any = StyledParagraph;
   if (isSpan) {
     TextType = StyledSpan;

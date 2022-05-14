@@ -31,11 +31,16 @@ export type CustomIconProps = {
   height?: string;
   heightLaptop?: string;
   heightDesktop?: string;
+  className?: string;
 };
 
-const CustomIcon: React.FC<CustomIconProps> = ({ type, ...props }) => {
+const CustomIcon: React.FC<CustomIconProps> = ({
+  type,
+  className,
+  ...props
+}) => {
   return (
-    <StyledIcon {...props}>
+    <StyledIcon className={className} {...props}>
       <TargetIcon type={type} />
     </StyledIcon>
   );

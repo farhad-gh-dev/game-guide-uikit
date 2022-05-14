@@ -10,16 +10,18 @@ import {
 export type SliderControlProps = {
   numberOfSlides?: number;
   activeSlide?: number;
-  handleSlideChange?: Function;
+  className?: string;
+  handleSlideChange?: (i: number) => void;
 };
 
 const SliderControl: React.FC<SliderControlProps> = ({
   numberOfSlides = 1,
   activeSlide = 1,
+  className = "",
   handleSlideChange = () => {},
 }) => {
   return (
-    <StyledSliderControl>
+    <StyledSliderControl className={className}>
       <StyledSliderControlContainer>
         <StyledSlideIndicators>
           {[...Array(numberOfSlides)].map((i, index) => {

@@ -11,6 +11,8 @@ export const StyledIcon = styled.div<{
   heightLaptop?: string;
   heightDesktop?: string;
 }>`
+  display: inline-block;
+
   svg {
     display: block;
     height: auto;

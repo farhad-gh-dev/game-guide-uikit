@@ -6,13 +6,19 @@ export type BrandLogoProps = {
   imageOnly?: boolean;
   coloredText?: string;
   whiteText?: string;
+  className?: string;
 };
 
 const BrandLogo: React.FC<BrandLogoProps> = (props) => {
-  const { imageOnly, coloredText = "Game", whiteText = "Guide" } = props;
+  const {
+    imageOnly,
+    coloredText = "Game",
+    whiteText = "Guide",
+    className = "",
+  } = props;
 
   return (
-    <StyledBrandLogo>
+    <StyledBrandLogo className={className}>
       <StyledLogo imageOnly={imageOnly}>
         <LogoIcon />
       </StyledLogo>
