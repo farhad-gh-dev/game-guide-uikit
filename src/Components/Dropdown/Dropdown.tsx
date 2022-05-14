@@ -13,17 +13,20 @@ export type DropdownItem = {
 };
 export type DropdownProps = {
   items?: DropdownItem[];
-  activeItemIndex?: number;
+  activeItemIndex?: number | undefined;
+  className?: string;
 };
 
 const Dropdown: React.FC<DropdownProps> = ({
   items = [],
-  activeItemIndex = 0,
+  activeItemIndex,
+  className = "",
 }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
+  if (items.length === 0) return null;
   return (
-    <StyledDropdown>
+    <StyledDropdown className={className}>
       <StyledToggler onClick={() => setIsOpen(!isOpen)}>
         <div></div>
         <div></div>

@@ -44,6 +44,7 @@ export const StyledMenu = styled.div`
   padding: 10px 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   border-radius: 3px;
+  background-color: ${color.lightest};
 
   @media (min-width: ${breakpoint.laptopScreen}px) {
     top: 25px;
@@ -74,7 +75,7 @@ export const StyledMenuItem = styled.div<{ active?: boolean }>`
     `
         background-color: rgba(0, 0, 0, 0.05);
 
-        &:after {
+        &::after {
             content: "";
             position: absolute;
             left: 0;
@@ -83,14 +84,35 @@ export const StyledMenuItem = styled.div<{ active?: boolean }>`
             width: 3px;
             background-color: ${color.darkest};
         }
+
+        a::before {
+          display: none;
+        }
     `};
 
   a {
+    position: relative;
     display: block;
     padding: 6px 18px 7px;
 
     @media (min-width: ${breakpoint.laptopScreen}px) {
       padding: 9px 23px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      right: 18px;
+      width: calc(100% - 36px);
+      height: 1px;
+      background-color: rgba(0, 0, 0, 0.1);
+
+      @media (min-width: ${breakpoint.laptopScreen}px) {
+        right: 23px;
+        width: calc(100% - 46px);
+        height: 2px;
+      }
     }
   }
 `;

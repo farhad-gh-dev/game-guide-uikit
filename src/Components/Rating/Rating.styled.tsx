@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { color, breakpoint } from "../../Styles/styles";
 
 export const StyledRating = styled.div`
+  display: inline-block;
   padding: 4px 11px;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 12px;
@@ -9,7 +10,7 @@ export const StyledRating = styled.div`
   backdrop-filter: blur(10px) brightness(105%);
 
   @media (min-width: ${breakpoint.laptopScreen}px) {
-    padding: 3px 12px;
+    padding: 4px 12px;
     border-radius: 12px;
   }
   @media (min-width: ${breakpoint.largeScreen}px) {
@@ -25,6 +26,7 @@ export const StyledRatingContent = styled.div`
   svg {
     width: 18px;
     height: 18px;
+    margin-bottom: 3px;
 
     @media (min-width: ${breakpoint.laptopScreen}px) {
       width: 20px;

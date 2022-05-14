@@ -5,11 +5,12 @@ import Text from "../Text/Text";
 
 export type RatingProps = {
   rating?: number;
+  className?: string;
 };
 
-const Rating: React.FC<RatingProps> = ({ rating = 0.0 }) => {
+const Rating: React.FC<RatingProps> = ({ rating = 0.0, className = "" }) => {
   return (
-    <StyledRating>
+    <StyledRating className={className}>
       <StyledRatingContent>
         <StarSvg />
         <Text isSpan size="lg">
