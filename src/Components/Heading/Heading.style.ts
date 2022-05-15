@@ -43,29 +43,21 @@ export const StyledH1 = styled.h1<{
 
 export const StyledH2 = styled(StyledH1).attrs({ as: "h2" })`
   font-size: ${typography.size.text_22};
-  line-height: 37px;
-
   @media (min-width: ${breakpoint.laptopScreen}px) {
     font-size: ${typography.size.text_24};
-    line-height: 42px;
   }
   @media (min-width: ${breakpoint.largeScreen}px) {
     font-size: ${typography.size.text_28};
-    line-height: 48px;
   }
 `;
 
 export const StyledH3 = styled(StyledH1).attrs({ as: "h3" })`
   font-size: ${typography.size.text_18};
-  line-height: 31px;
-
   @media (min-width: ${breakpoint.laptopScreen}px) {
     font-size: ${typography.size.text_20};
-    line-height: 33px;
   }
   @media (min-width: ${breakpoint.largeScreen}px) {
     font-size: ${typography.size.text_22};
-    line-height: 37px;
   }
 `;
 
