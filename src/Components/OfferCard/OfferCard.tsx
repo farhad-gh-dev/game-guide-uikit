@@ -15,6 +15,7 @@ import Dropdown, { type DropdownItem } from "../Dropdown/Dropdown";
 import Text from "../Text/Text";
 
 export type offerItem = {
+  id?: string;
   title?: string;
   imageSrc?: string,
   url?: string;
