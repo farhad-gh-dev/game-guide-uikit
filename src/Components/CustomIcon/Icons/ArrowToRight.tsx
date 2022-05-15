@@ -15,9 +15,9 @@ const ArrowToRight: React.FC = (props) => {
         transform="translate(-7.939 -4.939)"
         fill="none"
         stroke="#000"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.5"
       />
     </svg>
   );

@@ -16,7 +16,7 @@ const Search: React.FC = (props) => {
           transform="translate(170 213)"
           fill="none"
           stroke="#000"
-          stroke-width="2"
+          strokeWidth="2"
         >
           <circle cx="13.5" cy="13.5" r="13.5" stroke="none" />
           <circle cx="13.5" cy="13.5" r="12.5" fill="none" />
@@ -27,7 +27,7 @@ const Search: React.FC = (props) => {
           transform="translate(194 236)"
           fill="none"
           stroke="#000"
-          stroke-width="2"
+          strokeWidth="2"
         >
           <circle cx="3.5" cy="3.5" r="3.5" stroke="none" />
           <circle cx="3.5" cy="3.5" r="2.5" fill="none" />

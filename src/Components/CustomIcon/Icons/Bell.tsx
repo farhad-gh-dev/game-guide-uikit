@@ -16,9 +16,9 @@ const Bell: React.FC = (props) => {
           d="M21.753,10a7.763,7.763,0,0,0-7.5-8,7.763,7.763,0,0,0-7.5,8C6.751,19.336,3,22,3,22H25.5s-3.751-2.667-3.751-12"
           fill="none"
           stroke="#fff"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
         />
         <path
           id="Path_2"
@@ -27,9 +27,9 @@ const Bell: React.FC = (props) => {
           transform="translate(2.252 5.004)"
           fill="none"
           stroke="#fff"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
         />
       </g>
     </svg>

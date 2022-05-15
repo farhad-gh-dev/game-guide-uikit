@@ -9,6 +9,7 @@ import Dropdown, {type DropdownProps, type DropdownItem} from "./Components/Drop
 import Heading, {type HeadingProps} from "./Components/Heading/Heading";
 import ItemCard, {type ItemCardProps} from "./Components/ItemCard/ItemCard";
 import { Navbar, type NavbarProps, NavbarItem, type NavbarItemProps } from "./Components/Navbar/Navbar";
+import OfferCard, {type OfferCardProps, type offerItem} from './Components/OfferCard/OfferCard';
 import Rating, {type RatingProps} from "./Components/Rating/Rating";
 import SearchBar, {type SearchBarProps} from './Components/SearchBar/SearchBar';
 import Slider, {type SliderProps, type SliderItem} from './Components/Slider/Slider';
@@ -47,6 +48,10 @@ export {
 
     NavbarItem,
     NavbarItemProps,
+
+    OfferCard, 
+    OfferCardProps,
+    offerItem,
 
     Rating,
     RatingProps,
