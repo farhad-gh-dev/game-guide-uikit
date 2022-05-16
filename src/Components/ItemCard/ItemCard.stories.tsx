@@ -30,10 +30,9 @@ const Template: ComponentStory<typeof ItemCard> = (args) => (
 
 export const Standard = Template.bind({});
 Standard.args = {
-  title: "Modern Warfare 3",
+  title: "Mortal Kombat",
   rating: 9.3,
-  imageSrc:
-    "https://i.pinimg.com/originals/6f/1c/32/6f1c32968dbde34bcbe8c78ed25130b2.jpg",
+  imageSrc: "https://m.media-amazon.com/images/I/71MLMRhVSIL._AC_SL1500_.jpg",
 };
 
 export const Empty = Template.bind({});
@@ -44,7 +43,7 @@ export const Multiple = () => {
       <Template
         title="Modern Warfare 2"
         rating={9.3}
-        imageSrc="https://static.displate.com/857x1200/displate/2021-08-26/d53d94f4e94a39a968db747deb170df5_e4f386a63470a1303a5e7e55c8f4d0eb.jpg"
+        imageSrc="https://static.posters.cz/image/1300/poster/call-of-duty-mw2-cover-i7151.jpg"
       />
       <div style={{ padding: "10px" }}></div>
       <Template

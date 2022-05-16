@@ -33,6 +33,19 @@ export const Standard = Template.bind({});
 Standard.args = {
   sliderItems: [
     {
+      id: 2,
+      backgroundImageSrc:
+        "https://p4.wallpaperbetter.com/wallpaper/316/557/111/control-controlgame-remedy-games-red-pyramid-hd-wallpaper-preview.jpg",
+      overlayImageSrc:
+        "https://static.wikia.nocookie.net/playstationallstarsfanfictionroyale/images/e/e8/JesseFaden.png",
+      overlayImageHeight: 125,
+      overlayPositionFromRight: 10,
+      titleImageSrc:
+        "https://www.remedygames.com/wp-content/uploads/2018/05/ujujujuj3.png",
+      titleImageHeight: 67,
+      price: 1700,
+    },
+    {
       id: 1,
       backgroundImageSrc:
         "https://progameguides.com/wp-content/uploads/2021/12/Featured-VALORANT-Logo-900x506.jpg",
@@ -40,21 +53,9 @@ Standard.args = {
         "https://i.pinimg.com/originals/a9/94/d9/a994d91c5d89aca55b8231879dd7c9d0.png",
       overlayImageHeight: 120,
       overlayPositionFromRight: 0,
-      titleImageSrc:
-        "https://logodownload.org/wp-content/uploads/2020/06/valorant-logo.png",
-      titleImageHeight: 40,
-      lightDescription: true,
-      price: 1500,
-    },
-    {
-      id: 2,
-      backgroundImageSrc:
-        "https://gmedia.playstation.com/is/image/SIEPDC/apex-legends-overview-section-background-desktop-tablet-01-ps4-en-06feb19?$native$",
-      overlayImageSrc:
-        "https://gmedia.playstation.com/is/image/SIEPDC/apex-legends-seer-character-image-block-01-ps4-en-27jul21?$native--t$",
-      overlayPositionFromRight: -3,
       title: "Apex Legends",
-      price: 1700,
+
+      price: 1500,
     },
   ],
   onBuyHandler: (itemId) => {

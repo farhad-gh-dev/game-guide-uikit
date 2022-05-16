@@ -27,7 +27,7 @@ export type SliderItem = {
    * To percentage
    */
   titleImageHeight?: number;
-  lightDescription?: boolean;
+  titleIsLight?: boolean;
   price?: number;
 };
 
@@ -68,7 +68,9 @@ const Slider: React.FC<SliderProps> = ({
               ) : null}
 
               {!item.titleImageSrc && item.title ? (
-                <DefaultTitle>{item.title}</DefaultTitle>
+                <DefaultTitle isLight={item.titleIsLight}>
+                  {item.title}
+                </DefaultTitle>
               ) : null}
             </TextArea>
             <div>

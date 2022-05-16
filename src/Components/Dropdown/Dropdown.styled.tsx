@@ -1,9 +1,10 @@
 import styled from "styled-components";
-import { color, breakpoint } from "../../Styles/styles";
+import { color, ZIndex, breakpoint } from "../../Styles/styles";
 
 export const StyledDropdown = styled.div`
   position: relative;
   display: inline-block;
+  z-index: ${ZIndex.dropdown};
 `;
 
 export const MenuToggler = styled.div`

@@ -121,7 +121,9 @@ export const TitleImage = styled.img<{
     `};
 `;
 
-export const DefaultTitle = styled.span`
+export const DefaultTitle = styled.span<{
+  isLight?: boolean;
+}>`
   font-size: ${typography.size.text_18};
   font-weight: 700;
 
@@ -131,4 +133,10 @@ export const DefaultTitle = styled.span`
   @media (min-width: ${breakpoint.largeScreen}px) {
     font-size: 37px;
   }
+
+  ${(props) =>
+    props.isLight &&
+    `
+      color: ${color.lightest}
+    `}
 `;

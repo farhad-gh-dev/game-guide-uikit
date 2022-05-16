@@ -58,6 +58,10 @@ export const typography = {
   },
 };
 
+export const ZIndex = {
+  dropdown: 50,
+};
+
 export const breakpoint = {
   laptopScreen: 1280,
   largeScreen: 1920,

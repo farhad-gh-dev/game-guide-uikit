@@ -18,11 +18,11 @@ export const DiffProfileImage = Template.bind({});
 DiffProfileImage.args = {
   userType: "pro",
   imageSrc:
-    "https://mobimg.b-cdn.net/v3/fetch/83/83b001d629f121eea6797b62cdcb4c68.jpeg",
+    "https://i.pinimg.com/474x/67/bc/f1/67bcf160c0643d61b6d9da16e564d96b.jpg",
 };
 
 export const WithoutUserType = Template.bind({});
 WithoutUserType.args = {
   imageSrc:
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKjfXfX_Fckug1FdQJrkEzg43_kMFG4AkJqg&usqp=CAU",
+    "https://static.wikia.nocookie.net/onepunchman/images/8/81/Saitama_Anime_Profile.png",
 };
