@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { typography, breakpoint } from "../../Styles/styles";
 
-export const StyledImageBox = styled.div<{
+export const ImageContainer = styled.div<{
   backgroundImage?: string;
 }>`
   position: absolute;
@@ -36,7 +36,7 @@ export const StyledImageBox = styled.div<{
     `};
 `;
 
-export const StyledRatingBox = styled.div`
+export const RatingContainer = styled.div`
   display: inline-block;
   position: absolute;
   bottom: 12px;
@@ -52,7 +52,7 @@ export const StyledRatingBox = styled.div`
   }
 `;
 
-export const StyledTitleBox = styled.div`
+export const TitleContainer = styled.div`
   text-align: center;
   padding: 80px 12px 20px;
   background-color: rgba(0, 0, 0, 0.03);
@@ -88,7 +88,7 @@ export const StyledItemCard = styled.a`
     padding: 140px 0 0;
   }
 
-  &:hover ${StyledImageBox} {
+  &:hover ${ImageContainer} {
     transform: translateX(-50%) scale(0.96);
   }
 `;

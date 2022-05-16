@@ -31,7 +31,7 @@ export const StyledAvatar = styled.div<{ imageSrc?: any }>`
     `};
 `;
 
-export const StyledProfileType = styled.div`
+export const ProfileBadge = styled.div`
   position: absolute;
   bottom: -6px;
   left: 50%;

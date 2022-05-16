@@ -1,9 +1,9 @@
 import React from "react";
 import {
   StyledItemCard,
-  StyledImageBox,
-  StyledRatingBox,
-  StyledTitleBox,
+  ImageContainer,
+  RatingContainer,
+  TitleContainer,
 } from "./ItemCard.styled";
 import Text from "../Text/Text";
 import Rating from "../Rating/Rating";
@@ -23,18 +23,18 @@ const ItemCard: React.FC<ItemCardProps> = ({
 }) => {
   return (
     <StyledItemCard href={"#"} className={className}>
-      <StyledImageBox backgroundImage={imageSrc}>
+      <ImageContainer backgroundImage={imageSrc}>
         {rating !== 0 && (
-          <StyledRatingBox>
+          <RatingContainer>
             <Rating rating={rating} />
-          </StyledRatingBox>
+          </RatingContainer>
         )}
-      </StyledImageBox>
-      <StyledTitleBox>
+      </ImageContainer>
+      <TitleContainer>
         <Text size="md" overflowEllipsis fontWeight="500" title={title}>
           {title}
         </Text>
-      </StyledTitleBox>
+      </TitleContainer>
     </StyledItemCard>
   );
 };

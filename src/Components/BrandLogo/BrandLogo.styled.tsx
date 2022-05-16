@@ -6,7 +6,7 @@ export const StyledBrandLogo = styled.div`
   align-items: center;
 `;
 
-export const StyledLogo = styled.div<{
+export const LogoContainer = styled.div<{
   imageOnly?: boolean;
 }>`
   &,
@@ -38,7 +38,7 @@ export const StyledLogo = styled.div<{
   `};
 `;
 
-export const StyledText = styled.span<{
+export const BrandTitle = styled.span<{
   colored?: boolean;
 }>`
   color: ${color.lightest};

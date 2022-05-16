@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-import {
-  StyledDropdown,
-  StyledToggler,
-  StyledMenu,
-  StyledMenuItem,
-} from "./Dropdown.styled";
+import { StyledDropdown, MenuToggler, Menu, MenuItem } from "./Dropdown.styled";
 import Text from "../Text/Text";
 
 export type DropdownItem = {
@@ -27,16 +22,16 @@ const Dropdown: React.FC<DropdownProps> = ({
   if (items.length === 0) return null;
   return (
     <StyledDropdown className={className}>
-      <StyledToggler onClick={() => setIsOpen(!isOpen)}>
+      <MenuToggler onClick={() => setIsOpen(!isOpen)}>
         <div></div>
         <div></div>
         <div></div>
-      </StyledToggler>
+      </MenuToggler>
       {isOpen && items.length > 0 && (
-        <StyledMenu>
+        <Menu>
           {items.map((i, index) => {
             return (
-              <StyledMenuItem active={index === activeItemIndex}>
+              <MenuItem active={index === activeItemIndex}>
                 <a href={i.url} title={i.text}>
                   <Text
                     isSpan
@@ -48,10 +43,10 @@ const Dropdown: React.FC<DropdownProps> = ({
                     {i.text}
                   </Text>
                 </a>
-              </StyledMenuItem>
+              </MenuItem>
             );
           })}
-        </StyledMenu>
+        </Menu>
       )}
     </StyledDropdown>
   );

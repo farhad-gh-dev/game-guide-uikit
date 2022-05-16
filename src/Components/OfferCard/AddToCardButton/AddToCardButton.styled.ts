@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { color, breakpoint } from "../../../Styles/styles";
 
-export const StyledShoppingCardIcon = styled.div`
+export const ShoppingCardIconContainer = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
@@ -71,7 +71,7 @@ export const StyledAddToCardButton = styled.button<{
     }
   }
 
-  ${StyledShoppingCardIcon} {
+  ${ShoppingCardIconContainer} {
     svg {
       g,
       path,
@@ -91,7 +91,7 @@ export const StyledAddToCardButton = styled.button<{
       }
     }
 
-    ${StyledShoppingCardIcon} {
+    ${ShoppingCardIconContainer} {
       svg {
         g,
         path,

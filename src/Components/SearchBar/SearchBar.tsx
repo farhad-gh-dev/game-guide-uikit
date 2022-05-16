@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import {
   StyledSearchBar,
-  StyledDivider,
-  StyledInputContainer,
-  StyledInput,
-  StyledCloseButton,
+  Divider,
+  InputContainer,
+  SearchInput,
+  CloseButton,
 } from "./SearchBar.styled";
 import CustomIcon from "../CustomIcon/CustomIcon";
 
@@ -31,10 +31,10 @@ const SearchBar: React.FC<SearchBarProps> = ({
       <div onClick={() => setIsActive(true)}>
         <CustomIcon type="search" height="25px" heightDesktop="30px" />
       </div>
-      <StyledDivider />
+      <Divider />
 
-      <StyledInputContainer isActive={isActive}>
-        <StyledInput
+      <InputContainer isActive={isActive}>
+        <SearchInput
           placeholder="Search..."
           value={inputValue}
           onKeyUp={(e: React.KeyboardEvent<HTMLInputElement>) =>
@@ -42,10 +42,8 @@ const SearchBar: React.FC<SearchBarProps> = ({
           }
           onChange={(e) => setInputValue(e.target.value)}
         />
-        <StyledCloseButton onClick={() => setIsActive(false)}>
-          X
-        </StyledCloseButton>
-      </StyledInputContainer>
+        <CloseButton onClick={() => setIsActive(false)}>X</CloseButton>
+      </InputContainer>
     </StyledSearchBar>
   );
 };

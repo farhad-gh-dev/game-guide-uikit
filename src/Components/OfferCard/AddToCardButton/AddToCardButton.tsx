@@ -1,7 +1,7 @@
 import React from "react";
 import {
   StyledAddToCardButton,
-  StyledShoppingCardIcon,
+  ShoppingCardIconContainer,
 } from "./AddToCardButton.styled";
 import HexagonSmallScreen from "../Icons/HexagonSmallScreen";
 import HexagonLaptopScreen from "../Icons/HexagonLaptopScreen";
@@ -29,7 +29,7 @@ const AddToCardButton: React.FC<AddToCardButtonProps> = ({
       <HexagonLaptopScreen />
       <HexagonDesktopScreen />
 
-      <StyledShoppingCardIcon>
+      <ShoppingCardIconContainer>
         <CustomIcon
           className="shopping-card-icon"
           type="shopping-card"
@@ -38,7 +38,7 @@ const AddToCardButton: React.FC<AddToCardButtonProps> = ({
           heightLaptop="20px"
           heightDesktop="25px"
         />
-      </StyledShoppingCardIcon>
+      </ShoppingCardIconContainer>
     </StyledAddToCardButton>
   );
 };

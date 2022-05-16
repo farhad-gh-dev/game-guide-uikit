@@ -19,7 +19,7 @@ export const StyledRating = styled.div`
   }
 `;
 
-export const StyledRatingContent = styled.div`
+export const RatingContent = styled.div`
   display: flex;
   align-items: center;
 

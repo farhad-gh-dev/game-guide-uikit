@@ -2,11 +2,11 @@ import React from "react";
 import PriceBox from "./PriceBox/PriceBox";
 import {
   StyledSlider,
-  StyledSliderItem,
-  StyledOverlayImage,
-  StyledTextArea,
-  StyledTitleImage,
-  StyledDefaultTitle,
+  SliderItem,
+  OverlayImage,
+  TextArea,
+  TitleImage,
+  DefaultTitle,
 } from "./Slider.styled";
 
 export type SliderItem = {
@@ -48,19 +48,19 @@ const Slider: React.FC<SliderProps> = ({
     <StyledSlider className={className}>
       {sliderItems?.map((item, index) => {
         return (
-          <StyledSliderItem
+          <SliderItem
             active={activeSlide - 1 === index}
             backgroundImageSrc={item.backgroundImageSrc}
             key={item.id}
           >
-            <StyledOverlayImage
+            <OverlayImage
               src={item.overlayImageSrc}
               imageHeight={item.overlayImageHeight}
               imagePositionFromRight={item.overlayPositionFromRight}
             />
-            <StyledTextArea>
+            <TextArea>
               {item.titleImageSrc ? (
-                <StyledTitleImage
+                <TitleImage
                   src={item.titleImageSrc}
                   title={item.titleImageSrc}
                   titleImageHeight={item.titleImageHeight}
@@ -68,9 +68,9 @@ const Slider: React.FC<SliderProps> = ({
               ) : null}
 
               {!item.titleImageSrc && item.title ? (
-                <StyledDefaultTitle>{item.title}</StyledDefaultTitle>
+                <DefaultTitle>{item.title}</DefaultTitle>
               ) : null}
-            </StyledTextArea>
+            </TextArea>
             <div>
               <PriceBox
                 price={item.price}
@@ -78,7 +78,7 @@ const Slider: React.FC<SliderProps> = ({
                 onBuyHandler={onBuyHandler}
               />
             </div>
-          </StyledSliderItem>
+          </SliderItem>
         );
       })}
     </StyledSlider>

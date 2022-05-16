@@ -3,9 +3,9 @@ import Button from "../../Button/Button";
 import Text from "../../Text/Text";
 import {
   StyledPriceBox,
-  StyledTextArea,
-  StyledPrice,
-  StyledButtonContainer,
+  TextArea,
+  PriceContainer,
+  ButtonContainer,
 } from "./PriceBox.styled";
 
 export type PriceBoxProps = {
@@ -21,22 +21,22 @@ const PriceBox: React.FC<PriceBoxProps> = ({
 }) => {
   return (
     <StyledPriceBox>
-      <StyledTextArea>
+      <TextArea>
         <Text size={"sm"} fontWeight={"700"}>
           Price
         </Text>
-        <StyledPrice>
+        <PriceContainer>
           <Text size="md" fontWeight="900">
             {price ? "$" + price : "Free"}
           </Text>
           <div></div>
-        </StyledPrice>
-      </StyledTextArea>
-      <StyledButtonContainer>
+        </PriceContainer>
+      </TextArea>
+      <ButtonContainer>
         <Button active={true} onClick={() => onBuyHandler(itemId)}>
           Buy
         </Button>
-      </StyledButtonContainer>
+      </ButtonContainer>
     </StyledPriceBox>
   );
 };

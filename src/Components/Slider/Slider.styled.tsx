@@ -14,7 +14,7 @@ export const StyledSlider = styled.div`
   }
 `;
 
-export const StyledSliderItem = styled.div<{
+export const SliderItem = styled.div<{
   active?: boolean;
   backgroundImageSrc?: string;
 }>`
@@ -59,7 +59,7 @@ export const StyledSliderItem = styled.div<{
     `};
 `;
 
-export const StyledOverlayImage = styled.img<{
+export const OverlayImage = styled.img<{
   imageHeight?: number;
   imagePositionFromRight?: number;
 }>`
@@ -83,12 +83,12 @@ export const StyledOverlayImage = styled.img<{
     `};
 `;
 
-export const StyledTextArea = styled.div`
+export const TextArea = styled.div`
   flex: 1;
   position: relative;
 `;
 
-export const StyledTitleImage = styled.img<{
+export const TitleImage = styled.img<{
   titleImageSrc?: string;
   titleImageHeight?: number;
 }>`
@@ -121,7 +121,7 @@ export const StyledTitleImage = styled.img<{
     `};
 `;
 
-export const StyledDefaultTitle = styled.span`
+export const DefaultTitle = styled.span`
   font-size: ${typography.size.text_18};
   font-weight: 700;
 

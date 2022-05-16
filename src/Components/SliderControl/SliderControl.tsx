@@ -1,10 +1,10 @@
 import React from "react";
 import {
   StyledSliderControl,
-  StyledSliderControlContainer,
-  StyledSlideIndicators,
-  StyledSingleIndicator,
-  StyledSlideNumber,
+  SliderControlContainer,
+  SlideIndicators,
+  SingleIndicator,
+  SlideNumber,
 } from "./SliderControl.styled";
 
 export type SliderControlProps = {
@@ -22,22 +22,22 @@ const SliderControl: React.FC<SliderControlProps> = ({
 }) => {
   return (
     <StyledSliderControl className={className}>
-      <StyledSliderControlContainer>
-        <StyledSlideIndicators>
+      <SliderControlContainer>
+        <SlideIndicators>
           {[...Array(numberOfSlides)].map((i, index) => {
             return (
-              <StyledSingleIndicator
+              <SingleIndicator
                 key={index}
                 active={index + 1 === activeSlide}
                 onClick={() => handleSlideChange(index + 1)}
               />
             );
           })}
-        </StyledSlideIndicators>
-        <StyledSlideNumber>
+        </SlideIndicators>
+        <SlideNumber>
           {activeSlide}/{numberOfSlides}
-        </StyledSlideNumber>
-      </StyledSliderControlContainer>
+        </SlideNumber>
+      </SliderControlContainer>
     </StyledSliderControl>
   );
 };

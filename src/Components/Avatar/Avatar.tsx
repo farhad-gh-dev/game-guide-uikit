@@ -1,6 +1,6 @@
 import React from "react";
 import DefaultProfileImage from "./DefaultAvatar";
-import { StyledAvatar, StyledProfileType } from "./Avatar.styled";
+import { StyledAvatar, ProfileBadge } from "./Avatar.styled";
 
 export type AvatarProps = {
   userType?: string;
@@ -16,7 +16,7 @@ const Avatar: React.FC<AvatarProps> = ({
   return (
     <StyledAvatar imageSrc={imageSrc} className={className}>
       {!imageSrc && <DefaultProfileImage />}
-      {userType ? <StyledProfileType>{userType}</StyledProfileType> : null}
+      {userType ? <ProfileBadge>{userType}</ProfileBadge> : null}
     </StyledAvatar>
   );
 };

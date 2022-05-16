@@ -38,11 +38,11 @@ Standard.args = {
         "https://progameguides.com/wp-content/uploads/2021/12/Featured-VALORANT-Logo-900x506.jpg",
       overlayImageSrc:
         "https://i.pinimg.com/originals/a9/94/d9/a994d91c5d89aca55b8231879dd7c9d0.png",
-      overlayImageHeight: 150,
+      overlayImageHeight: 120,
       overlayPositionFromRight: 0,
       titleImageSrc:
         "https://logodownload.org/wp-content/uploads/2020/06/valorant-logo.png",
-      titleImageHeight: 50,
+      titleImageHeight: 40,
       lightDescription: true,
       price: 1500,
     },

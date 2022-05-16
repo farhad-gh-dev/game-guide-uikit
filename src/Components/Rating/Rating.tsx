@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledRating, StyledRatingContent } from "./Rating.styled";
+import { StyledRating, RatingContent } from "./Rating.styled";
 import StarSvg from "./StarIcon";
 import Text from "../Text/Text";
 
@@ -11,12 +11,12 @@ export type RatingProps = {
 const Rating: React.FC<RatingProps> = ({ rating = 0.0, className = "" }) => {
   return (
     <StyledRating className={className}>
-      <StyledRatingContent>
+      <RatingContent>
         <StarSvg />
         <Text isSpan size="lg">
           {rating.toFixed(1)}
         </Text>
-      </StyledRatingContent>
+      </RatingContent>
     </StyledRating>
   );
 };

@@ -1,12 +1,12 @@
 import React from "react";
 import {
   StyledOfferCard,
-  StyledImageContainer,
-  StyledCardImage,
-  StyledRatingContainer,
-  StyledTextArea,
-  StyledTitleContainer,
-  StyledPriceContainer,
+  ImageContainer,
+  CardImage,
+  RatingContainer,
+  TextArea,
+  TitleContainer,
+  PriceContainer,
 } from "./OfferCard.styled";
 import AddToCardButton from "./AddToCardButton/AddToCardButton";
 import Raring from "../Rating/Rating";
@@ -38,20 +38,20 @@ const OfferCard: React.FC<OfferCardProps> = ({
 }) => {
   return (
     <StyledOfferCard className={className}>
-      <StyledImageContainer href={itemData.url} >
-        <StyledCardImage CardImageSrc={itemData.imageSrc}>
+      <ImageContainer href={itemData.url} >
+        <CardImage CardImageSrc={itemData.imageSrc}>
           <div></div>
-        </StyledCardImage>
+        </CardImage>
 
-        <StyledRatingContainer>
+        <RatingContainer>
           <Raring rating={itemData.rating} />
-        </StyledRatingContainer>
+        </RatingContainer>
 
         <AddToCardButton onAddToCard={() => onAddToCard(itemData)} isActive={itemData.isInBasket}/>
-      </StyledImageContainer>
+      </ImageContainer>
 
-      <StyledTextArea>
-        <StyledTitleContainer>
+      <TextArea>
+        <TitleContainer>
           <a href={itemData.url}>
             <Heading h3 className="offer-card-title">
               {itemData.title ? itemData.title : "No Title"}
@@ -61,9 +61,9 @@ const OfferCard: React.FC<OfferCardProps> = ({
           {itemData.dropdownItems && (
             <Dropdown items={itemData.dropdownItems} />
           )}
-        </StyledTitleContainer>
+        </TitleContainer>
 
-        <StyledPriceContainer>
+        <PriceContainer>
           <Text isSpan size="sm" fontWeight="700" className="offer-price-label">
             Price
           </Text>
@@ -75,8 +75,8 @@ const OfferCard: React.FC<OfferCardProps> = ({
                 : "$ " + itemData.price
               : "$ 0"}
           </Text>
-        </StyledPriceContainer>
-      </StyledTextArea>
+        </PriceContainer>
+      </TextArea>
     </StyledOfferCard>
   );
 };

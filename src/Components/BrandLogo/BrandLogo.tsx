@@ -1,6 +1,6 @@
 import React from "react";
 import LogoIcon from "./Logo";
-import { StyledBrandLogo, StyledLogo, StyledText } from "./BrandLogo.styled";
+import { StyledBrandLogo, LogoContainer, BrandTitle } from "./BrandLogo.styled";
 
 export type BrandLogoProps = {
   imageOnly?: boolean;
@@ -19,13 +19,13 @@ const BrandLogo: React.FC<BrandLogoProps> = (props) => {
 
   return (
     <StyledBrandLogo className={className}>
-      <StyledLogo imageOnly={imageOnly}>
+      <LogoContainer imageOnly={imageOnly}>
         <LogoIcon />
-      </StyledLogo>
+      </LogoContainer>
       {!imageOnly ? (
         <>
-          <StyledText colored>{coloredText}</StyledText>&nbsp;
-          <StyledText>{whiteText}</StyledText>
+          <BrandTitle colored>{coloredText}</BrandTitle>&nbsp;
+          <BrandTitle>{whiteText}</BrandTitle>
         </>
       ) : null}
     </StyledBrandLogo>

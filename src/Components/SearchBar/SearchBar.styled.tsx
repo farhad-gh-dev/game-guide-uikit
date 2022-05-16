@@ -16,7 +16,7 @@ export const StyledSearchBar = styled.div`
   }
 `;
 
-export const StyledDivider = styled.div`
+export const Divider = styled.div`
   display: none;
 
   @media (min-width: ${breakpoint.laptopScreen}px) {
@@ -33,7 +33,7 @@ export const StyledDivider = styled.div`
   }
 `;
 
-export const StyledInputContainer = styled.div<{
+export const InputContainer = styled.div<{
   isActive?: boolean;
 }>`
   display: ${(props) => (props.isActive ? "flex" : "none")};
@@ -56,7 +56,7 @@ export const StyledInputContainer = styled.div<{
   }
 `;
 
-export const StyledInput = styled.input`
+export const SearchInput = styled.input`
   width: calc(100% - 100px);
   margin: 0;
   padding: 0;
@@ -89,7 +89,7 @@ export const StyledInput = styled.input`
   }
 `;
 
-export const StyledCloseButton = styled.button`
+export const CloseButton = styled.button`
   position: absolute;
   top: 25px;
   right: 25px;

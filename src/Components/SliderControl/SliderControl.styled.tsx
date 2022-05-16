@@ -14,14 +14,14 @@ export const StyledSliderControl = styled.div`
   }
 `;
 
-export const StyledSliderControlContainer = styled.div`
+export const SliderControlContainer = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
-export const StyledSlideIndicators = styled.div`
+export const SlideIndicators = styled.div`
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -36,7 +36,7 @@ export const StyledSlideIndicators = styled.div`
   }
 `;
 
-export const StyledSingleIndicator = styled.div<{ active?: boolean }>`
+export const SingleIndicator = styled.div<{ active?: boolean }>`
   flex-grow: 1;
   width: 3px;
   border-radius: 3px;
@@ -66,7 +66,7 @@ export const StyledSingleIndicator = styled.div<{ active?: boolean }>`
     `};
 `;
 
-export const StyledSlideNumber = styled.span`
+export const SlideNumber = styled.span`
   font-size: ${typography.size.text_14};
   letter-spacing: 0.03em;
   font-feature-settings: "tnum";

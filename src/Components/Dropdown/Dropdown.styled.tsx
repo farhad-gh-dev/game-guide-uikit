@@ -6,7 +6,7 @@ export const StyledDropdown = styled.div`
   display: inline-block;
 `;
 
-export const StyledToggler = styled.div`
+export const MenuToggler = styled.div`
   display: flex;
   padding: 6px 0 6px 6px;
   cursor: pointer;
@@ -36,7 +36,7 @@ export const StyledToggler = styled.div`
   }
 `;
 
-export const StyledMenu = styled.div`
+export const Menu = styled.div`
   position: absolute;
   top: 17px;
   right: 0;
@@ -60,7 +60,7 @@ export const StyledMenu = styled.div`
   }
 `;
 
-export const StyledMenuItem = styled.div<{ active?: boolean }>`
+export const MenuItem = styled.div<{ active?: boolean }>`
   position: relative;
   text-align: left;
   transition: 0.15s ease-in-out;

@@ -15,7 +15,7 @@ export const StyledOfferCard = styled.div`
   }
 `;
 
-export const StyledImageContainer = styled.a`
+export const ImageContainer = styled.a`
   position: relative;
   height: 184px;
   border-radius: 16px;
@@ -34,7 +34,7 @@ export const StyledImageContainer = styled.a`
   }
 `;
 
-export const StyledCardImage = styled.div<{
+export const CardImage = styled.div<{
   CardImageSrc?: string;
 }>`
   display: flex;
@@ -76,14 +76,14 @@ export const StyledCardImage = styled.div<{
   }
 `;
 
-export const StyledRatingContainer = styled.div`
+export const RatingContainer = styled.div`
   position: absolute;
   bottom: 13px;
   left: 50%;
   transform: translateX(-50%);
 `;
 
-export const StyledTextArea = styled.div`
+export const TextArea = styled.div`
   @media (min-width: ${breakpoint.laptopScreen}px) {
     margin-left: 7px;
   }
@@ -93,7 +93,7 @@ export const StyledTextArea = styled.div`
   }
 `;
 
-export const StyledTitleContainer = styled.div`
+export const TitleContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -108,7 +108,7 @@ export const StyledTitleContainer = styled.div`
   }
 `;
 
-export const StyledPriceContainer = styled.div`
+export const PriceContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;

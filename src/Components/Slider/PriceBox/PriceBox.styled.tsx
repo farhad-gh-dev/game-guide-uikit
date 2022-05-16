@@ -21,7 +21,7 @@ export const StyledPriceBox = styled.div`
   }
 `;
 
-export const StyledTextArea = styled.div`
+export const TextArea = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -40,7 +40,7 @@ export const StyledTextArea = styled.div`
   }
 `;
 
-export const StyledPrice = styled.div`
+export const PriceContainer = styled.div`
   display: flex;
   align-items: center;
 
@@ -70,7 +70,7 @@ export const StyledPrice = styled.div`
   }
 `;
 
-export const StyledButtonContainer = styled.div`
+export const ButtonContainer = styled.div`
   position: absolute;
   right: -30px;
   top: 50%;
