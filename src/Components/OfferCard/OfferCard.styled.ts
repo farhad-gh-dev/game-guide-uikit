@@ -3,15 +3,16 @@ import { typography, breakpoint } from "../../Styles/styles";
 
 export const StyledOfferCard = styled.div`
   padding-right: 15px;
-  margin-bottom: 40px;
+  margin-bottom: 45px;
 
   @media (min-width: ${breakpoint.laptopScreen}px) {
     padding-right: 20px;
+    margin-bottom: 48px;
   }
 
   @media (min-width: ${breakpoint.largeScreen}px) {
     padding-right: 25px;
-    margin-bottom: 70px;
+    margin-bottom: 80px;
   }
 `;
 
@@ -97,10 +98,14 @@ export const TitleContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+
+  @media (min-width: ${breakpoint.laptopScreen}px) {
+    margin-bottom: 8px;
+  }
 
   @media (min-width: ${breakpoint.largeScreen}px) {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
   }
 
   .offer-card-title {
