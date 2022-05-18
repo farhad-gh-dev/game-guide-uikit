@@ -11,5 +11,19 @@ const Template: ComponentStory<typeof Tabs> = (args) => <Tabs {...args} />;
 
 export const Standard = Template.bind({});
 Standard.args = {
-  // children: <div id="test">test</div>,
+  tabItems: [
+    {
+      tabTitle: "Collection Details",
+      tabContent: <div>tab 1 content</div>,
+    },
+    {
+      tabTitle: "Available Versions",
+      tabContent: <div>tab 2 content</div>,
+    },
+    {
+      tabTitle: "Installation Guide",
+      tabContent: <div>tab 3 content</div>,
+    },
+  ],
+  defaultActiveIndex: 1,
 };

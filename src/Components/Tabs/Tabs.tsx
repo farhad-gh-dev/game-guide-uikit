@@ -1,30 +1,37 @@
 import React, { useState } from "react";
-import { StyledTabs, TabsHeader, ContentContainer } from "./Tabs.styled";
+import { StyledTabs, TabContent } from "./Tabs.styled";
+import TabsListSmallScreen from "./TabsListSmallScreen/TabsListSmallScreen";
 
-export type TabsProps = {
-  children?: React.ReactNode;
+export type TabItem = {
+  tabTitle: string;
+  tabContent?: React.ReactNode;
 };
 
-const Tabs: React.FC<TabsProps> = ({ children }) => {
-  const [activeTab, setActiveTab] = useState<number>(0);
+export type TabsProps = {
+  tabItems?: TabItem[];
+  defaultActiveIndex?: number;
+  className?: string;
+};
 
-  //   console.log(
-  //     console.log(
-  //       React.Children.toArray(children).filter((item) => item.type === "div")[0]
-  //         .type
-  //     )
-  //   );
+const Tabs: React.FC<TabsProps> = ({
+  tabItems = [],
+  defaultActiveIndex = 0,
+  className = "",
+}) => {
+  const [activeTabIndex, setActiveTabIndex] =
+    useState<number>(defaultActiveIndex);
+
+  if (tabItems.length === 0) return null;
   return (
-    <StyledTabs>
-      <TabsHeader>
-        <div>t1</div>
-        <div>t2</div>
-        <div>t3</div>
-      </TabsHeader>
+    <StyledTabs className={className}>
+      <TabsListSmallScreen
+        tabItems={tabItems.map((item) => item.tabTitle)}
+        activeTabIndex={activeTabIndex}
+        setActiveTabIndex={(i) => setActiveTabIndex(i)}
+      />
 
-      <ContentContainer></ContentContainer>
+      <TabContent>{tabItems[activeTabIndex].tabContent}</TabContent>
     </StyledTabs>
   );
 };
-
 export default Tabs;
