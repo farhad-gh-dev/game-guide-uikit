@@ -4,6 +4,7 @@ import { color, breakpoint } from "../../../Styles/styles";
 export const StyledTabsListSmallScreen = styled.div`
   position: relative;
   display: flex;
+  margin-bottom: 25px;
 
   &::after {
     content: "";
@@ -22,21 +23,21 @@ export const StyledTabsListSmallScreen = styled.div`
 `;
 
 export const SliderControlButton = styled.button<{
-  onLeft?: boolean;
-  onRight?: boolean;
+  isOnLeft?: boolean;
+  isOnRight?: boolean;
   isDisabled?: boolean;
 }>`
   background-color: transparent;
   margin-bottom: 13px;
 
   ${(props) =>
-    props.onLeft &&
+    props.isOnLeft &&
     `
         padding: 0 15px 0 5px;
       `};
 
   ${(props) =>
-    props.onRight &&
+    props.isOnRight &&
     `
         padding: 0 5px 0 15px;
       `};
@@ -70,14 +71,6 @@ export const Tab = styled.div<{
 }>`
   position: relative;
   padding: 0 7px 15px;
-
-  @media (min-width: ${breakpoint.laptopScreen}px) {
-    padding: 0 12px 20px;
-  }
-
-  @media (min-width: ${breakpoint.largeScreen}px) {
-    padding: 0 30px 30px;
-  }
 
   &::before {
     content: "";

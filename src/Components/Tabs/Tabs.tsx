@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { StyledTabs, TabContent } from "./Tabs.styled";
 import TabsListSmallScreen from "./TabsListSmallScreen/TabsListSmallScreen";
+import TabsListLargeScreen from "./TabsListLargeScreen/TabsListLargeScreen";
 
 export type TabItem = {
   tabTitle: string;
@@ -28,6 +29,11 @@ const Tabs: React.FC<TabsProps> = ({
         tabItems={tabItems.map((item) => item.tabTitle)}
         activeTabIndex={activeTabIndex}
         setActiveTabIndex={(i) => setActiveTabIndex(i)}
+      />
+      <TabsListLargeScreen
+        tabItems={tabItems.map((item) => item.tabTitle)}
+        activeTabIndex={activeTabIndex}
+        setActiveTabIndex={setActiveTabIndex}
       />
 
       <TabContent>{tabItems[activeTabIndex].tabContent}</TabContent>

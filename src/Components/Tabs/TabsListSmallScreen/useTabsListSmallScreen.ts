@@ -56,7 +56,7 @@ export const useTabsListSmallScreen = (
     return () => {
       clearTimeout(timeout);
     };
-  });
+  }, [focusedTab]);
 
   return {
     focusedTab,

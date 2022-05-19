@@ -41,7 +41,7 @@ const TabsListSmallScreen: React.FC<TabsProps> = ({
       <SliderControlButton
         onClick={prevSlideHandler}
         isDisabled={focusedTab === 0}
-        onLeft
+        isOnLeft
       >
         <CustomIcon type="arrow-to-left" height="10px" />
       </SliderControlButton>
@@ -78,7 +78,7 @@ const TabsListSmallScreen: React.FC<TabsProps> = ({
       <SliderControlButton
         onClick={nextSlideHandler}
         isDisabled={focusedTab === tabItems.length - 1}
-        onRight
+        isOnRight
       >
         <CustomIcon type="arrow-to-right" height="10px" />
       </SliderControlButton>

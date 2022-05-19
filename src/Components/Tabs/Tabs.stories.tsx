@@ -24,6 +24,10 @@ Standard.args = {
       tabTitle: "Installation Guide",
       tabContent: <div>tab 3 content</div>,
     },
+    {
+      tabTitle: "Comments",
+      tabContent: <div>tab 4 content</div>,
+    },
   ],
   defaultActiveIndex: 1,
 };
