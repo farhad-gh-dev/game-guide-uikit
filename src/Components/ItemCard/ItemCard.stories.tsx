@@ -30,9 +30,11 @@ const Template: ComponentStory<typeof ItemCard> = (args) => (
 
 export const Standard = Template.bind({});
 Standard.args = {
-  title: "Mortal Kombat",
-  rating: 9.3,
-  imageSrc: "https://m.media-amazon.com/images/I/71MLMRhVSIL._AC_SL1500_.jpg",
+  cardInfo: {
+    title: "Mortal Kombat",
+    rating: 9.3,
+    imageSrc: "https://m.media-amazon.com/images/I/71MLMRhVSIL._AC_SL1500_.jpg",
+  },
 };
 
 export const Empty = Template.bind({});
@@ -41,15 +43,20 @@ export const Multiple = () => {
   return (
     <div style={{ display: "flex" }}>
       <Template
-        title="Modern Warfare 2"
-        rating={9.3}
-        imageSrc="https://static.posters.cz/image/1300/poster/call-of-duty-mw2-cover-i7151.jpg"
+        cardInfo={{
+          title: "Modern Warfare 2",
+          rating: 9.3,
+          imageSrc:
+            "https://static.posters.cz/image/1300/poster/call-of-duty-mw2-cover-i7151.jpg",
+        }}
       />
       <div style={{ padding: "10px" }}></div>
       <Template
-        title="Squid Games"
-        rating={8}
-        imageSrc="https://img.posterlounge.de/images/l/1909398.jpg"
+        cardInfo={{
+          title: "Squid Games",
+          rating: 8,
+          imageSrc: "https://img.posterlounge.de/images/l/1909398.jpg",
+        }}
       />
     </div>
   );

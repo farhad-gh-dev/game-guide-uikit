@@ -8,31 +8,38 @@ import {
 import Text from "../Text/Text";
 import Rating from "../Rating/Rating";
 
-export type ItemCardProps = {
+export type ItemCardInfo = {
   title?: string;
   rating?: number;
   imageSrc?: string;
+};
+
+export type ItemCardProps = {
+  cardInfo?: ItemCardInfo;
   className?: string;
 };
 
 const ItemCard: React.FC<ItemCardProps> = ({
-  title = "",
-  rating = 0,
-  imageSrc = "",
+  cardInfo = undefined,
   className = "",
 }) => {
   return (
     <StyledItemCard href={"#"} className={className}>
-      <ImageContainer backgroundImage={imageSrc}>
-        {rating !== 0 && (
+      <ImageContainer backgroundImage={cardInfo?.imageSrc}>
+        {cardInfo?.rating !== 0 && (
           <RatingContainer>
-            <Rating rating={rating} />
+            <Rating rating={cardInfo?.rating} />
           </RatingContainer>
         )}
       </ImageContainer>
       <TitleContainer>
-        <Text size="md" overflowEllipsis fontWeight="500" title={title}>
-          {title}
+        <Text
+          size="md"
+          overflowEllipsis
+          fontWeight="500"
+          title={cardInfo?.title}
+        >
+          {cardInfo?.title}
         </Text>
       </TitleContainer>
     </StyledItemCard>
