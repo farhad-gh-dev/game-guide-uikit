@@ -9,6 +9,7 @@ import Text from "../Text/Text";
 import Rating from "../Rating/Rating";
 
 export type ItemCardInfo = {
+  id?: number;
   title?: string;
   rating?: number;
   imageSrc?: string;
