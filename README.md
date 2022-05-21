@@ -5,6 +5,10 @@
 [Game Guide](https://github.com/farhad-gh-dev/game-guide) application design system.
 Live demo -> https://game-guide-uikit.vercel.app/
 
+## Tech stack
+
+React (typescript) - Storybook - Styled Components
+
 ## Usage
 
     import React from 'react';
