@@ -28,8 +28,6 @@ jobs:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v20
-        id: deploy-vercel
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
