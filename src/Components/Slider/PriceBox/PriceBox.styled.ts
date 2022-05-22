@@ -35,8 +35,8 @@ export const TextArea = styled.div`
     width: 214px;
   }
 
-  p {
-    color: rgba(0, 0, 0, 0.5);
+  .price-label {
+    opacity: 0.55;
   }
 `;
 

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { color, typography, breakpoint } from "../../Styles/styles";
+import { color, background, typography, breakpoint } from "../../Styles/styles";
 
 export const StyledSlider = styled.div`
   position: relative;
@@ -27,7 +27,7 @@ export const SliderItem = styled.div<{
   height: 100%;
   width: 100%;
   padding: 30px 20px;
-  background-color: #f2f2f2;
+  background-color: ${background.placeholder_light};
   border-radius: 16px;
   opacity: 0;
   z-index: 0;

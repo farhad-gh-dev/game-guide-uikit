@@ -22,7 +22,7 @@ const PriceBox: React.FC<PriceBoxProps> = ({
   return (
     <StyledPriceBox>
       <TextArea>
-        <Text size={"sm"} fontWeight={"700"}>
+        <Text className="price-label" size={"sm"} fontWeight={"700"}>
           Price
         </Text>
         <PriceContainer>

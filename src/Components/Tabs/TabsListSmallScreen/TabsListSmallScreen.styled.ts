@@ -45,7 +45,7 @@ export const SliderControlButton = styled.button<{
   ${(props) =>
     props.isDisabled &&
     `
-        opacity: 0.5;
+        opacity: 0.55;
       `};
 `;
 
@@ -88,7 +88,7 @@ export const Tab = styled.div<{
 
   h4 {
     cursor: pointer;
-    opacity: 0.45;
+    opacity: 0.55;
     font-weight: 500;
     white-space: nowrap;
     pointer-events: none;

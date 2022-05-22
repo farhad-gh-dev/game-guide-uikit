@@ -53,25 +53,28 @@ const Slider: React.FC<SliderProps> = ({
             backgroundImageSrc={item.backgroundImageSrc}
             key={item.id}
           >
-            <OverlayImage
-              src={item.overlayImageSrc}
-              imageHeight={item.overlayImageHeight}
-              imagePositionFromRight={item.overlayPositionFromRight}
-            />
+            {item.overlayImageSrc && (
+              <OverlayImage
+                alt={item.title}
+                src={item.overlayImageSrc}
+                imageHeight={item.overlayImageHeight}
+                imagePositionFromRight={item.overlayPositionFromRight}
+              />
+            )}
             <TextArea>
-              {item.titleImageSrc ? (
+              {item.titleImageSrc && (
                 <TitleImage
+                  alt={item.title}
                   src={item.titleImageSrc}
-                  title={item.titleImageSrc}
                   titleImageHeight={item.titleImageHeight}
                 />
-              ) : null}
+              )}
 
-              {!item.titleImageSrc && item.title ? (
+              {!item.titleImageSrc && item.title && (
                 <DefaultTitle isLight={item.titleIsLight}>
                   {item.title}
                 </DefaultTitle>
-              ) : null}
+              )}
             </TextArea>
             <div>
               <PriceBox

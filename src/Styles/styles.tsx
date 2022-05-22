@@ -2,6 +2,8 @@
 export const background = {
   app: "#FFFFFF",
   app_inverse: "#000000",
+  placeholder_light: "#e8e8e8",
+  placeholder_dark: "#c0c0c0",
 };
 
 export const color = {

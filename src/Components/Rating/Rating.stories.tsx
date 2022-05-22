@@ -12,7 +12,7 @@ const Template: ComponentStory<typeof Rating> = (args) => (
   <div
     style={{
       display: "inline-block",
-      backgroundColor: "#6868FF",
+      backgroundColor: "hsl(0, 88.34951456310678%, 45%)",
       padding: "20px",
     }}
   >

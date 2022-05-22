@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { typography, breakpoint } from "../../Styles/styles";
+import { background, typography, breakpoint } from "../../Styles/styles";
 
 export const ImageContainer = styled.div<{
   backgroundImage?: string;
@@ -10,7 +10,7 @@ export const ImageContainer = styled.div<{
   transform: translateX(-50%);
   width: calc(100% - 20px);
   height: 160px;
-  background-color: grey;
+  background-color: ${background.placeholder_light};
   border-radius: 14px;
   transition: 0.2s ease-in-out;
 

@@ -30,7 +30,7 @@ AsSpan.args = {
 export const DifferentOpacity = Template.bind({});
 DifferentOpacity.args = {
   children: defaultText,
-  opacity: 0.5,
+  opacity: 0.6,
 };
 
 export const Sizes = () => (

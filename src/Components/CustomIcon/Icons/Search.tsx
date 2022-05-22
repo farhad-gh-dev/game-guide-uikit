@@ -9,9 +9,8 @@ const Search: React.FC = (props) => {
       viewBox="0 0 31 30"
       {...props}
     >
-      <g id="Group_1" data-name="Group 1" transform="translate(-170 -213)">
+      <g data-name="Search" transform="translate(-170 -213)">
         <g
-          id="Ellipse_1"
           data-name="Ellipse 1"
           transform="translate(170 213)"
           fill="none"
@@ -22,7 +21,6 @@ const Search: React.FC = (props) => {
           <circle cx="13.5" cy="13.5" r="12.5" fill="none" />
         </g>
         <g
-          id="Ellipse_2"
           data-name="Ellipse 2"
           transform="translate(194 236)"
           fill="none"

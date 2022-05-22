@@ -43,6 +43,7 @@ export const RatingContent = styled.div`
     margin-left: 4px;
     font-feature-settings: "tnum";
     font-variant-numeric: tabular-nums;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
 
     @media (min-width: ${breakpoint.laptopScreen}px) {
       margin-left: 6px;

@@ -39,6 +39,7 @@ const TabsListSmallScreen: React.FC<TabsProps> = ({
   return (
     <StyledTabsListSmallScreen>
       <SliderControlButton
+        aria-label="prev-button"
         onClick={prevSlideHandler}
         isDisabled={focusedTab === 0}
         isOnLeft
@@ -76,6 +77,7 @@ const TabsListSmallScreen: React.FC<TabsProps> = ({
       </TabsSlider>
 
       <SliderControlButton
+        aria-label="next-button"
         onClick={nextSlideHandler}
         isDisabled={focusedTab === tabItems.length - 1}
         isOnRight

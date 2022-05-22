@@ -9,9 +9,8 @@ const ShoppingCard: React.FC = (props) => {
       viewBox="0 0 24.5 27"
       {...props}
     >
-      <g id="shopping-bag" transform="translate(-2 -1)">
+      <g data-name="shopping-bag" transform="translate(-2 -1)">
         <path
-          id="Path_3"
           data-name="Path 3"
           d="M6.75,2,3,7V24.5A2.5,2.5,0,0,0,5.5,27H23a2.5,2.5,0,0,0,2.5-2.5V7L21.75,2Z"
           fill="none"
@@ -21,7 +20,6 @@ const ShoppingCard: React.FC = (props) => {
           strokeWidth="2"
         />
         <line
-          id="Line_1"
           data-name="Line 1"
           x2="22.5"
           transform="translate(3 6)"
@@ -32,7 +30,6 @@ const ShoppingCard: React.FC = (props) => {
           strokeWidth="2"
         />
         <path
-          id="Path_4"
           data-name="Path 4"
           d="M16,10a4,4,0,0,1-8,0"
           transform="translate(2.25 2.5)"

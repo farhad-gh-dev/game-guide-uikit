@@ -10,7 +10,7 @@ const ArrowToRight: React.FC = (props) => {
       {...props}
     >
       <path
-        id="chevron-right"
+        data-name="arrow-right"
         d="M9,16l5-5L9,6"
         transform="translate(-7.939 -4.939)"
         fill="none"

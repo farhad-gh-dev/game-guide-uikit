@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { typography, breakpoint } from "../../Styles/styles";
+import { background, typography, breakpoint } from "../../Styles/styles";
 
 export const StyledOfferCard = styled.div`
   padding-right: 15px;
@@ -20,7 +20,7 @@ export const ImageContainer = styled.a`
   position: relative;
   height: 184px;
   border-radius: 16px;
-  background-color: gray;
+  background-color: ${background.placeholder_light};
   margin-bottom: 20px;
 
   @media (min-width: ${breakpoint.laptopScreen}px) {
@@ -120,7 +120,7 @@ export const PriceContainer = styled.div`
 
   .offer-price-label {
     letter-spacing: 0.03em;
-    opacity: 0.5;
+    opacity: 0.55;
   }
 
   .offer-price {

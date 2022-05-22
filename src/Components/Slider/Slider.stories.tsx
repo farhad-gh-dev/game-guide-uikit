@@ -40,6 +40,7 @@ Standard.args = {
         "https://static.wikia.nocookie.net/playstationallstarsfanfictionroyale/images/e/e8/JesseFaden.png",
       overlayImageHeight: 125,
       overlayPositionFromRight: 10,
+      title: "control",
       titleImageSrc:
         "https://www.remedygames.com/wp-content/uploads/2018/05/ujujujuj3.png",
       titleImageHeight: 67,
@@ -53,8 +54,7 @@ Standard.args = {
         "https://i.pinimg.com/originals/a9/94/d9/a994d91c5d89aca55b8231879dd7c9d0.png",
       overlayImageHeight: 120,
       overlayPositionFromRight: 0,
-      title: "Apex Legends",
-
+      title: "valorant",
       price: 1500,
     },
   ],

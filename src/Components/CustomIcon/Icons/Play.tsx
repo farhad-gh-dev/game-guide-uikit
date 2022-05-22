@@ -10,7 +10,7 @@ const Play: React.FC = (props) => {
       {...props}
     >
       <path
-        id="play"
+        data-name="play"
         d="M5,3l14,9L5,21Z"
         transform="translate(-5 -3)"
         fill="#fff"

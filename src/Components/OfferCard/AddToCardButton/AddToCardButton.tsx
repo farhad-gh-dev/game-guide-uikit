@@ -21,6 +21,7 @@ const AddToCardButton: React.FC<AddToCardButtonProps> = ({
 }) => {
   return (
     <StyledAddToCardButton
+      aria-label="add to card"
       className={className}
       isActive={isActive}
       onClick={() => onAddToCard()}
