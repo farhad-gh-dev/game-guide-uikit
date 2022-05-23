@@ -1,4 +1,6 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { within, userEvent } from "@storybook/testing-library";
+import { expect } from "@storybook/jest";
 
 import Rating from "./Rating";
 
@@ -22,7 +24,13 @@ const Template: ComponentStory<typeof Rating> = (args) => (
 
 export const Standard = Template.bind({});
 Standard.args = {
-  rating: 8.4,
+  rating: 8.4135135,
+};
+
+Standard.play = async ({ canvasElement }) => {
+  const canvas = within(canvasElement);
+
+  await expect(canvas.getByTestId("rating").textContent).toBe("8.4");
 };
 
 export const NoRating = Template.bind({});

@@ -55,7 +55,7 @@ export const SingleIndicator = styled.div<{ active?: boolean }>`
     margin-bottom: 15px;
   }
 
-  &:last-child {
+  &:last-of-type {
     margin-bottom: 0;
   }
 

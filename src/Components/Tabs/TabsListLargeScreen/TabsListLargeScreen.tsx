@@ -19,7 +19,11 @@ const TabsListLargeScreen: React.FC<TabsProps> = ({
       {tabItems.map((item, index) => {
         return (
           <Tab key={item} active={activeTabIndex === index}>
-            <Heading h4 onClick={() => setActiveTabIndex(index)}>
+            <Heading
+              h4
+              onClick={() => setActiveTabIndex(index)}
+              data-testid={`tab-lg-${item}`}
+            >
               {item}
             </Heading>
           </Tab>

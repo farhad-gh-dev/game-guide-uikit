@@ -31,7 +31,7 @@ export const MenuToggler = styled.div`
       margin-right: 5px;
     }
 
-    &:last-child {
+    &:last-of-type {
       margin-right: 0;
     }
   }

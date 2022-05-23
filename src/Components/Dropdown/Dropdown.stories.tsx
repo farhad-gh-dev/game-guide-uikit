@@ -1,4 +1,6 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { within, userEvent } from "@storybook/testing-library";
+import { expect } from "@storybook/jest";
 
 import Dropdown from "./Dropdown";
 
@@ -22,6 +24,18 @@ const mockData = [
 export const Standard = Template.bind({});
 Standard.args = {
   items: mockData,
+};
+
+Standard.play = async ({ canvasElement }) => {
+  const canvas = within(canvasElement);
+
+  await userEvent.click(canvas.getByTestId("menu-toggler"));
+
+  await expect(canvas.queryByText(mockData[0].text)).toBeInTheDocument();
+
+  await userEvent.click(canvas.getByTestId("menu-toggler"));
+
+  await expect(canvas.queryByText(mockData[0].text)).not.toBeInTheDocument();
 };
 
 export const Empty = Template.bind({});

@@ -7,6 +7,9 @@ module.exports = {
     "@storybook/preset-create-react-app",
     "@storybook/addon-a11y",
   ],
+  features: {
+    interactionsDebugger: true, // 👈 Enable playback controls
+  },
   framework: "@storybook/react",
   core: {
     builder: "@storybook/builder-webpack5",

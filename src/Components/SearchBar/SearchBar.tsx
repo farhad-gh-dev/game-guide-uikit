@@ -35,6 +35,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
 
       <InputContainer isActive={isActive}>
         <SearchInput
+          data-testid="search-input"
           placeholder="Search..."
           value={inputValue}
           onKeyUp={(e: React.KeyboardEvent<HTMLInputElement>) =>

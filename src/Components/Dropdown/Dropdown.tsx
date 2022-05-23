@@ -22,16 +22,19 @@ const Dropdown: React.FC<DropdownProps> = ({
   if (items.length === 0) return null;
   return (
     <StyledDropdown className={className}>
-      <MenuToggler onClick={() => setIsOpen(!isOpen)}>
+      <MenuToggler
+        data-testid="menu-toggler"
+        onClick={() => setIsOpen(!isOpen)}
+      >
         <div></div>
         <div></div>
         <div></div>
       </MenuToggler>
       {isOpen && items.length > 0 && (
-        <Menu>
+        <Menu data-testid="menu">
           {items.map((i, index) => {
             return (
-              <MenuItem active={index === activeItemIndex}>
+              <MenuItem key={index} active={index === activeItemIndex}>
                 <a href={i.url} title={i.text}>
                   <Text
                     isSpan
