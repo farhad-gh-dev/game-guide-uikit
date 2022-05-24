@@ -29,11 +29,11 @@ Standard.args = {
 Standard.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
 
-  await userEvent.click(canvas.getByTestId("menu-toggler"));
+  await userEvent.click(canvas.getByTestId("dropdown-menu-toggler"));
 
   await expect(canvas.queryByText(mockData[0].text)).toBeInTheDocument();
 
-  await userEvent.click(canvas.getByTestId("menu-toggler"));
+  await userEvent.click(canvas.getByTestId("dropdown-menu-toggler"));
 
   await expect(canvas.queryByText(mockData[0].text)).not.toBeInTheDocument();
 };

@@ -29,8 +29,9 @@ Standard.args = {
 
 Standard.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
+  const inputElement = canvas.getByPlaceholderText("Search...");
 
-  await userEvent.type(canvas.getByTestId("search-input"), "call of duty");
+  await userEvent.type(inputElement, "call of duty");
 
-  await expect(canvas.getByDisplayValue("call of duty")).toBeInTheDocument();
+  await expect(inputElement.getAttribute("value")).toBe("call of duty");
 };

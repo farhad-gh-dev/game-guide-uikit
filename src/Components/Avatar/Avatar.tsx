@@ -16,7 +16,9 @@ const Avatar: React.FC<AvatarProps> = ({
   return (
     <StyledAvatar imageSrc={imageSrc} className={className}>
       {!imageSrc && <DefaultProfileImage />}
-      {userType ? <ProfileBadge>{userType}</ProfileBadge> : null}
+      {userType ? (
+        <ProfileBadge data-testid="avatar-type">{userType}</ProfileBadge>
+      ) : null}
     </StyledAvatar>
   );
 };

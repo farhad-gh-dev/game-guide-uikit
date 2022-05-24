@@ -23,7 +23,7 @@ const Dropdown: React.FC<DropdownProps> = ({
   return (
     <StyledDropdown className={className}>
       <MenuToggler
-        data-testid="menu-toggler"
+        data-testid="dropdown-menu-toggler"
         onClick={() => setIsOpen(!isOpen)}
       >
         <div></div>
@@ -31,7 +31,7 @@ const Dropdown: React.FC<DropdownProps> = ({
         <div></div>
       </MenuToggler>
       {isOpen && items.length > 0 && (
-        <Menu data-testid="menu">
+        <Menu data-testid="dorp-down-menu">
           {items.map((i, index) => {
             return (
               <MenuItem key={index} active={index === activeItemIndex}>

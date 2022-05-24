@@ -49,6 +49,7 @@ const Slider: React.FC<SliderProps> = ({
       {sliderItems?.map((item, index) => {
         return (
           <SliderItem
+            data-testid={`slide-${index + 1}`}
             active={activeSlide - 1 === index}
             backgroundImageSrc={item.backgroundImageSrc}
             key={item.id}
