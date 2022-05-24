@@ -1,6 +1,7 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { within, userEvent } from "@storybook/testing-library";
+import { within } from "@storybook/testing-library";
 import { expect } from "@storybook/jest";
+import { fireEvent } from "@testing-library/react";
 
 import SearchBar from "./SearchBar";
 
@@ -31,8 +32,7 @@ Standard.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
   const inputElement = canvas.getByPlaceholderText("Search...");
 
-  await userEvent.click(inputElement);
-  await userEvent.keyboard("call of duty");
+  await fireEvent.change(inputElement, { target: { value: "call of duty" } });
 
   await expect(inputElement.getAttribute("value")).toBe("call of duty");
 };
