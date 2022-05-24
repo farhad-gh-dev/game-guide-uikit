@@ -27,11 +27,11 @@ Standard.args = {
   onSearch: (i) => console.log(i),
 };
 
-Standard.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement);
-  const inputElement = canvas.getByPlaceholderText("Search...");
+// Standard.play = async ({ canvasElement }) => {
+//   const canvas = within(canvasElement);
+//   const inputElement = canvas.getByPlaceholderText("Search...");
 
-  await userEvent.type(inputElement, "call of duty");
+//   await userEvent.type(inputElement, "call of duty");
 
-  await expect(inputElement.getAttribute("value")).toBe("call of duty");
-};
+//   await expect(inputElement.getAttribute('value')).toBe("call of duty");
+// };
