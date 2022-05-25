@@ -3,18 +3,18 @@ import { color, breakpoint } from "../../Styles/styles";
 
 export const StyledRating = styled.div`
   display: inline-block;
-  padding: 4px 11px;
+  padding: 5px 10px;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 12px;
   background-color: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px) brightness(105%);
 
   @media (min-width: ${breakpoint.laptopScreen}px) {
-    padding: 4px 12px;
+    padding: 6px 10px;
     border-radius: 12px;
   }
   @media (min-width: ${breakpoint.largeScreen}px) {
-    padding: 6px 18px;
+    padding: 8px 15px;
     border-radius: 15px;
   }
 `;
@@ -47,9 +47,6 @@ export const RatingContent = styled.div`
 
     @media (min-width: ${breakpoint.laptopScreen}px) {
       margin-left: 6px;
-    }
-    @media (min-width: ${breakpoint.largeScreen}px) {
-      margin-left: 8px;
     }
   }
 `;
