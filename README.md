@@ -1,4 +1,4 @@
-![enter image description here](https://raw.githubusercontent.com/farhad-gh-dev/game-guide-uikit/master/public/logo512.png)
+![game guide ui kit screenshot](https://raw.githubusercontent.com/farhad-gh-dev/game-guide-uikit/master/public/logo512.png)
 
 ## Game-Guide-UIKit
 
