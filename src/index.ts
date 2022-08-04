@@ -8,6 +8,7 @@ import CustomIcon, {type CustomIconProps, type IconTypes} from "./Components/Cus
 import Dropdown, {type DropdownProps, type DropdownItem} from "./Components/Dropdown/Dropdown";
 import Heading, {type HeadingProps} from "./Components/Heading/Heading";
 import ItemCard, {type ItemCardProps, type ItemCardInfo} from "./Components/ItemCard/ItemCard";
+import Loading from './Components/Loading/Loading';
 import { Navbar, type NavbarProps, NavbarItem, type NavbarItemProps } from "./Components/Navbar/Navbar";
 import OfferCard, {type OfferCardProps, type offerItem} from './Components/OfferCard/OfferCard';
 import Rating, {type RatingProps} from "./Components/Rating/Rating";
@@ -44,6 +45,8 @@ export {
     ItemCard,
     ItemCardProps,
     ItemCardInfo,
+
+    Loading,
 
     Navbar,
     NavbarProps,
