@@ -12,6 +12,7 @@ export const StyledIcon = styled.div<{
   heightDesktop?: string;
 }>`
   display: inline-block;
+  position: relative;
 
   svg {
     display: block;
@@ -77,5 +78,29 @@ export const StyledIcon = styled.div<{
             };
         `};
     }
+  }
+`;
+
+export const Counter = styled.span<{ width?: string }>`
+  position: absolute;
+  bottom: 70%;
+  left: 61%;
+  padding: 0 3px;
+  border-radius: 3px;
+  background-color: ${color.primary};
+  color: ${color.lightest};
+  font-size: 10px;
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+
+  @media (min-width: ${breakpoint.laptopScreen}px) {
+    padding: 0 4px;
+    border-radius: 4px;
+  }
+
+  @media (min-width: ${breakpoint.largeScreen}px) {
+    padding: 0 5px;
+    border-radius: 5px;
+    font-size: 12px;
   }
 `;

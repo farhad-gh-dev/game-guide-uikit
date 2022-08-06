@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledIcon } from "./CustomIcon.styled";
+import { StyledIcon, Counter } from "./CustomIcon.styled";
 import ShoppingCardIcon from "./Icons/ShoppingCard";
 import BellIcon from "./Icons/Bell";
 import SearchIcon from "./Icons/Search";
@@ -31,16 +31,21 @@ export type CustomIconProps = {
   height?: string;
   heightLaptop?: string;
   heightDesktop?: string;
+  counter?: number;
   className?: string;
 };
 
 const CustomIcon: React.FC<CustomIconProps> = ({
   type,
+  counter,
   className,
   ...props
 }) => {
   return (
     <StyledIcon className={className} {...props}>
+      {counter ? (
+        <Counter width={props.width}>{counter < 100 ? counter : "+99"}</Counter>
+      ) : null}
       <TargetIcon type={type} />
     </StyledIcon>
   );

@@ -40,3 +40,12 @@ export const Single = Template.bind({});
 Single.args = {
   type: "shopping-card",
 };
+
+export const WithCounter = Template.bind({});
+WithCounter.args = {
+  type: "bell",
+  counter: 12,
+  height: "15px",
+  heightLaptop: "22px",
+  heightDesktop: "25px",
+};
