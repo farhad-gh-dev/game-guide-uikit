@@ -1,5 +1,6 @@
+import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { within, userEvent } from "@storybook/testing-library";
+import { within } from "@storybook/testing-library";
 import { expect } from "@storybook/jest";
 
 import Rating from "./Rating";
