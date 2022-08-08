@@ -28,18 +28,18 @@ export type offerItem = {
 export type OfferCardProps = {
   className?: string;
   itemData?: offerItem;
-  onAddToCard?: (itemData: {}) => void;
+  onAddToCart?: (itemData: {}) => void;
 };
 
 const OfferCard: React.FC<OfferCardProps> = ({
   itemData = {},
   className = "",
-  onAddToCard = () => {},
+  onAddToCart = () => {},
 }) => {
   return (
     <StyledOfferCard className={className}>
-      <ImageContainer href={itemData.url} >
-        <CardImage CardImageSrc={itemData.imageSrc}>
+      <ImageContainer>
+        <CardImage CardImageSrc={itemData.imageSrc} href={itemData.url}>
           <div></div>
         </CardImage>
 
@@ -47,7 +47,7 @@ const OfferCard: React.FC<OfferCardProps> = ({
           <Raring rating={itemData.rating} />
         </RatingContainer>
 
-        <AddToCardButton onAddToCard={() => onAddToCard(itemData)} isActive={itemData.isInBasket}/>
+        <AddToCardButton onAddToCart={() => onAddToCart(itemData)} isActive={itemData.isInBasket}/>
       </ImageContainer>
 
       <TextArea>

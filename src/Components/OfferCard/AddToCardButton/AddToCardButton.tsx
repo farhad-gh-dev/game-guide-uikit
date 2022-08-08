@@ -11,20 +11,20 @@ import CustomIcon from "../../CustomIcon/CustomIcon";
 export type AddToCardButtonProps = {
   isActive?: boolean;
   className?: string;
-  onAddToCard?: () => void;
+  onAddToCart?: () => void;
 };
 
 const AddToCardButton: React.FC<AddToCardButtonProps> = ({
   isActive = false,
   className = "",
-  onAddToCard = () => {},
+  onAddToCart = () => {},
 }) => {
   return (
     <StyledAddToCardButton
       aria-label="add to card"
       className={className}
       isActive={isActive}
-      onClick={() => onAddToCard()}
+      onClick={() => onAddToCart()}
     >
       <HexagonSmallScreen />
       <HexagonLaptopScreen />

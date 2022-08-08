@@ -16,7 +16,7 @@ export const StyledOfferCard = styled.div`
   }
 `;
 
-export const ImageContainer = styled.a`
+export const ImageContainer = styled.div`
   position: relative;
   height: 184px;
   border-radius: 16px;
@@ -35,7 +35,7 @@ export const ImageContainer = styled.a`
   }
 `;
 
-export const CardImage = styled.div<{
+export const CardImage = styled.a<{
   CardImageSrc?: string;
 }>`
   display: flex;
