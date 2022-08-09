@@ -36,7 +36,7 @@ const PriceBox: React.FC<PriceBoxProps> = ({
       </TextArea>
       <ButtonContainer>
         <Button active={true} onClick={() => onBuyHandler(itemId)}>
-          {isInBasket ? "Buy" : "Drop It"}
+          {isInBasket ? "Drop It" : "Buy"}
         </Button>
       </ButtonContainer>
     </StyledPriceBox>
