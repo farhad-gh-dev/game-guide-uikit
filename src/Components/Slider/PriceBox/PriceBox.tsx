@@ -11,12 +11,14 @@ import {
 export type PriceBoxProps = {
   itemId?: string | number;
   price?: number;
+  isInBasket?: boolean;
   onBuyHandler?: (itemId?: string | number) => void;
 };
 
 const PriceBox: React.FC<PriceBoxProps> = ({
   itemId,
   price = 0,
+  isInBasket = false,
   onBuyHandler = () => {},
 }) => {
   return (
@@ -34,7 +36,7 @@ const PriceBox: React.FC<PriceBoxProps> = ({
       </TextArea>
       <ButtonContainer>
         <Button active={true} onClick={() => onBuyHandler(itemId)}>
-          Buy
+          {isInBasket ? "Buy" : "Drop It"}
         </Button>
       </ButtonContainer>
     </StyledPriceBox>

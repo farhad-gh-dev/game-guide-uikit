@@ -1,6 +1,6 @@
 {
   "name": "game-guide-ui-kit",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "a UI kit for game guide application",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
