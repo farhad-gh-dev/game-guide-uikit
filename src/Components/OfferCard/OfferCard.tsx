@@ -28,13 +28,13 @@ export type offerItem = {
 export type OfferCardProps = {
   className?: string;
   itemData?: offerItem;
-  onAddToCart?: (itemData: {}) => void;
+  onToggleInCart?: (itemData: {}) => void;
 };
 
 const OfferCard: React.FC<OfferCardProps> = ({
   itemData = {},
   className = "",
-  onAddToCart = () => {},
+  onToggleInCart = () => {},
 }) => {
   return (
     <StyledOfferCard className={className}>
@@ -47,7 +47,7 @@ const OfferCard: React.FC<OfferCardProps> = ({
           <Raring rating={itemData.rating} />
         </RatingContainer>
 
-        <AddToCardButton onAddToCart={() => onAddToCart(itemData)} isActive={itemData.isInBasket}/>
+        <AddToCardButton onAddToCart={() => onToggleInCart(itemData)} isActive={itemData.isInBasket}/>
       </ImageContainer>
 
       <TextArea>
