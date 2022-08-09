@@ -10,7 +10,7 @@ import {
 } from "./Slider.styled";
 
 export type SliderItem = {
-  id?: string | number;
+  id?: string;
   title?: string;
   backgroundImageSrc?: string;
   overlayImageSrc?: string;
@@ -35,7 +35,7 @@ export type SliderProps = {
   sliderItems?: Array<SliderItem>;
   activeSlide?: number;
   className?: string;
-  onBuyHandler?: (itemId?: string | number) => void;
+  onBuyHandler?: (itemId?: string) => void;
 };
 
 const Slider: React.FC<SliderProps> = ({

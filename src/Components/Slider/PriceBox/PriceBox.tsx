@@ -9,10 +9,10 @@ import {
 } from "./PriceBox.styled";
 
 export type PriceBoxProps = {
-  itemId?: string | number;
+  itemId?: string;
   price?: number;
   isInBasket?: boolean;
-  onBuyHandler?: (itemId?: string | number) => void;
+  onBuyHandler?: (itemId?: string) => void;
 };
 
 const PriceBox: React.FC<PriceBoxProps> = ({
