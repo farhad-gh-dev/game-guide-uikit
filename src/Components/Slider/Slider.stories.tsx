@@ -59,7 +59,28 @@ Standard.args = {
       price: 1500,
     },
   ],
-  onBuyHandler: (itemId) => {
+  onToggleInCart: (itemId) => {
+    console.log(itemId);
+  },
+};
+
+export const ItemIsInBasket = Template.bind({});
+ItemIsInBasket.args = {
+  sliderItems: [
+    {
+      id: 1,
+      backgroundImageSrc:
+        "https://progameguides.com/wp-content/uploads/2021/12/Featured-VALORANT-Logo-900x506.jpg",
+      overlayImageSrc:
+        "https://i.pinimg.com/originals/a9/94/d9/a994d91c5d89aca55b8231879dd7c9d0.png",
+      overlayImageHeight: 120,
+      overlayPositionFromRight: 0,
+      title: "valorant",
+      price: 1500,
+      isInBasket: true,
+    },
+  ],
+  onToggleInCart: (itemId) => {
     console.log(itemId);
   },
 };

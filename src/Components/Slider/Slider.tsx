@@ -29,20 +29,21 @@ export type SliderItem = {
   titleImageHeight?: number;
   titleIsLight?: boolean;
   price?: number;
+  isInBasket?: boolean;
 };
 
 export type SliderProps = {
   sliderItems?: Array<SliderItem>;
   activeSlide?: number;
   className?: string;
-  onBuyHandler?: (itemId?: string) => void;
+  onToggleInCart?: (itemId?: string) => void;
 };
 
 const Slider: React.FC<SliderProps> = ({
   sliderItems = [],
   activeSlide = 1,
   className = "",
-  onBuyHandler = () => {},
+  onToggleInCart = () => {},
 }) => {
   return (
     <StyledSlider className={className}>
@@ -79,9 +80,10 @@ const Slider: React.FC<SliderProps> = ({
             </TextArea>
             <div>
               <PriceBox
-                price={item.price}
                 itemId={item.id}
-                onBuyHandler={onBuyHandler}
+                price={item.price}
+                isInBasket={item.isInBasket}
+                onToggleInCart={onToggleInCart}
               />
             </div>
           </SliderItem>

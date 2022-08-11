@@ -70,7 +70,7 @@ export const PriceContainer = styled.div`
   }
 `;
 
-export const ButtonContainer = styled.div`
+export const ButtonContainer = styled.div<{ isInBasket?: boolean }>`
   position: absolute;
   right: -30px;
   top: 50%;
@@ -96,5 +96,19 @@ export const ButtonContainer = styled.div`
       width: 150px;
       height: 60px;
     }
+
+    ${(props) =>
+      props.isInBasket &&
+      `
+        background-color: ${color.lightest};
+        color: ${color.primary};
+        border: 2px solid ${color.primary};
+        font-weight: ${typography.weight.regular};
+
+        @media (min-width: ${breakpoint.laptopScreen}px) {
+          border: 3px solid ${color.primary};
+          font-weight: ${typography.weight.bold};
+        }
+    `};
   }
 `;
