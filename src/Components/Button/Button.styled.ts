@@ -32,8 +32,7 @@ export const StyledButton = styled.button<{
   cursor: pointer;
   transition: 0.2s ease-in-out;
 
-  &:hover,
-  &:focus {
+  &:hover {
     filter: brightness(95%);
   }
 
