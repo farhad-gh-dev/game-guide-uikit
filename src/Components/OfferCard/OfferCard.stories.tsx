@@ -46,6 +46,22 @@ Standard.args = {
   },
 };
 
+export const Active = Template.bind({});
+Active.args = {
+  itemData: {
+    title: "Elden Ring",
+    imageSrc: "https://www.gamepressure.com/i/h/17/383338361.jpg",
+    url: "/",
+    price: 34.9,
+    rating: 9.8,
+    isInBasket: true,
+    dropdownItems: [
+      { text: "Collection", url: "/" },
+      { text: "title", url: "/" },
+    ],
+  },
+};
+
 export const Empty = Template.bind({});
 
 export const Multiple: ComponentStory<typeof OfferCard> = () => {
@@ -72,7 +88,6 @@ export const Multiple: ComponentStory<typeof OfferCard> = () => {
           url: "/",
           price: 34.9,
           rating: 9.8,
-          isInBasket: true,
           dropdownItems: [
             { text: "Collection", url: "/" },
             { text: "title", url: "/" },

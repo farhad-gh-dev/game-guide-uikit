@@ -83,23 +83,7 @@ export const StyledAddToCardButton = styled.button<{
   }
 
   &:hover {
-    .hexagon,
-    .hexagon-laptop,
-    .hexagon-desktop {
-      path {
-        fill: ${(props) => (props.isActive ? color.lightest : color.primary)};
-      }
-    }
-
-    ${ShoppingCardIconContainer} {
-      svg {
-        g,
-        path,
-        line {
-          stroke: ${(props) =>
-            props.isActive ? color.primary : color.lightest} !important;
-        }
-      }
-    }
+    transition: 0.3s ease-in-out;
+    filter: brightness(${(props) => (props.isActive ? "85%" : "95%")});
   }
 `;

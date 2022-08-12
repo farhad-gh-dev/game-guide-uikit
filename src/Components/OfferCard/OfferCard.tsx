@@ -47,7 +47,7 @@ const OfferCard: React.FC<OfferCardProps> = ({
           <Raring rating={itemData.rating} />
         </RatingContainer>
 
-        <AddToCardButton onAddToCart={() => onToggleInCart(itemData)} isActive={itemData.isInBasket}/>
+        <AddToCardButton onAddToCart={() => onToggleInCart(itemData)} isActive={itemData.isInBasket} isInBasket={itemData.isInBasket}/>
       </ImageContainer>
 
       <TextArea>
