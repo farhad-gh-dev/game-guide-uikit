@@ -48,7 +48,7 @@ export const StyledButton = styled.button<{
     border-color: transparent;
     color: white;
 
-    &:hover, &:focus {
+    &:hover {
       filter: brightness(85%);
     }
     `};
