@@ -2,6 +2,10 @@ import styled from "styled-components";
 import { color, background, typography, breakpoint } from "../../Styles/styles";
 
 export const StyledSlider = styled.div`
+  width: 100%;
+`;
+
+export const SliderContainer = styled.div`
   position: relative;
   height: 170px;
   width: 100%;
@@ -55,7 +59,7 @@ export const SliderItem = styled.div<{
     props.active &&
     `
     opacity: 1;
-    z-index: 100;
+    z-index: 10;
     `};
 `;
 
@@ -65,7 +69,7 @@ export const OverlayImage = styled.img<{
 }>`
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: -4%;
   height: 120%;
   width: auto;
   max-width: 100%;
@@ -139,4 +143,16 @@ export const DefaultTitle = styled.span<{
     `
       color: ${color.lightest}
     `}
+`;
+
+export const OverlayImageBottomCover = styled.div`
+  position: relative;
+  width: 100%;
+  height: 25px;
+  background-color: white;
+  z-index: 15;
+
+  @media (min-width: ${breakpoint.largeScreen}px) {
+    height: 40px;
+  }
 `;
