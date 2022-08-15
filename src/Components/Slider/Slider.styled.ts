@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { color, background, typography, breakpoint } from "../../Styles/styles";
 
 export const StyledSlider = styled.div`
+  position: relative;
   width: 100%;
 `;
 
@@ -146,13 +147,14 @@ export const DefaultTitle = styled.span<{
 `;
 
 export const OverlayImageBottomCover = styled.div`
-  position: relative;
+  position: absolute;
+  top: 100%;
   width: 100%;
-  height: 25px;
+  height: 35px;
   background-color: white;
   z-index: 15;
 
   @media (min-width: ${breakpoint.largeScreen}px) {
-    height: 40px;
+    height: 60px;
   }
 `;

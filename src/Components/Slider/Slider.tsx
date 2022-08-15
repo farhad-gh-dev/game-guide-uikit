@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import PriceBox from "./PriceBox/PriceBox";
 import {
   StyledSlider,
@@ -37,6 +37,7 @@ export type SliderItem = {
 export type SliderProps = {
   sliderItems?: Array<SliderItem>;
   activeSlide?: number;
+  overlayImage3DOffsets?: [xOffset: number, yOffset: number];
   className?: string;
   onToggleInCart?: (itemId?: string) => void;
 };
@@ -44,31 +45,10 @@ export type SliderProps = {
 const Slider: React.FC<SliderProps> = ({
   sliderItems = [],
   activeSlide = 1,
+  overlayImage3DOffsets = [0, 0],
   className = "",
   onToggleInCart = () => {},
 }) => {
-  const [offsetX, setOffsetX] = useState("");
-  const [offsetY, setOffsetY] = useState("");
-  const friction = 1 / 60;
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    let followX = window.innerWidth / 2 - e.clientX;
-    let followY = window.innerHeight / 2 - e.clientY;
-
-    let x = 0,
-      y = 0;
-    x += (-followX - x) * friction;
-    y += (followY - y) * friction;
-
-    setOffsetX(`${x}`);
-    setOffsetY(`${y}`);
-  };
-
-  let offset = {
-    transform: `perspective(800px)
-                rotateY(${offsetX}deg)
-                rotateX(${offsetY}deg)`,
-  };
   return (
     <StyledSlider>
       <SliderContainer className={className}>
@@ -79,15 +59,18 @@ const Slider: React.FC<SliderProps> = ({
               active={activeSlide - 1 === index}
               backgroundImageSrc={item.backgroundImageSrc}
               key={item.id}
-              onMouseMove={(e) => handleMouseMove(e)}
             >
               {item.overlayImageSrc && (
                 <OverlayImage
-                  style={offset}
                   alt={item.title}
                   src={item.overlayImageSrc}
                   imageHeight={item.overlayImageHeight}
                   imagePositionFromRight={item.overlayPositionFromRight}
+                  style={{
+                    transform: `perspective(800px)
+                    rotateY(${overlayImage3DOffsets[0]}deg)
+                    rotateX(${overlayImage3DOffsets[1]}deg)`,
+                  }}
                 />
               )}
               <TextArea>

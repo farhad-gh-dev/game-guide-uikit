@@ -38,9 +38,9 @@ Standard.args = {
       backgroundImageSrc:
         "https://p4.wallpaperbetter.com/wallpaper/316/557/111/control-controlgame-remedy-games-red-pyramid-hd-wallpaper-preview.jpg",
       overlayImageSrc:
-        "https://game-guide-app.vercel.app/static/media/the_wolf_among_us_overlay.f1b69edb3da2ddf9e46e.png",
-      overlayImageHeight: 113,
-      overlayPositionFromRight: -2,
+        "https://static.wikia.nocookie.net/playstationallstarsfanfictionroyale/images/e/e8/JesseFaden.png",
+      overlayImageHeight: 125,
+      overlayPositionFromRight: 10,
       title: "control",
       titleImageSrc:
         "https://www.remedygames.com/wp-content/uploads/2018/05/ujujujuj3.png",
