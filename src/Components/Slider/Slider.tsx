@@ -16,6 +16,7 @@ export type SliderItem = {
   title?: string;
   backgroundImageSrc?: string;
   overlayImageSrc?: string;
+  overlayImage3DEffect?: boolean;
   /**
    * To percentage
    */
@@ -66,11 +67,15 @@ const Slider: React.FC<SliderProps> = ({
                   src={item.overlayImageSrc}
                   imageHeight={item.overlayImageHeight}
                   imagePositionFromRight={item.overlayPositionFromRight}
-                  style={{
-                    transform: `perspective(800px)
-                    rotateY(${overlayImage3DOffsets[0]}deg)
-                    rotateX(${overlayImage3DOffsets[1]}deg)`,
-                  }}
+                  style={
+                    item.overlayImage3DEffect
+                      ? {
+                          transform: `perspective(800px)
+                                      rotateY(${overlayImage3DOffsets[0]}deg)
+                                      rotateX(${overlayImage3DOffsets[1]}deg)`,
+                        }
+                      : {}
+                  }
                 />
               )}
               <TextArea>

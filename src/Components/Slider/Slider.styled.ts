@@ -153,6 +153,7 @@ export const OverlayImageBottomCover = styled.div`
   height: 35px;
   background-color: white;
   z-index: 15;
+  pointer-events: none;
 
   @media (min-width: ${breakpoint.largeScreen}px) {
     height: 60px;
