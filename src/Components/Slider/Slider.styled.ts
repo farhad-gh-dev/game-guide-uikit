@@ -150,12 +150,16 @@ export const OverlayImageBottomCover = styled.div`
   position: absolute;
   top: 100%;
   width: 100%;
-  height: 35px;
+  height: 25px;
   background-color: white;
-  z-index: 15;
   pointer-events: none;
+  z-index: 15;
+
+  @media (min-width: ${breakpoint.laptopScreen}px) {
+    height: 35px;
+  }
 
   @media (min-width: ${breakpoint.largeScreen}px) {
-    height: 60px;
+    height: 45px;
   }
 `;

@@ -54,6 +54,7 @@ const Slider: React.FC<SliderProps> = ({
     <StyledSlider>
       <SliderContainer className={className}>
         {sliderItems?.map((item, index) => {
+          const { overlayImage3DEffect = true } = item;
           return (
             <SliderItem
               data-testid={`slide-${index + 1}`}
@@ -68,7 +69,7 @@ const Slider: React.FC<SliderProps> = ({
                   imageHeight={item.overlayImageHeight}
                   imagePositionFromRight={item.overlayPositionFromRight}
                   style={
-                    item.overlayImage3DEffect
+                    overlayImage3DEffect
                       ? {
                           transform: `perspective(800px)
                                       rotateY(${overlayImage3DOffsets[0]}deg)
