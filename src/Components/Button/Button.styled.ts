@@ -22,7 +22,6 @@ export const StyledButton = styled.button<{
   font-size: ${typography.size.text_12};
   font-weight: ${typography.weight.medium};
   border: 1px solid rgba(0, 0, 0, 0.08);
-  border-color: rgba(0, 0, 0, 0.08);
   border-radius: 10px;
   background-color: #f7f7f7;
   color: black;
@@ -41,6 +40,24 @@ export const StyledButton = styled.button<{
     transform: scale(0.96);
   }
 
+  @media (min-width: ${breakpoint.laptopScreen}px) {
+    width: ${btnSize.width_laptop}px;
+    height: ${btnSize.height_laptop}px;
+    padding: 0 15px;
+    font-size: ${typography.size.text_16};
+    border: 2px solid rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.05);
+    border-radius: 16px;
+  }
+
+  @media (min-width: ${breakpoint.largeScreen}px) {
+    width: ${btnSize.width_large_screen}px;
+    height: ${btnSize.height_large_screen}px;
+    padding: 0 20px;
+    font-size: ${typography.size.text_18};
+    border-radius: 20px;
+  }
+
   ${(props) =>
     props.variant === "primary" &&
     `
@@ -50,6 +67,10 @@ export const StyledButton = styled.button<{
 
     &:hover {
       filter: brightness(85%);
+    }
+
+    @media (min-width: ${breakpoint.largeScreen}px){
+      border-color: transparent;
     }
     `};
 
@@ -62,7 +83,7 @@ export const StyledButton = styled.button<{
     font-weight: ${typography.weight.regular};
 
     @media (min-width: ${breakpoint.laptopScreen}px) {
-      border: 3px solid ${color.primary} !important;
+      border: 3px solid ${color.primary};
       font-weight: ${typography.weight.bold};
     }
     `};
@@ -75,30 +96,6 @@ export const StyledButton = styled.button<{
     cursor: not-allowed;
     pointer-event: none;
     `};
-
-  @media (min-width: ${breakpoint.laptopScreen}px) {
-    width: ${btnSize.width_laptop}px;
-    height: ${btnSize.height_laptop}px;
-    padding: 0 15px;
-    font-size: ${typography.size.text_16};
-    border: 2px solid rgba(0, 0, 0, 0.05);
-    border-color: rgba(0, 0, 0, 0.05);
-    border-radius: 16px;
-
-    ${(props) =>
-      props.variant &&
-      `
-      border-color: transparent;
-      `};
-  }
-
-  @media (min-width: ${breakpoint.largeScreen}px) {
-    width: ${btnSize.width_large_screen}px;
-    height: ${btnSize.height_large_screen}px;
-    padding: 0 20px;
-    font-size: ${typography.size.text_18};
-    border-radius: 20px;
-  }
 `;
 
 export const StyledLink = StyledButton.withComponent("a");

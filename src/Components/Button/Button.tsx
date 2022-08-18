@@ -2,7 +2,7 @@ import React, { ReactNode } from "react";
 import { StyledButton, StyledLink } from "./Button.styled";
 
 export type ButtonProps = {
-  variant?: "primary" | "primary-outlined";
+  variant?: "default" | "normal" | "primary" | "primary-outlined";
   isLink?: boolean;
   children?: ReactNode;
 } & React.ComponentProps<"button"> &
