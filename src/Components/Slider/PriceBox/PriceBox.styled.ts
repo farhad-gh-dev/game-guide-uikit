@@ -96,19 +96,5 @@ export const ButtonContainer = styled.div<{ isInBasket?: boolean }>`
       width: 150px;
       height: 60px;
     }
-
-    ${(props) =>
-      props.isInBasket &&
-      `
-        background-color: ${color.lightest};
-        color: ${color.primary};
-        border: 2px solid ${color.primary};
-        font-weight: ${typography.weight.regular};
-
-        @media (min-width: ${breakpoint.laptopScreen}px) {
-          border: 3px solid ${color.primary};
-          font-weight: ${typography.weight.bold};
-        }
-    `};
   }
 `;

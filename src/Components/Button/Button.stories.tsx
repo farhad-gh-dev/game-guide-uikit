@@ -13,7 +13,7 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 export const Active = Template.bind({});
 Active.args = {
   children: "Action",
-  active: true,
+  variant: "primary",
 };
 
 export const NotActive = Template.bind({});

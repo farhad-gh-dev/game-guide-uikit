@@ -13,7 +13,7 @@ const btnSize = {
 };
 
 export const StyledButton = styled.button<{
-  active: boolean;
+  variant?: string;
   disabled: boolean;
 }>`
   width: ${btnSize.width_mobile}px;
@@ -42,7 +42,7 @@ export const StyledButton = styled.button<{
   }
 
   ${(props) =>
-    props.active &&
+    props.variant === "primary" &&
     `
     background-color: ${color.primary};
     border-color: transparent;
@@ -50,6 +50,20 @@ export const StyledButton = styled.button<{
 
     &:hover {
       filter: brightness(85%);
+    }
+    `};
+
+  ${(props) =>
+    props.variant === "primary-outlined" &&
+    `
+    background-color: ${color.lightest};
+    color: ${color.primary};
+    border: 2px solid ${color.primary};
+    font-weight: ${typography.weight.regular};
+
+    @media (min-width: ${breakpoint.laptopScreen}px) {
+      border: 3px solid ${color.primary} !important;
+      font-weight: ${typography.weight.bold};
     }
     `};
 
@@ -72,7 +86,7 @@ export const StyledButton = styled.button<{
     border-radius: 16px;
 
     ${(props) =>
-      props.active &&
+      props.variant &&
       `
       border-color: transparent;
       `};
@@ -84,12 +98,6 @@ export const StyledButton = styled.button<{
     padding: 0 20px;
     font-size: ${typography.size.text_18};
     border-radius: 20px;
-
-    ${(props) =>
-      props.active &&
-      `
-      border-color: transparent;
-      `};
   }
 `;
 

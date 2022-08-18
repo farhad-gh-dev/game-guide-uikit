@@ -34,8 +34,11 @@ const PriceBox: React.FC<PriceBoxProps> = ({
           <div></div>
         </PriceContainer>
       </TextArea>
-      <ButtonContainer isInBasket={isInBasket}>
-        <Button active={true} onClick={() => onToggleInCart(itemId)}>
+      <ButtonContainer>
+        <Button
+          variant={isInBasket ? "primary-outlined" : "primary"}
+          onClick={() => onToggleInCart(itemId)}
+        >
           {isInBasket ? "Drop It" : "Buy"}
         </Button>
       </ButtonContainer>
