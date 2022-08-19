@@ -64,7 +64,7 @@ const Slider: React.FC<SliderProps> = ({
             >
               {item.overlayImageSrc && (
                 <OverlayImage
-                  alt={item.title}
+                  alt={`${item.title} overlay`}
                   src={item.overlayImageSrc}
                   imageHeight={item.overlayImageHeight}
                   imagePositionFromRight={item.overlayPositionFromRight}
@@ -82,7 +82,7 @@ const Slider: React.FC<SliderProps> = ({
               <TextArea>
                 {item.titleImageSrc && (
                   <TitleImage
-                    alt={item.title}
+                    alt={`${item.title} title`}
                     src={item.titleImageSrc}
                     titleImageHeight={item.titleImageHeight}
                   />
