@@ -9,7 +9,7 @@ import {
   PriceContainer,
 } from "./OfferCard.styled";
 import AddToCardButton from "./AddToCardButton/AddToCardButton";
-import Raring from "../Rating/Rating";
+import Rating from "../Rating/Rating";
 import Heading from "../Heading/Heading";
 import Dropdown, { type DropdownItem } from "../Dropdown/Dropdown";
 import Text from "../Text/Text";
@@ -17,7 +17,7 @@ import Text from "../Text/Text";
 export type offerItem = {
   id?: string;
   title?: string;
-  imageSrc?: string,
+  imageSrc?: string;
   url?: string;
   price?: number;
   rating?: number;
@@ -39,15 +39,25 @@ const OfferCard: React.FC<OfferCardProps> = ({
   return (
     <StyledOfferCard className={className}>
       <ImageContainer>
-        <CardImage CardImageSrc={itemData.imageSrc} href={itemData.url}>
+        <CardImage
+          aria-label={`${
+            itemData.title ? itemData.title + " " : "Offer "
+          }Poster`}
+          CardImageSrc={itemData.imageSrc}
+          href={itemData.url}
+        >
           <div></div>
         </CardImage>
 
         <RatingContainer>
-          <Raring rating={itemData.rating} />
+          <Rating rating={itemData.rating} />
         </RatingContainer>
 
-        <AddToCardButton onAddToCart={() => onToggleInCart(itemData)} isActive={itemData.isInBasket} isInBasket={itemData.isInBasket}/>
+        <AddToCardButton
+          onAddToCart={() => onToggleInCart(itemData)}
+          isActive={itemData.isInBasket}
+          isInBasket={itemData.isInBasket}
+        />
       </ImageContainer>
 
       <TextArea>
