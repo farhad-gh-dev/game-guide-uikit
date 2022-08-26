@@ -23,8 +23,7 @@ const AddToCardButton: React.FC<AddToCardButtonProps> = ({
 }) => {
   return (
     <StyledAddToCardButton
-      aria-label="add to card"
-      title={isInBasket ? "Remove From Cart" : "Add To Cart"}
+      aria-label={isInBasket ? "Remove From Cart" : "Add To Cart"}
       className={className}
       isActive={isActive}
       onClick={() => onAddToCart()}

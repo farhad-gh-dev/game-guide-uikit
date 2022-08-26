@@ -35,7 +35,7 @@ const Dropdown: React.FC<DropdownProps> = ({
           {items.map((i, index) => {
             return (
               <MenuItem key={index} active={index === activeItemIndex}>
-                <a href={i.url} title={i.text}>
+                <a href={i.url}>
                   <Text
                     isSpan
                     size="sm"

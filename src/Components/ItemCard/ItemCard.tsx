@@ -34,12 +34,7 @@ const ItemCard: React.FC<ItemCardProps> = ({
         )}
       </ImageContainer>
       <TitleContainer>
-        <Text
-          size="md"
-          overflowEllipsis
-          fontWeight="500"
-          title={cardInfo?.title}
-        >
+        <Text size="md" overflowEllipsis fontWeight="500">
           {cardInfo?.title}
         </Text>
       </TitleContainer>
