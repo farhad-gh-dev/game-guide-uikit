@@ -1,13 +1,25 @@
 import styled from "styled-components";
 import { color, typography, breakpoint } from "../../Styles/styles";
 
-export const StyledLoading = styled.div`
+export const StyledLoading = styled.div<{
+  coverPage?: boolean;
+}>`
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 100%;
-  height: 100%;
+
+  ${(props) =>
+    props.coverPage
+      ? `
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+    `
+      : `
+      width: 100%;
+      height: 100%;
+    `};
 
   svg {
     position: absolute;

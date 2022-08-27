@@ -2,9 +2,13 @@ import React from "react";
 import { StyledLoading, LoadingRing, LoadingText } from "./Loading.styled";
 import DarkLogo from "./DarkLogo";
 
-const Loading: React.FC = () => {
+type LoadingProps = {
+  coverPage?: boolean;
+};
+
+const Loading: React.FC<LoadingProps> = ({ coverPage = false }) => {
   return (
-    <StyledLoading>
+    <StyledLoading coverPage={coverPage}>
       <LoadingRing>
         <DarkLogo />
         <span></span>

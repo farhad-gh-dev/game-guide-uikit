@@ -13,3 +13,8 @@ const Template: ComponentStory<typeof Loading> = (args) => (
 );
 
 export const Standard = Template.bind({});
+
+export const CoverThePage = Template.bind({});
+CoverThePage.args = {
+  coverPage: true,
+};
