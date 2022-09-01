@@ -25,7 +25,7 @@ const ItemCard: React.FC<ItemCardProps> = ({
   className = "",
 }) => {
   return (
-    <StyledItemCard href={"#"} className={className}>
+    <StyledItemCard href={"#"} className={className} data-testid="item-card">
       <ImageContainer backgroundImage={cardInfo?.imageSrc}>
         {cardInfo?.rating !== 0 && (
           <RatingContainer>

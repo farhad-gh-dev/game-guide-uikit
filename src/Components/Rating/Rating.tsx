@@ -10,7 +10,7 @@ export type RatingProps = {
 
 const Rating: React.FC<RatingProps> = ({ rating = 0.0, className = "" }) => {
   return (
-    <StyledRating className={className}>
+    <StyledRating className={className} data-testid="rating">
       <RatingContent>
         <StarSvg />
         <Text isSpan size="lg" data-testid="rating">

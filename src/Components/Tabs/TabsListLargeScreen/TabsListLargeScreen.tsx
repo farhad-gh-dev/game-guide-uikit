@@ -15,7 +15,7 @@ const TabsListLargeScreen: React.FC<TabsProps> = ({
 }) => {
   if (tabItems.length === 0) return null;
   return (
-    <StyledTabsListLargeScreen>
+    <StyledTabsListLargeScreen data-testid="tabs-container-desktop">
       {tabItems.map((item, index) => {
         return (
           <Tab key={item} active={activeTabIndex === index}>

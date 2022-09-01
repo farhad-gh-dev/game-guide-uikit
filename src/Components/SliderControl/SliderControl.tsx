@@ -21,7 +21,7 @@ const SliderControl: React.FC<SliderControlProps> = ({
   handleSlideChange = () => {},
 }) => {
   return (
-    <StyledSliderControl className={className}>
+    <StyledSliderControl className={className} data-testid="slider-control">
       <SliderControlContainer>
         <SlideIndicators>
           {[...Array(numberOfSlides)].map((i, index) => {

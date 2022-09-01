@@ -14,7 +14,11 @@ const Avatar: React.FC<AvatarProps> = ({
   className = "",
 }) => {
   return (
-    <StyledAvatar imageSrc={imageSrc} className={className}>
+    <StyledAvatar
+      imageSrc={imageSrc}
+      className={className}
+      data-testid="avatar"
+    >
       {!imageSrc && <DefaultProfileImage />}
       {userType ? (
         <ProfileBadge data-testid="avatar-type">{userType}</ProfileBadge>

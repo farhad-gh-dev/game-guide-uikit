@@ -37,7 +37,7 @@ const OfferCard: React.FC<OfferCardProps> = ({
   onToggleInCart = () => {},
 }) => {
   return (
-    <StyledOfferCard className={className}>
+    <StyledOfferCard className={className} data-testid="offer-card">
       <ImageContainer>
         <CardImage
           aria-label={`${

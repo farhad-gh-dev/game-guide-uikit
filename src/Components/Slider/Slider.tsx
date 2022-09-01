@@ -51,7 +51,7 @@ const Slider: React.FC<SliderProps> = ({
   onToggleInCart = () => {},
 }) => {
   return (
-    <StyledSlider>
+    <StyledSlider data-testid="slider">
       <SliderContainer className={className}>
         {sliderItems?.map((item, index) => {
           const { overlayImage3DEffect = true } = item;

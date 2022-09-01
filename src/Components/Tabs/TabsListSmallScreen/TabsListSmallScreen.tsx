@@ -37,7 +37,7 @@ const TabsListSmallScreen: React.FC<TabsProps> = ({
   if (tabItems.length === 0) return null;
 
   return (
-    <StyledTabsListSmallScreen>
+    <StyledTabsListSmallScreen data-testid="tabs-container-mobile">
       <SliderControlButton
         aria-label="prev-button"
         onClick={prevSlideHandler}

@@ -18,7 +18,7 @@ const BrandLogo: React.FC<BrandLogoProps> = (props) => {
   } = props;
 
   return (
-    <StyledBrandLogo className={className}>
+    <StyledBrandLogo className={className} data-testid="brand-logo">
       <LogoContainer imageOnly={imageOnly}>
         <LogoIcon />
       </LogoContainer>

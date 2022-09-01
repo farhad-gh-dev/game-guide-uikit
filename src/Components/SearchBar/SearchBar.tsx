@@ -27,7 +27,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
   };
 
   return (
-    <StyledSearchBar className={className}>
+    <StyledSearchBar className={className} data-testid="search-bar">
       <div onClick={() => setIsActive(true)}>
         <CustomIcon type="search" height="25px" heightDesktop="30px" />
       </div>
