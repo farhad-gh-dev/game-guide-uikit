@@ -13,7 +13,7 @@ import { Navbar, type NavbarProps, NavbarItem, type NavbarItemProps } from "./Co
 import OfferCard, {type OfferCardProps, type offerItem} from './Components/OfferCard/OfferCard';
 import Rating, {type RatingProps} from "./Components/Rating/Rating";
 import SearchBar, {type SearchBarProps} from './Components/SearchBar/SearchBar';
-import Slider, {type SliderProps, type SliderItem} from './Components/Slider/Slider';
+import Slider, {type SliderProps, type SliderItemType} from './Components/Slider/Slider';
 import SliderControl, {type SliderControlProps} from "./Components/SliderControl/SliderControl";
 import Tabs, {type TabsProps, type TabItem} from "./Components/Tabs/Tabs";
 import Text, {type TextProps} from "./Components/Text/Text";
@@ -66,7 +66,7 @@ export {
 
     Slider,
     SliderProps,
-    SliderItem,
+    SliderItemType,
 
     SliderControl,
     SliderControlProps,

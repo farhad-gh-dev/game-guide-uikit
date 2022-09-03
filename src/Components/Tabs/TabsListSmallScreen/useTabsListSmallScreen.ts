@@ -16,39 +16,40 @@ export const useTabsListSmallScreen = (
     if (focusedTab !== 0) setFocusedTab(focusedTab - 1);
   };
 
-  const calcSliderOffset = (): number => {
-    if (sliderItemsIds.length === 0) return 0;
-
-    let offsetSum = 0,
-      sideOffset = 0;
-
-    //calc elements width before focused item (no need for first item)
-    if (focusedTab !== 0) {
-      sliderItemsIds.forEach((item, index) => {
-        const currentElement = document.getElementById(item);
-        if (currentElement !== null && index < focusedTab) {
-          offsetSum += currentElement.clientWidth;
-        }
-      });
-    }
-
-    //get width of the focused item in slider
-    const targetElementWidth = document.getElementById(
-      sliderItemsIds[focusedTab]
-    )?.clientWidth;
-
-    const sliderWidth = document.getElementById(sliderContainerId)?.clientWidth;
-
-    //calc space for each side of the focused item to set it in the middle of the slider
-    if (sliderWidth !== undefined && targetElementWidth !== undefined) {
-      sideOffset = (sliderWidth - targetElementWidth) / 2;
-    }
-
-    return -(offsetSum - sideOffset);
-  };
-
   useEffect(() => {
     //using timeout to prevent render issue (wrong calc for offset value)
+    const calcSliderOffset = (): number => {
+      if (sliderItemsIds.length === 0) return 0;
+
+      let offsetSum = 0,
+        sideOffset = 0;
+
+      //calc elements width before focused item (no need for first item)
+      if (focusedTab !== 0) {
+        sliderItemsIds.forEach((item, index) => {
+          const currentElement = document.getElementById(item);
+          if (currentElement !== null && index < focusedTab) {
+            offsetSum += currentElement.clientWidth;
+          }
+        });
+      }
+
+      //get width of the focused item in slider
+      const targetElementWidth = document.getElementById(
+        sliderItemsIds[focusedTab]
+      )?.clientWidth;
+
+      const sliderWidth =
+        document.getElementById(sliderContainerId)?.clientWidth;
+
+      //calc space for each side of the focused item to set it in the middle of the slider
+      if (sliderWidth !== undefined && targetElementWidth !== undefined) {
+        sideOffset = (sliderWidth - targetElementWidth) / 2;
+      }
+
+      return -(offsetSum - sideOffset);
+    };
+
     const timeout = setTimeout(() => {
       setOffset(calcSliderOffset());
     }, 0);
@@ -56,7 +57,7 @@ export const useTabsListSmallScreen = (
     return () => {
       clearTimeout(timeout);
     };
-  }, [focusedTab]);
+  }, [focusedTab, sliderContainerId, sliderItemsIds]);
 
   return {
     focusedTab,

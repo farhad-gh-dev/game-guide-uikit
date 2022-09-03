@@ -11,7 +11,7 @@ import {
   OverlayImageBottomCover,
 } from "./Slider.styled";
 
-export type SliderItem = {
+export type SliderItemType = {
   id?: string;
   title?: string;
   backgroundImageSrc?: string;
@@ -36,7 +36,7 @@ export type SliderItem = {
 };
 
 export type SliderProps = {
-  sliderItems?: Array<SliderItem>;
+  sliderItems?: Array<SliderItemType>;
   activeSlide?: number;
   overlayImage3DOffsets?: [xOffset: number, yOffset: number];
   className?: string;

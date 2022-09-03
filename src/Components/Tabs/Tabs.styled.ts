@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { color, breakpoint } from "../../Styles/styles";
+import { breakpoint } from "../../Styles/styles";
 
 export const StyledTabs = styled.div``;
 
