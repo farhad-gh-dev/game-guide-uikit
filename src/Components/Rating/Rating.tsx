@@ -13,7 +13,7 @@ const Rating: React.FC<RatingProps> = ({ rating = 0.0, className = "" }) => {
     <StyledRating className={className} data-testid="rating">
       <RatingContent>
         <StarSvg />
-        <Text isSpan size="lg" data-testid="rating">
+        <Text isSpan size="lg">
           {rating.toFixed(1)}
         </Text>
       </RatingContent>
