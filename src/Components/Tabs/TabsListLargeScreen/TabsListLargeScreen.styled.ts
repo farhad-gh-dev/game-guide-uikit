@@ -29,7 +29,7 @@ export const Tab = styled.div<{
     padding: 0 30px 30px;
   }
 
-  &::before {
+  &::after {
     content: "";
     position: absolute;
     bottom: -4px;
@@ -58,7 +58,7 @@ export const Tab = styled.div<{
   ${(props) =>
     props.active &&
     `
-      &::before{
+      &::after{
         opacity: 1;
       }
 

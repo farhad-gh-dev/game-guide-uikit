@@ -36,7 +36,7 @@ export const SlideIndicators = styled.div`
   }
 `;
 
-export const SingleIndicator = styled.div<{ active?: boolean }>`
+export const SingleIndicator = styled.button<{ active?: boolean }>`
   flex-grow: 1;
   width: 3px;
   border-radius: 3px;

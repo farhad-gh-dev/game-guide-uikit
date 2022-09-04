@@ -67,13 +67,12 @@ const TabsListSmallScreen: React.FC<TabsProps> = ({
                 isLeftSideItem={isLeftSideItem}
                 isRightSideItem={isRightSideItem}
               >
-                <Heading
-                  h4
+                <button
                   onClick={() => onClickTab(index)}
                   data-testid={`tab-sm-${item}`}
                 >
-                  {item}
-                </Heading>
+                  <Heading h4>{item}</Heading>
+                </button>
               </Tab>
             );
           })}

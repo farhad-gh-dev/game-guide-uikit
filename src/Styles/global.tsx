@@ -58,9 +58,13 @@ export const bodyStyles = css`
   input,
   textarea,
   select {
-    outline: none;
-    font-family: ${typography.type.primary};
     border: none;
+    font-family: ${typography.type.primary};
+  }
+
+  button {
+    padding: 0;
+    background-color: transparent;
   }
 
   a {

@@ -23,6 +23,8 @@ const Dropdown: React.FC<DropdownProps> = ({
   return (
     <StyledDropdown className={className} data-testid="dropdown">
       <MenuToggler
+        type="button"
+        aria-label="dropdown"
         data-testid="dropdown-menu-toggler"
         onClick={() => setIsOpen((prevState) => !prevState)}
       >

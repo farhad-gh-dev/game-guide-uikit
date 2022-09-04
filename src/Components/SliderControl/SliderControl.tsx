@@ -29,6 +29,7 @@ const SliderControl: React.FC<SliderControlProps> = ({
               <SingleIndicator
                 key={index}
                 data-testid={`indicator-${index + 1}`}
+                aria-label={`slide-${index + 1}-indicator`}
                 active={index + 1 === activeSlide}
                 onClick={() => handleSlideChange(index + 1)}
               />

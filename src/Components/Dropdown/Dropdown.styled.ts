@@ -7,7 +7,7 @@ export const StyledDropdown = styled.div`
   z-index: ${ZIndex.dropdown};
 `;
 
-export const MenuToggler = styled.div`
+export const MenuToggler = styled.button`
   display: flex;
   padding: 6px 0 6px 6px;
   cursor: pointer;
