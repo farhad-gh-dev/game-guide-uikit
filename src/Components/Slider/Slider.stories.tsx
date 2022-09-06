@@ -77,9 +77,9 @@ ItemIsInBasket.args = {
       overlayPositionFromRight: 0,
       title: "valorant",
       price: 1500,
-      isInBasket: true,
     },
   ],
+  basketItems: ["1"],
   onToggleInCart: (itemId) => {
     console.log(itemId);
   },

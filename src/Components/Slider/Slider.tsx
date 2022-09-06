@@ -32,11 +32,11 @@ export type SliderItemType = {
   titleImageHeight?: number;
   titleIsLight?: boolean;
   price?: number;
-  isInBasket?: boolean;
 };
 
 export type SliderProps = {
   sliderItems?: Array<SliderItemType>;
+  basketItems?: Array<string>;
   activeSlide?: number;
   overlayImage3DOffsets?: [xOffset: number, yOffset: number];
   className?: string;
@@ -45,6 +45,7 @@ export type SliderProps = {
 
 const Slider: React.FC<SliderProps> = ({
   sliderItems = [],
+  basketItems = [],
   activeSlide = 1,
   overlayImage3DOffsets = [0, 0],
   className = "",
@@ -98,7 +99,7 @@ const Slider: React.FC<SliderProps> = ({
                 <PriceBox
                   itemId={item.id}
                   price={item.price}
-                  isInBasket={item.isInBasket}
+                  isInBasket={basketItems.includes(`${item.id}`)}
                   onToggleInCart={onToggleInCart}
                 />
               </div>
