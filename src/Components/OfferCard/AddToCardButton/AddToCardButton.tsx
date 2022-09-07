@@ -10,20 +10,18 @@ import CustomIcon from "../../CustomIcon/CustomIcon";
 
 export type AddToCardButtonProps = {
   isActive?: boolean;
-  isInBasket?: boolean;
   className?: string;
   onAddToCart?: () => void;
 };
 
 const AddToCardButton: React.FC<AddToCardButtonProps> = ({
   isActive = false,
-  isInBasket = false,
   className = "",
   onAddToCart = () => {},
 }) => {
   return (
     <StyledAddToCardButton
-      aria-label={isInBasket ? "Remove From Cart" : "Add To Cart"}
+      aria-label={isActive ? "Remove From Cart" : "Add To Cart"}
       className={className}
       isActive={isActive}
       onClick={() => onAddToCart()}

@@ -21,18 +21,20 @@ export type offerItem = {
   url?: string;
   price?: number;
   rating?: number;
-  isInBasket?: boolean;
+
   dropdownItems?: DropdownItem[];
 };
 
 export type OfferCardProps = {
-  className?: string;
   itemData?: offerItem;
+  isInBasket?: boolean;
+  className?: string;
   onToggleInCart?: (itemData: {}) => void;
 };
 
 const OfferCard: React.FC<OfferCardProps> = ({
   itemData = {},
+  isInBasket = false,
   className = "",
   onToggleInCart = () => {},
 }) => {
@@ -55,8 +57,7 @@ const OfferCard: React.FC<OfferCardProps> = ({
 
         <AddToCardButton
           onAddToCart={() => onToggleInCart(itemData)}
-          isActive={itemData.isInBasket}
-          isInBasket={itemData.isInBasket}
+          isActive={isInBasket}
         />
       </ImageContainer>
 

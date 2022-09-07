@@ -46,20 +46,20 @@ Standard.args = {
   },
 };
 
-export const Active = Template.bind({});
-Active.args = {
+export const isInBasket = Template.bind({});
+isInBasket.args = {
   itemData: {
     title: "Elden Ring",
     imageSrc: "https://www.gamepressure.com/i/h/17/383338361.jpg",
     url: "/",
     price: 34.9,
     rating: 9.8,
-    isInBasket: true,
     dropdownItems: [
       { text: "Collection", url: "/" },
       { text: "title", url: "/" },
     ],
   },
+  isInBasket: true,
 };
 
 export const Empty = Template.bind({});
