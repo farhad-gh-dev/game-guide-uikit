@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { color, typography, breakpoint } from "../../Styles/styles";
 
 const btnSize = {
@@ -11,6 +11,39 @@ const btnSize = {
   width_large_screen: 160,
   height_large_screen: 65,
 };
+
+const primaryVariantStyle = css`
+  background-color: ${color.primary};
+  border-color: transparent;
+  color: white;
+
+  &:hover {
+    filter: brightness(85%);
+  }
+
+  @media (min-width: ${breakpoint.largeScreen}px) {
+    border-color: transparent;
+  }
+`;
+
+const primaryOutlinedVariantStyle = css`
+  background-color: ${color.lightest};
+  color: ${color.primary};
+  border: 2px solid ${color.primary};
+  font-weight: ${typography.weight.regular};
+
+  @media (min-width: ${breakpoint.laptopScreen}px) {
+    border: 3px solid ${color.primary};
+    font-weight: ${typography.weight.bold};
+  }
+`;
+
+const disabledStyle = css`
+  background-color: #e8e8e8;
+  color: ${color.text_disabled};
+  cursor: not-allowed;
+  pointer-event: none;
+`;
 
 export const StyledButton = styled.button<{
   variant?: string;
@@ -58,44 +91,12 @@ export const StyledButton = styled.button<{
     border-radius: 20px;
   }
 
-  ${(props) =>
-    props.variant === "primary" &&
-    `
-    background-color: ${color.primary};
-    border-color: transparent;
-    color: white;
-
-    &:hover {
-      filter: brightness(85%);
-    }
-
-    @media (min-width: ${breakpoint.largeScreen}px){
-      border-color: transparent;
-    }
-    `};
+  ${(props) => props.variant === "primary" && primaryVariantStyle};
 
   ${(props) =>
-    props.variant === "primary-outlined" &&
-    `
-    background-color: ${color.lightest};
-    color: ${color.primary};
-    border: 2px solid ${color.primary};
-    font-weight: ${typography.weight.regular};
+    props.variant === "primary-outlined" && primaryOutlinedVariantStyle};
 
-    @media (min-width: ${breakpoint.laptopScreen}px) {
-      border: 3px solid ${color.primary};
-      font-weight: ${typography.weight.bold};
-    }
-    `};
-
-  ${(props) =>
-    props.disabled &&
-    `
-    background-color: #E8E8E8;
-    color: ${color.text_disabled};
-    cursor: not-allowed;
-    pointer-event: none;
-    `};
+  ${(props) => props.disabled && disabledStyle};
 `;
 
 export const StyledLink = StyledButton.withComponent("a");

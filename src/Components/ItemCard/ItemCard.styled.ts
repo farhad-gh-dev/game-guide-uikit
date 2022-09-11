@@ -1,5 +1,12 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { background, typography, breakpoint } from "../../Styles/styles";
+
+const backgroundImageStyle = css<{ backgroundImage?: string }>`
+  background-image: url(${(props) => props.backgroundImage});
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+`;
 
 export const ImageContainer = styled.div<{
   backgroundImage?: string;
@@ -26,14 +33,7 @@ export const ImageContainer = styled.div<{
     border-radius: 20px;
   }
 
-  ${(props) =>
-    props.backgroundImage &&
-    `
-        background-image: url(${props.backgroundImage});
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-    `};
+  ${(props) => props.backgroundImage && backgroundImageStyle};
 `;
 
 export const RatingContainer = styled.div`

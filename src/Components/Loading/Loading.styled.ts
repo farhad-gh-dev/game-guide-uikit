@@ -1,5 +1,29 @@
-import styled from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import { color, typography, breakpoint } from "../../Styles/styles";
+
+const loadingRingRotate = keyframes`
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+`;
+
+const loadingRingDotRotate = keyframes`
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
+`;
+
+const coverPageStyle = css`
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+`;
 
 export const StyledLoading = styled.div<{
   coverPage?: boolean;
@@ -8,18 +32,10 @@ export const StyledLoading = styled.div<{
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  width: 100%;
+  height: 100%;
 
-  ${(props) =>
-    props.coverPage
-      ? `
-      position: fixed;
-      width: 100vw;
-      height: 100vh;
-    `
-      : `
-      width: 100%;
-      height: 100%;
-    `};
+  ${(props) => props.coverPage && coverPageStyle};
 
   svg {
     position: absolute;
@@ -71,7 +87,7 @@ export const LoadingRing = styled.div`
     border-top: 2px solid ${color.primary};
     border-right: 2px solid ${color.primary};
     border-radius: 50%;
-    animation: animateC 2s linear infinite;
+    animation: ${loadingRingRotate} 2s linear infinite;
   }
 
   span {
@@ -83,7 +99,7 @@ export const LoadingRing = styled.div`
     height: 4px;
     background: transparent;
     transform-origin: left;
-    animation: animate 2s linear infinite;
+    animation: ${loadingRingDotRotate} 2s linear infinite;
 
     &:before {
       content: "";
@@ -108,23 +124,6 @@ export const LoadingRing = styled.div`
         top: -4px;
         right: -6px;
       }
-    }
-  }
-
-  @keyframes animateC {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  @keyframes animate {
-    0% {
-      transform: rotate(45deg);
-    }
-    100% {
-      transform: rotate(405deg);
     }
   }
 `;

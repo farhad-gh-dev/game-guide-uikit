@@ -1,5 +1,16 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { color, breakpoint } from "../../../Styles/styles";
+
+const activeTabStyle = css`
+  &::after {
+    opacity: 1;
+  }
+
+  h4 {
+    opacity: 1;
+    font-weight: 700;
+  }
+`;
 
 export const StyledTabsListLargeScreen = styled.div`
   display: none;
@@ -55,16 +66,5 @@ export const Tab = styled.div<{
     white-space: nowrap;
   }
 
-  ${(props) =>
-    props.active &&
-    `
-      &::after{
-        opacity: 1;
-      }
-
-      h4{
-        opacity: 1;
-        font-weight: 700;
-      }
-    `};
+  ${(props) => props.active && activeTabStyle};
 `;

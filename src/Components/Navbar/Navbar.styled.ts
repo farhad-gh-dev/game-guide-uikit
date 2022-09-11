@@ -1,5 +1,44 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { color, typography, breakpoint } from "../../Styles/styles";
+
+const activeNavbarItemStyle = css`
+  transform: translateY(-5px);
+
+  & * {
+    opacity: 1;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 25px;
+    background-color: ${color.primary};
+    border-radius: 3px;
+  }
+
+  @media (min-width: ${breakpoint.laptopScreen}px) {
+    transform: translateY(0);
+    &::before {
+      top: 0;
+      bottom: unset;
+      height: 4px;
+      width: 36px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+
+  @media (min-width: ${breakpoint.largeScreen}px) {
+    &::before {
+      height: 6px;
+      width: 40px;
+    }
+  }
+`;
 
 export const StyledNavbar = styled.ul`
   list-style: none;
@@ -41,45 +80,5 @@ export const StyledNavbarItem = styled.li<{ active?: boolean }>`
     }
   }
 
-  ${(props) =>
-    props.active &&
-    `
-        transform: translateY(-5px);
-    
-        & * {
-            opacity: 1;
-        }
-
-        &::before {
-        content: "";
-        position: absolute;
-        bottom: -3px;
-        left: 50%;
-        transform: translateX(-50%);
-        height: 3px;
-        width: 25px;
-        background-color: ${color.primary};
-        border-radius: 3px;
-        }
-
-        @media (min-width: ${breakpoint.laptopScreen}px) {
-            transform: translateY(0);
-            &::before{
-                top: 0;
-                bottom: unset;
-                height: 4px;
-                width: 36px;
-                border-top-left-radius: 0;
-                border-top-right-radius: 0;
-            }
-        }
-
-        @media (min-width: ${breakpoint.largeScreen}px) {
-            &::before{
-                height: 6px;
-                width: 40px;
-            }
-        }
-
-    `};
+  ${(props) => props.active && activeNavbarItemStyle};
 `;

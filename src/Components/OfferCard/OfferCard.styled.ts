@@ -1,5 +1,12 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { background, typography, breakpoint } from "../../Styles/styles";
+
+const cardImageStyle = css<{ CardImageSrc?: string }>`
+  background-image: url(${(props) => props.CardImageSrc});
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+`;
 
 export const StyledOfferCard = styled.div`
   padding-right: 15px;
@@ -62,14 +69,7 @@ export const CardImage = styled.a<{
     height: 100%;
     transition: 200ms ease-in-out;
 
-    ${(props) =>
-      props.CardImageSrc &&
-      `
-      background-image: url(${props.CardImageSrc});
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-    `};
+    ${(props) => props.CardImageSrc && cardImageStyle};
 
     &:hover {
       transform: scale(1.1);

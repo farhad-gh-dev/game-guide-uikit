@@ -1,5 +1,48 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { color, breakpoint } from "../../../Styles/styles";
+
+const activeTabStyle = css`
+  &::after {
+    opacity: 1;
+  }
+
+  h4 {
+    opacity: 1;
+    font-weight: 700;
+  }
+`;
+
+const focusedTabStyle = css`
+  h4 {
+    pointer-events: unset;
+  }
+`;
+
+const isLeftSideTabStyle = css`
+  h4 {
+    background: linear-gradient(
+      -90deg,
+      rgba(0, 0, 0, 1),
+      rgba(255, 255, 255, 0) 65%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+`;
+
+const isRightSideTabStyle = css`
+  h4 {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 1),
+      rgba(255, 255, 255, 0) 65%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+`;
 
 export const StyledTabsListSmallScreen = styled.div`
   position: relative;
@@ -94,54 +137,11 @@ export const Tab = styled.div<{
     pointer-events: none;
   }
 
-  ${(props) =>
-    props.activeItem &&
-    `
-      &::after{
-        opacity: 1;
-      }
+  ${(props) => props.activeItem && activeTabStyle};
 
-      h4{
-        opacity: 1;
-        font-weight: 700;
-      }
-    `};
+  ${(props) => props.focusedItem && focusedTabStyle};
 
-  ${(props) =>
-    props.focusedItem &&
-    `
-      h4{
-        pointer-events: unset;
-      }
-    `};
+  ${(props) => props.isLeftSideItem && isLeftSideTabStyle};
 
-  ${(props) =>
-    props.isLeftSideItem &&
-    `
-      h4{
-        background: linear-gradient(
-          -90deg,
-          rgba(0, 0, 0, 1),
-          rgba(255, 255, 255, 0) 65%
-        );
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-    `};
-
-  ${(props) =>
-    props.isRightSideItem &&
-    `
-      h4{
-        background: linear-gradient(
-          90deg,
-          rgba(0, 0, 0, 1),
-          rgba(255, 255, 255, 0) 65%
-        );
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-    `};
+  ${(props) => props.isRightSideItem && isRightSideTabStyle};
 `;

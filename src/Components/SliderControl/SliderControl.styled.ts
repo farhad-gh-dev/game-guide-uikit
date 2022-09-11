@@ -1,5 +1,9 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { color, typography, breakpoint } from "../../Styles/styles";
+
+const activeIndicatorStyle = css`
+  background-color: ${color.primary};
+`;
 
 export const StyledSliderControl = styled.div`
   display: inline-block;
@@ -59,11 +63,7 @@ export const SingleIndicator = styled.button<{ active?: boolean }>`
     margin-bottom: 0;
   }
 
-  ${(props) =>
-    props.active &&
-    `
-        background-color: ${color.primary}
-    `};
+  ${(props) => props.active && activeIndicatorStyle};
 `;
 
 export const SlideNumber = styled.span`

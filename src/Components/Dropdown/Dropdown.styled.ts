@@ -1,5 +1,23 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { color, ZIndex, breakpoint } from "../../Styles/styles";
+
+const activeMenuItemStyle = css`
+  background-color: rgba(0, 0, 0, 0.05);
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background-color: ${color.darkest};
+  }
+
+  a::before {
+    display: none;
+  }
+`;
 
 export const StyledDropdown = styled.div`
   position: relative;
@@ -71,25 +89,7 @@ export const MenuItem = styled.div<{ active?: boolean }>`
     background-color: rgba(0, 0, 0, 0.05);
   }
 
-  ${(props) =>
-    props.active &&
-    `
-        background-color: rgba(0, 0, 0, 0.05);
-
-        &::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 3px;
-            background-color: ${color.darkest};
-        }
-
-        a::before {
-          display: none;
-        }
-    `};
+  ${(props) => props.active && activeMenuItemStyle};
 
   a {
     position: relative;

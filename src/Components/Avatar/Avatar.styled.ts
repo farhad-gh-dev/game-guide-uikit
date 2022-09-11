@@ -1,7 +1,14 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { color, typography, breakpoint } from "../../Styles/styles";
 
-export const StyledAvatar = styled.div<{ imageSrc?: any }>`
+const imageStyle = css<{ imageSrc?: string }>`
+  background-image: url(${(props) => props.imageSrc});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+`;
+
+export const StyledAvatar = styled.div<{ imageSrc?: string }>`
   position: relative;
   border-radius: 100%;
 
@@ -21,14 +28,7 @@ export const StyledAvatar = styled.div<{ imageSrc?: any }>`
     }
   }
 
-  ${(props) =>
-    props.imageSrc &&
-    `
-      background-image: url(${props.imageSrc});
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center center;
-    `};
+  ${(props) => props.imageSrc && imageStyle};
 `;
 
 export const ProfileBadge = styled.div`

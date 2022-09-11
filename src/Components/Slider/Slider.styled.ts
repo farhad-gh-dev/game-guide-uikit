@@ -1,5 +1,17 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { color, background, typography, breakpoint } from "../../Styles/styles";
+
+const backgroundImageStyle = css<{ backgroundImageSrc?: string }>`
+  background-image: url(${(props) => props.backgroundImageSrc});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+`;
+
+const activeSlideStyle = css`
+  opacity: 1;
+  z-index: 10;
+`;
 
 export const StyledSlider = styled.div`
   position: relative;
@@ -47,21 +59,9 @@ export const SliderItem = styled.div<{
     padding: 80px 60px;
   }
 
-  ${(props) =>
-    props.backgroundImageSrc &&
-    `
-    background-image: url("${props.backgroundImageSrc}");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    `};
+  ${(props) => props.backgroundImageSrc && backgroundImageStyle};
 
-  ${(props) =>
-    props.active &&
-    `
-    opacity: 1;
-    z-index: 10;
-    `};
+  ${(props) => props.active && activeSlideStyle};
 `;
 
 export const OverlayImage = styled.img<{

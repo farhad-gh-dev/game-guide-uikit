@@ -1,5 +1,20 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { color, typography, breakpoint } from "../../Styles/styles";
+
+const imageOnlyStyle = css`
+  margin-right: 7px;
+
+  @media (min-width: ${breakpoint.laptopScreen}px) {
+    margin-right: 15px;
+  }
+
+  @media (min-width: ${breakpoint.largeScreen}px) {
+    margin-right: 20px;
+  }
+`;
+const coloredTextStyle = css`
+  color: ${color.primary};
+`;
 
 export const StyledBrandLogo = styled.div`
   display: flex;
@@ -23,19 +38,7 @@ export const LogoContainer = styled.div<{
     }
   }
 
-  ${(props) =>
-    !props.imageOnly &&
-    `
-    margin-right: 7px;
-  
-    @media (min-width: ${breakpoint.laptopScreen}px) {
-        margin-right: 15px;
-    }
-
-    @media (min-width: ${breakpoint.largeScreen}px) {
-        margin-right: 20px;
-    }
-  `};
+  ${(props) => !props.imageOnly && imageOnlyStyle};
 `;
 
 export const BrandTitle = styled.span<{
@@ -54,5 +57,5 @@ export const BrandTitle = styled.span<{
     font-size: ${typography.size.text_20};
   }
 
-  ${(props) => props.colored && `color: ${color.primary}`}
+  ${(props) => props.colored && coloredTextStyle}
 `;
